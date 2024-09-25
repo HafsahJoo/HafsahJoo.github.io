@@ -36,15 +36,13 @@ jobs:
           node-version: 20
           cache: 'npm'
       - name: Install dependencies
-        run: |
-          cd my-portfolio
+        run: 
           npm ci
-        working-directory: ./my-portfolio
+        working-directory: ./my-portfolio/
       - name: Build
-        run: |
-          cd my-portfolio
+        run: 
           npm run build
-        working-directory: ./my-portfolio
+        working-directory: ./my-portfolio/
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
