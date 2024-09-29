@@ -6,7 +6,8 @@ export default {
     extend: {
       fontFamily: {
         lemonmilk : ['Lemonmilk', 'sans-serif'],
-        inter : ['Inter', 'sans-serif']
+        inter : ['Inter', 'sans-serif'],
+        tommy : ['tommy', 'sans-serif'],
       },
       fontWeight: {
         light: 300,
