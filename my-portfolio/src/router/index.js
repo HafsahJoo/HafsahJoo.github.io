@@ -7,7 +7,7 @@ import AboutmePage from "../components/AboutmePage.vue";
 const routes = [
     {
         path: "/",
-        component: AboutmePage,
+        component: HomePage,
     }
     ,
     {
@@ -26,7 +26,7 @@ const routes = [
 ];
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes,
 });
 
