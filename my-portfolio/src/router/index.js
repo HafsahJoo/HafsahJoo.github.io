@@ -7,7 +7,7 @@ import AboutmePage from "../components/AboutmePage.vue";
 const routes = [
     {
         path: "/",
-        component: HomePage,
+        component: AboutmePage,
     }
     ,
     {
