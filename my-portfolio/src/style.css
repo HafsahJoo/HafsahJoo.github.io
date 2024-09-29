@@ -38,6 +38,13 @@
     font-style: normal;
 }
 
+@font-face{
+    font-family:'tommy';
+    src: url('assets/fonts/tommy.TTF');
+    font-weight: 500;
+    font-style: medium;
+}
+
 /* transition color when switching */
 body {
     transition: background-color 0.5s, color 0.5s;
