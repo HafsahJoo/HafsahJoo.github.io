@@ -88,12 +88,11 @@
             code.
           </p>
           <div class="flex flex-row w-full justify-end items-end">
-            <button
-               @click="navigateToAbout" class="mt-4 p-2 rounded-xl border-2 border-lighterGray dark:bg-gray-600"
-            >
+            <!-- Use router-link for navigation -->
+            <router-link to="/aboutme" class="mt-4 p-2 rounded-xl border-2 border-lighterGray dark:bg-gray-600">
               <img v-if="isDarkMode" src="../assets/icons/darkmore.svg" alt="arrow" class="w-6" />
               <img v-else src="../assets/icons/lightmore.svg" alt="arrow" class="w-6" />
-            </button>
+            </router-link>
           </div>
         </div>
 
@@ -113,8 +112,6 @@ import { inject } from "vue";
 import Header from "./Header.vue";
 const isDarkMode = inject("isDarkMode");
 
-const navigateToAbout = () => {
-  window.location.href = "/aboutme";
-};
+
 
 </script>
