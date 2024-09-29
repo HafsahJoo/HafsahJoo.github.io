@@ -5,8 +5,8 @@
     </div>
     <div class="flex flex-col items-center min-h-screen">
       <div class="mx-10 md:mx-40 max-w-[1200px]">
-        <div class="flex flex-row items-center justify-between">
-          <div class="flex flex-col justify-center sm:mb-20">
+        <div class="flex flex-row items-center justify-between ">
+          <div class="flex flex-col justify-center sm:mb-40">
             <h1
               class="font-lemonmilk font-bold text-xl sm:text-40px mb-4 dark:text-white"
             >
@@ -48,6 +48,21 @@
                   class="w-12 h-12 sm:inline-block mr-4"
                 />
               </a>
+              <a href="mailto:hafsah260103@gmail.com">
+                <img
+                  v-if="isDarkMode"
+                  src="../assets/icons/darkmail.svg"
+                  alt="mail"
+                  class="w-12 h-12 sm:inline-block"
+                />
+                <img
+                  v-else
+                  src="../assets/icons/lightmail.svg"
+                  alt="mail"
+                  class="w-12 h-12 sm:inline-block"
+                />
+              </a>
+
             </div>
           </div>
           <div class="hidden sm:block mr-20">
@@ -64,7 +79,7 @@
           class="my-20 p-8 rounded-xl flex flex-col items-center justify-center border-lighterGray border shadow-xl"
         >
           <h1 class="font-lemonmilk font-medium text-lg dark:text-white mb-2">About me</h1>
-          <p class="font-inter dark:text-lightGray">
+          <p class="font-inter text-center dark:text-lightGray">
             I am a passionate computer science student in my third year at
             Middlesex University, with a keen interest in data science,
             artificial intelligence, and innovative web development. My journey
@@ -72,11 +87,21 @@
             has evolved into a commitment to solve real-world problems through
             code.
           </p>
+          <div class="flex flex-row w-full justify-end items-end">
+            <button
+               @click="navigateToAbout" class="mt-4 p-2 rounded-xl border-2 border-lighterGray dark:bg-gray-600"
+            >
+              <img v-if="isDarkMode" src="../assets/icons/darkmore.svg" alt="arrow" class="w-6" />
+              <img v-else src="../assets/icons/lightmore.svg" alt="arrow" class="w-6" />
+            </button>
+          </div>
         </div>
 
         <div class="flex flex-row items-center justify-center">
-          <h1>Blogs</h1>
-          <div></div>
+          <h1 class="font-lemonmilk font-medium text-lg" >Blogs</h1>
+          <div>
+            
+          </div>
         </div>
       </div>
     </div>
@@ -87,4 +112,9 @@
 import { inject } from "vue";
 import Header from "./Header.vue";
 const isDarkMode = inject("isDarkMode");
+
+const navigateToAbout = () => {
+  window.location.href = "/aboutme";
+};
+
 </script>
