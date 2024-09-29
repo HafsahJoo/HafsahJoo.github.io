@@ -15,10 +15,10 @@
                         When im free, I like to read books, watch movies and play video games.
                     </p>
 
-                    <h3>
-                        contact info
-                    </h3>
-                    
+
+                    <div>
+                        <button @click="openCV" class="cv-button">View My CV</button>
+                    </div>
 
                 </div>
             </div>  
@@ -29,5 +29,9 @@
 <script setup>
     import { ref } from 'vue';
     import Header from "./Header.vue";
-
+    
+    const openCV = () => {
+    const cvPath = 'hafsah_joomun_cv.pdf'; // Use relative or absolute path
+    window.open(cvPath, '_blank');
+    };
 </script>
