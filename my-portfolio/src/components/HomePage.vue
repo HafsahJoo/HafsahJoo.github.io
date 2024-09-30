@@ -23,13 +23,13 @@
                 <!-- Use v-if to toggle between dark and light icons -->
                 <img
                   v-if="isDarkMode"
-                  src="../assets/icons/darklinkedin.svg"
+                  src="@/assets/icons/darklinkedin.svg"
                   alt="linkedin"
                   class="w-12 h-12 sm:inline-block mr-4"
                 />
                 <img
                   v-else
-                  src="../assets/icons/lightlinkedin.svg"
+                  src="@/assets/icons/lightlinkedin.svg"
                   alt="linkedin"
                   class="w-12 h-12 sm:inline-block mr-4"
                 />
@@ -37,13 +37,13 @@
               <a href="#">
                 <img
                   v-if="isDarkMode"
-                  src="../assets/icons/darkgithub.svg"
+                  src="@/assets/icons/darkgithub.svg"
                   alt="github"
                   class="w-12 h-12 sm:inline-block mr-4"
                 />
                 <img
                   v-else
-                  src="../assets/icons/lightgithub.svg"
+                  src="@/assets/icons/lightgithub.svg"
                   alt="github"
                   class="w-12 h-12 sm:inline-block mr-4"
                 />
@@ -51,13 +51,13 @@
               <a href="mailto:hafsah260103@gmail.com">
                 <img
                   v-if="isDarkMode"
-                  src="../assets/icons/darkmail.svg"
+                  src="@/assets/icons/darkmail.svg"
                   alt="mail"
                   class="w-12 h-12 sm:inline-block"
                 />
                 <img
                   v-else
-                  src="../assets/icons/lightmail.svg"
+                  src="@/assets/icons/lightmail.svg"
                   alt="mail"
                   class="w-12 h-12 sm:inline-block"
                 />
@@ -68,10 +68,10 @@
           <div class="hidden sm:block mr-20">
             <img
               v-if="isDarkMode"
-              src="../assets/icons/lightprofile.svg"
+              src="@/assets/icons/lightprofile.svg"
               alt="profile"
             />
-            <img v-else src="../assets/icons/darkprofile.svg" alt="profile" />
+            <img v-else src="@/assets/icons/darkprofile.svg" alt="profile" />
           </div>
         </div>
 
