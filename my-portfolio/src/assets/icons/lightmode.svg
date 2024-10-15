@@ -1,14 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#a)" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10">
-<path d="M5 12H1M23 12h-4M7.05 7.05 4.222 4.222M19.778 19.778 16.95 16.95M7.05 16.95l-2.828 2.828M19.778 4.222 16.95 7.05" stroke-linecap="round"/>
-<path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" fill="#000000" fill-opacity=".16"/>
-<path d="M12 19v4M12 1v4" stroke-linecap="round"/>
-</g>
-<defs>
-<clipPath id="a">
-<path fill="#ffffff" d="M0 0h24v24H0z"/>
-</clipPath>
-</defs>
-</svg>
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_93_3)">
+<mask id="mask0_93_3" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="800" height="800">
+<path d="M0 0H800V800H0V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_93_3)">
+<path d="M166.667 400H33.3334M766.667 400H633.333M235 235L140.733 140.733M659.267 659.266L565 565M235 565L140.733 659.266M659.267 140.733L565 235" stroke="white" stroke-width="50" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M400 533.333C435.362 533.333 469.276 519.286 494.281 494.281C519.286 469.276 533.333 435.362 533.333 400C533.333 364.638 519.286 330.724 494.281 305.719C469.276 280.714 435.362 266.667 400 266.667C364.638 266.667 330.724 280.714 305.719 305.719C280.714 330.724 266.667 364.638 266.667 400C266.667 435.362 280.714 469.276 305.719 494.281C330.724 519.286 364.638 533.333 400 533.333Z" fill="white" fill-opacity="0.16" stroke="white" stroke-width="50" stroke-miterlimit="10"/>
+<path d="M400 633.333V766.667M400 33.3333V166.667" stroke="white" stroke-width="50" stroke-miterlimit="10" stroke-linecap="round"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_93_3">
+<rect width="800" height="800" fill="white"/>
+</clipPath>
+</defs>
+</svg>

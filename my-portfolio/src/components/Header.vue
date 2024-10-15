@@ -7,7 +7,7 @@
             </router-link>
         </div>
         <div class="mx-8">
-            <button class="border-gray-300 rounded border-2 p-1 dark:bg-gray-600" @click="toggleDarkMode">
+            <button class=" p-1 " @click="toggleDarkMode">
                 <img v-if="isDarkMode" src="../assets/icons/lightmode.svg" class="w-6 h-6" alt="Light Mode" />
                 <img v-else src="../assets/icons/darkmode.svg" class="w-6 h-6" alt="Dark Mode" />
             </button>
