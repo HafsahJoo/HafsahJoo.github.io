@@ -1,20 +1,23 @@
 <template>
-    <div>
-      <div class="mb-14 sm:mb-40">
-        <Header />
-      </div>
-      <div class="flex flex-col items-center min-h-screen">
-        <div class="mx-10 md:mx-40 max-w-[1200px]">
-          <div class="flex flex-row items-center justify-between ">
-            <div class="flex flex-col justify-center sm:mb-40">
-              <h1 class="font-lemonmilk font-bold text-xl sm:text-40px mb-4 text-LMBlue dark:text-DMyellow  ">
-                hafsah joomun
-              </h1>
-              <p class="font-inter text-lighterGray">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate minus veritatis voluptates inventore velit perspiciatis molestiae debitis praesentium reiciendis enim, nobis nihil expedita vitae unde!
-                
-              </p>
-              <div class="flex flex-row mt-4">
+  <div>
+    <Header />
+    <!-- use grid everywhere -->
+    <div
+      class="max-w-[1200px] px-8 sm:px-28 mx-auto w-full grid min-h-screen place-items-start"
+    >
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-3 mt-14 sm:mt-28">
+        <div class="col-span-1 sm:col-span-2">
+          <h1
+            class="font-lemonmilk font-bold text-xl sm:text-40px mb-4 text-LMBlue dark:text-DMyellow"
+          >
+            Hafsah joomun
+          </h1>
+          <p class="font-inter text-lighterGray">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+            tempore, neque accusantium placeat numquam a illum odit tempora
+            similique omnis.
+          </p>
+          <div class="flex flex-row mt-4">
                 <!-- links to social media icons -->
                 <a href="https://www.linkedin.com/in/hafsah-joomun/">
                   <!-- Use v-if to toggle between dark and light icons -->
@@ -34,55 +37,73 @@
                   <img v-else src="../assets/icons/lightmail.svg" alt="mail" class="w-12 h-12 sm:inline-block" />
                 </a>
   
-              </div>
-            </div>
-            <div class="hidden sm:block mr-20">
-              <img v-if="isDarkMode" src="../assets/icons/lightprofile.svg" alt="profile" />
-              <img v-else src="../assets/icons/darkprofile.svg" alt="profile" />
-            </div>
           </div>
-  
-          <div class="my-20 p-8 rounded-xl flex flex-col items-center justify-center  border-lighterGray border shadow-xl">
-            <h1 class="font-lemonmilk font-medium text-lg dark:text-white mb-2">About me</h1>
-            <p class="font-inter text-center dark:text-lightGray">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis quod recusandae ab libero.
-              Aut voluptas modi quaerat optio nobis iure non illo, maiores suscipit. Perferendis fugit rem voluptates
-              possimus cupiditate amet quam cumque, ab at facilis ipsam laboriosam? Ex corrupti officia, sed beatae nisi
-              et ab nulla adipisci sunt sint similique aliquam. Deleniti, dolorem nobis? Consequuntur, mollitia quis
-              facere beatae placeat ipsum libero molestiae tenetur commodi. Asperiores quis voluptatibus quae ratione
-              distinctio voluptatem. Odit voluptate nemo perspiciatis modi eos asperiores velit, exercitationem fugiat
-              accusantium perferendis
-              adipisci illo libero tempora fuga a mollitia maxime consequatur temporibus, reprehenderit minima commodi.
-              Id, numquam!
+        </div>
+        <div class="col-span-1 hidden sm:block my-auto">
+          <div v-if="isDarkMode">
+            <img src="../assets/icons/lightprofile.svg" alt="Dark Mode" />
+          </div>
+          <div v-else>
+            <img src="../assets/icons/darkprofile.svg" alt="Light Mode" />
+          </div>
+        </div>
+
+        
+
+        <!-- about me -->
+        <div class="sm:col-span-3  my-10 border border-lighterGray  shadow-xl rounded-xl p-7">
+          <div class="flex flex-col items-center justify-center">
+            <h1 class="mx-auto pb-4 font-lemonmilk font-medium text-lg dark:text-white ">About me</h1>
+            <p class="font-inter text-center dark:text-lightGray mb-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+              expedita saepe non voluptas consequatur libero rerum, impedit ipsa
+              assumenda, dolorem enim tempore explicabo hic voluptatibus mollitia
+              commodi magnam vitae nulla! Officiis iure deleniti explicabo maxime
+              illo aliquid modi. Illum a veniam velit eaque inventore adipisci
+              placeat eum, quos voluptate nihil recusandae consequuntur eligendi,
+              harum aspernatur magnam iure porro, nulla sint quo. Facilis
+              accusantium recusandae voluptate consequatur assumenda consectetur
+              eos! Illum tempora eligendi necessitatibus sapiente rem optio,
+              tempore exercitationem ipsum culpa aut laboriosam delectus! Earum
+              magni, aspernatur in rerum ab quae voluptate, fugiat nobis
+              distinctio fuga ipsa nihil unde? Ipsum, quos.
             </p>
+            
             <div class="flex flex-row w-full justify-end items-end">
-              <!-- Use router-link for navigation -->
               <router-link to="/aboutme" class="mt-4 p-2 rounded-xl border-2 border-lighterGray dark:bg-gray-600">
-                <img v-if="isDarkMode" src="../assets/icons/darkmore.svg" alt="arrow" class="w-6" />
-                <img v-else src="../assets/icons/lightmore.svg" alt="arrow" class="w-6" />
+                  <img v-if="isDarkMode" src="../assets/icons/darkmore.svg" alt="arrow" class="w-6" />
+                  <img v-else src="../assets/icons/lightmore.svg" alt="arrow" class="w-6" />
               </router-link>
             </div>
           </div>
           
-          <h1 class="font-lemonmilk font-medium text-lg text-center">Blogs</h1>
-          <div class="flex flex-row items-center justify-center">
-                <Blog />
 
+        </div>
+
+        <!-- blogs -->
+        <div class="sm:col-span-3">
+          <div class="grid  grid-cols-2 md:grid-cols-3 gap-4 ">
+            <Blog/>
+            <Blog/>
+            <Blog/>
+            <Blog/>
+            <Blog/>
+            <Blog/>
           </div>
         </div>
+        
+        
+
       </div>
-      <Footer />
     </div>
-  </template>
-  
-  <script setup>
-  import { inject } from "vue";
-  import Header from "../components/Header.vue";
-  import Footer from "../components/Footer.vue";
-  import Blog from "../components/Blog.vue";
-  const isDarkMode = inject("isDarkMode");
-  
-  
-  
-  </script>
-  
+    <Footer />
+  </div>
+</template>
+
+<script setup>
+import { inject } from "vue";
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
+import Blog from "../components/BlogCard.vue";
+const isDarkMode = inject("isDarkMode");
+</script>
