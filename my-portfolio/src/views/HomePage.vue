@@ -7,13 +7,12 @@
         <div class="mx-10 md:mx-40 max-w-[1200px]">
           <div class="flex flex-row items-center justify-between ">
             <div class="flex flex-col justify-center sm:mb-40">
-              <h1 class="font-lemonmilk font-bold text-xl sm:text-40px mb-4 dark:text-white">
+              <h1 class="font-lemonmilk font-bold text-xl sm:text-40px mb-4 text-LMBlue dark:text-DMyellow  ">
                 hafsah joomun
               </h1>
               <p class="font-inter text-lighterGray">
-                3rd-year Computer science student passionate about technology and
-                bla bla bla.<br />
-                Please hire me!
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate minus veritatis voluptates inventore velit perspiciatis molestiae debitis praesentium reiciendis enim, nobis nihil expedita vitae unde!
+                
               </p>
               <div class="flex flex-row mt-4">
                 <!-- links to social media icons -->
@@ -43,7 +42,7 @@
             </div>
           </div>
   
-          <div class="my-20 p-8 rounded-xl flex flex-col items-center justify-center border-lighterGray border shadow-xl">
+          <div class="my-20 p-8 rounded-xl flex flex-col items-center justify-center  border-lighterGray border shadow-xl">
             <h1 class="font-lemonmilk font-medium text-lg dark:text-white mb-2">About me</h1>
             <p class="font-inter text-center dark:text-lightGray">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis quod recusandae ab libero.
@@ -64,21 +63,23 @@
               </router-link>
             </div>
           </div>
-  
+          
+          <h1 class="font-lemonmilk font-medium text-lg text-center">Blogs</h1>
           <div class="flex flex-row items-center justify-center">
-            <h1 class="font-lemonmilk font-medium text-lg">Blogs</h1>
-            <div>
-                
-            </div>
+                <Blog />
+
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   </template>
   
   <script setup>
   import { inject } from "vue";
   import Header from "../components/Header.vue";
+  import Footer from "../components/Footer.vue";
+  import Blog from "../components/Blog.vue";
   const isDarkMode = inject("isDarkMode");
   
   

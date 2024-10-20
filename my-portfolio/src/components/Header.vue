@@ -1,5 +1,5 @@
 <template>
-<header class="border-b-2 border-x-0 border-gray-300  dark:bg-black flex flex-row items-center justify-center">
+<header class="border-b-2 border-x-0 border-gray-300  flex flex-row items-center justify-center">
     <div class=" w-full max-w-[1200px] flex flex-row items-center justify-between p-2">
         <div class="mx-8">
             <router-link to="/">

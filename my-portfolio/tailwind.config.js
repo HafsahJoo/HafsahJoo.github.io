@@ -18,6 +18,17 @@ export default {
       colors:{
         lightGray: '#8A8A8A',
         lighterGray: '#878686',
+        LMveryLightBeige:"#FEFAF6",
+        LMlightBeige:"#EADBC8",
+        LMbeige:"#DAC0A3",
+        DMdarkGray:"#222831",
+        DMlightGray:"#393E46",
+        LMBlue:"#102C57",
+        DMyellow:"#FFD369",
+        DMwhite:"#EEEEEE",
+
+
+        
       },
       fontSize: {
         '40px': ['40px', '2.5rem'],
