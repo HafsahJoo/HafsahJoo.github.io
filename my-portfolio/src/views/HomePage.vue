@@ -57,20 +57,13 @@
             <p class="font-inter text-center dark:text-lightGray mb-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
               expedita saepe non voluptas consequatur libero rerum, impedit ipsa
-              assumenda, dolorem enim tempore explicabo hic voluptatibus mollitia
-              commodi magnam vitae nulla! Officiis iure deleniti explicabo maxime
-              illo aliquid modi. Illum a veniam velit eaque inventore adipisci
-              placeat eum, quos voluptate nihil recusandae consequuntur eligendi,
-              harum aspernatur magnam iure porro, nulla sint quo. Facilis
-              accusantium recusandae voluptate consequatur assumenda consectetur
-              eos! Illum tempora eligendi necessitatibus sapiente rem optio,
-              tempore exercitationem ipsum culpa aut laboriosam delectus! Earum
+              assumenda, dolorem enim tempore explicabo hic voluptatibus mollitiarum
               magni, aspernatur in rerum ab quae voluptate, fugiat nobis
               distinctio fuga ipsa nihil unde? Ipsum, quos.
             </p>
             
             <div class="flex flex-row w-full justify-end items-end">
-              <router-link to="/aboutme" class="mt-4 p-2 rounded-xl border-2 border-lighterGray dark:bg-gray-600">
+              <router-link to="/aboutme" class="p-2 rounded-xl border-2 border-lighterGray dark:bg-gray-600">
                   <img v-if="isDarkMode" src="../assets/icons/darkmore.svg" alt="arrow" class="w-6" />
                   <img v-else src="../assets/icons/lightmore.svg" alt="arrow" class="w-6" />
               </router-link>
@@ -82,7 +75,7 @@
 
         <!-- blogs -->
         <div class="sm:col-span-3">
-          <div class="grid  grid-cols-2 md:grid-cols-3 gap-4 ">
+          <div class="grid  grid-cols-1 md:grid-cols-3 gap-4 ">
             <Blog/>
             <Blog/>
             <Blog/>
