@@ -2,14 +2,10 @@
   <div>
     <Header />
     <!-- use grid everywhere -->
-    <div
-      class="max-w-[1200px] px-8 sm:px-28 mx-auto w-full grid min-h-screen place-items-start"
-    >
+    <div class="max-w-[1200px] px-8 sm:px-28 mx-auto w-full grid min-h-screen place-items-start">
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-3 mt-14 sm:mt-28">
         <div class="col-span-1 sm:col-span-2">
-          <h1
-            class="font-lemonmilk font-bold text-xl sm:text-40px mb-4 text-LMBlue dark:text-DMyellow"
-          >
+          <h1 class="font-lemonmilk font-bold text-xl sm:text-40px mb-4 text-LMBlue dark:text-DMyellow">
             Hafsah joomun
           </h1>
           <p class="font-inter text-lighterGray">
@@ -18,25 +14,24 @@
             similique omnis.
           </p>
           <div class="flex flex-row mt-4">
-                <!-- links to social media icons -->
-                <a href="https://www.linkedin.com/in/hafsah-joomun/">
-                  <!-- Use v-if to toggle between dark and light icons -->
-                  <img v-if="isDarkMode" src="../assets/icons/darklinkedin.svg" alt="linkedin"
-                    class="w-12 h-12 sm:inline-block mr-4" />
-                  <img v-else src="../assets/icons/lightlinkedin.svg" alt="linkedin"
-                    class="w-12 h-12 sm:inline-block mr-4" />
-                </a>
-                <a href="#">
-                  <img v-if="isDarkMode" src="../assets/icons/darkgithub.svg" alt="github"
-                    class="w-12 h-12 sm:inline-block mr-4" />
-                  <img v-else src="../assets/icons/lightgithub.svg" alt="github" class="w-12 h-12 sm:inline-block mr-4" />
-                </a>
-                <a href="mailto:hafsah260103@gmail.com">
-                  <img v-if="isDarkMode" src="../assets/icons/darkmail.svg" alt="mail"
-                    class="w-12 h-12 sm:inline-block" />
-                  <img v-else src="../assets/icons/lightmail.svg" alt="mail" class="w-12 h-12 sm:inline-block" />
-                </a>
-  
+            <!-- links to social media icons -->
+            <a href="https://www.linkedin.com/in/hafsah-joomun/">
+              <!-- Use v-if to toggle between dark and light icons -->
+              <img v-if="isDarkMode" src="../assets/icons/darklinkedin.svg" alt="linkedin"
+                class="w-12 h-12 sm:inline-block mr-4" />
+              <img v-else src="../assets/icons/lightlinkedin.svg" alt="linkedin"
+                class="w-12 h-12 sm:inline-block mr-4" />
+            </a>
+            <a href="#">
+              <img v-if="isDarkMode" src="../assets/icons/darkgithub.svg" alt="github"
+                class="w-12 h-12 sm:inline-block mr-4" />
+              <img v-else src="../assets/icons/lightgithub.svg" alt="github" class="w-12 h-12 sm:inline-block mr-4" />
+            </a>
+            <a href="mailto:hafsah260103@gmail.com">
+              <img v-if="isDarkMode" src="../assets/icons/darkmail.svg" alt="mail" class="w-12 h-12 sm:inline-block" />
+              <img v-else src="../assets/icons/lightmail.svg" alt="mail" class="w-12 h-12 sm:inline-block" />
+            </a>
+
           </div>
         </div>
         <div class="col-span-1 hidden sm:block my-auto">
@@ -48,7 +43,7 @@
           </div>
         </div>
 
-        
+
 
         <!-- about me -->
         <div class="sm:col-span-3  my-10 border border-lighterGray  shadow-xl rounded-xl p-7">
@@ -61,31 +56,35 @@
               magni, aspernatur in rerum ab quae voluptate, fugiat nobis
               distinctio fuga ipsa nihil unde? Ipsum, quos.
             </p>
-            
+
             <div class="flex flex-row w-full justify-end items-end">
               <router-link to="/aboutme" class="p-2 rounded-xl border-2 border-lighterGray dark:bg-gray-600">
-                  <img v-if="isDarkMode" src="../assets/icons/darkmore.svg" alt="arrow" class="w-6" />
-                  <img v-else src="../assets/icons/lightmore.svg" alt="arrow" class="w-6" />
+                <img v-if="isDarkMode" src="../assets/icons/darkmore.svg" alt="arrow" class="w-6" />
+                <img v-else src="../assets/icons/lightmore.svg" alt="arrow" class="w-6" />
               </router-link>
             </div>
           </div>
-          
+
 
         </div>
 
         <!-- blogs -->
+        <div>
+          <h1 class="font-lemonmilk font-medium text-lg dark:text-white">Blogs</h1>
+        </div>
         <div class="sm:col-span-3">
           <div class="grid  grid-cols-1 md:grid-cols-3 gap-4 ">
-            <Blog/>
-            <Blog/>
-            <Blog/>
-            <Blog/>
-            <Blog/>
-            <Blog/>
+            <Blog title="Robotic arm playing rock paper scissors"
+              body="This is a robotic arm playing rock paper scissors , it uses gesture detection from media pipe and python"
+              imgpath="/src/assets/blogs/robot.jpg"  page="/blog1" />
+            <!-- <Blog />
+            <Blog /> -->
+
           </div>
         </div>
-        
-        
+
+        <!-- findings -->
+
 
       </div>
     </div>
