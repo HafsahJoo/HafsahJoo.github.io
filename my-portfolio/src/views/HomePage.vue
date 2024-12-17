@@ -75,7 +75,7 @@
           <div class="grid  grid-cols-1 md:grid-cols-3 gap-4 ">
             <Blog title="Robotic arm playing rock paper scissors"
               body="This is a robotic arm playing rock paper scissors , it uses gesture detection from media pipe and python"
-              imgpath="/src/assets/blogs/robot.jpg"  page="/blog1" />
+              imgpath="../assets/blogs/robot.jpg"  page="/blog1" />
             <Blog />
             
 
