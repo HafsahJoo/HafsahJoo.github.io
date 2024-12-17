@@ -48,7 +48,7 @@
         <!-- about me -->
         <div class="sm:col-span-3  my-10 border border-lighterGray  shadow-xl rounded-xl p-7">
           <div class="flex flex-col items-center justify-center">
-            <h1 class="mx-auto pb-4 font-lemonmilk font-medium text-lg dark:text-white ">About me</h1>
+            <h1 class="pb-4 font-lemonmilk font-medium text-lg dark:text-white ">About me</h1>
             <p class="font-inter text-center dark:text-lightGray mb-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
               expedita saepe non voluptas consequatur libero rerum, impedit ipsa
@@ -69,16 +69,15 @@
         </div>
 
         <!-- blogs -->
-        <div>
-          <h1 class="font-lemonmilk font-medium text-lg dark:text-white">Blogs</h1>
-        </div>
+          
         <div class="sm:col-span-3">
+          <h1 class="font-lemonmilk text-lg mx-auto my-6 text-center dark:text-white">Blogs</h1>
           <div class="grid  grid-cols-1 md:grid-cols-3 gap-4 ">
             <Blog title="Robotic arm playing rock paper scissors"
               body="This is a robotic arm playing rock paper scissors , it uses gesture detection from media pipe and python"
               imgpath="/src/assets/blogs/robot.jpg"  page="/blog1" />
-            <!-- <Blog />
-            <Blog /> -->
+            <Blog />
+            
 
           </div>
         </div>
