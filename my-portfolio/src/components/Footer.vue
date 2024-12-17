@@ -1,6 +1,6 @@
 <template>
     <footer
-        class="border-t-2 border-x-0 mt-20 border-gray-300  dark:bg-black flex flex-row items-center justify-center">
+        class="border-t-2 border-x-0 mt-20 border-gray-300  dark:bg-DMdarkGray flex flex-row items-center justify-center">
         <div class=" w-full max-w-[1200px] flex my-2 flex-row items-center justify-between p-2">
             <div class="mx-8">
                 <span class="dark:text-gray-300">© 2024 HAFSAH JOOMUN</span>
