@@ -11,11 +11,12 @@
                         
                         <h1 class="font-lemonmilk font-medium text-xl sm:text-3xl mb-4 dark:text-white">hafsah joomun </h1>
                         <p class="mb-3 dark:text-lightGray">
-                            3rd-year Computer science student passionate about technology and bla bla bla.<br />
-                            Please hire me MO PENA TRAVAY !
+                            Hi! I'm a 3rd year Computer Science student who loves exploring creative and practical tech solutions. I enjoy learning new things, following established practices, and adding my own creative touch.
+                            <br>I worked on projects like software design, robotics, and game development, always looking for challenges that make me think differently.
+                            
                         </p>
                         <p class="mb-5  dark:text-lightGray">
-                            When im free, I like to vey zafr, build legos and play video games.
+                            When I’m not coding, I’m either building with Legos or playing video games.
                         </p>
                         <div class="mt-2">
                             <button @click="openCV" class="rounded-lg  border-red-600 bg-red-600 border p-2  dark:border-red-500 dark:bg-red-500 ">
@@ -127,7 +128,7 @@
     import { ref } from 'vue';
     import Header from "../components/Header.vue";
     const openCV = () => {
-    const cvPath = 'hafsah_joomun_cv.pdf'; // Use relative or absolute path
+    const cvPath = 'hafsah_joomun_cv.pdf'; 
     window.open(cvPath, '_blank');
     };
 </script>
