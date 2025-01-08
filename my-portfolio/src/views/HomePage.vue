@@ -5,7 +5,7 @@
     <div class="max-w-[1200px] px-8 sm:px-28 mx-auto w-full grid min-h-screen place-items-start">
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-3 mt-14 sm:mt-28">
         <div class="col-span-1 sm:col-span-2">
-          <h1 class="font-lemonmilk font-bold text-xl sm:text-40px mb-4 text-LMBlue dark:text-DMyellow">
+          <h1 class="font-lemonmilk font-bold text-2xl sm:text-40px mb-4 text-LMBlue dark:text-DMyellow">
             Hafsah joomun
           </h1>
           <p class="font-inter text-lighterGray text-md sm:text-lg">
