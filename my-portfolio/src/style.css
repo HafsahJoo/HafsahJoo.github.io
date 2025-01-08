@@ -45,6 +45,17 @@
     font-style: medium;
 }
 
+/* Add to your global CSS */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Hide scrollbar on WebKit browsers */
+  }
+  
+.scrollbar-hide {
+-ms-overflow-style: none; /* Hide scrollbar on IE and Edge */
+scrollbar-width: none; /* Hide scrollbar on Firefox */
+}
+  
+
 /* transition color when switching */
 body {
     transition: background-color 0.5s, color 0.5s;

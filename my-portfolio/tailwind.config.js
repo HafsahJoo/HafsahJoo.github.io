@@ -31,7 +31,9 @@ export default {
         
       },
       fontSize: {
+        '32px': ['32px', '2rem'],
         '40px': ['40px', '2.5rem'],
+        
     },
     },
   },

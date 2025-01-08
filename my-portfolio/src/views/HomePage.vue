@@ -5,7 +5,7 @@
     <div class="max-w-[1200px] px-8 sm:px-28 mx-auto w-full grid min-h-screen place-items-start">
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-3 mt-14 sm:mt-28">
         <div class="col-span-1 sm:col-span-2">
-          <h1 class="font-lemonmilk font-bold text-2xl sm:text-40px mb-4 text-LMBlue dark:text-DMyellow">
+          <h1 class="font-lemonmilk font-bold text-32px sm:text-40px mb-4 text-LMBlue dark:text-DMyellow">
             Hafsah joomun
           </h1>
           <p class="font-inter text-lighterGray text-md sm:text-lg">
@@ -68,22 +68,29 @@
         <!-- blogs -->
           
         <div class="sm:col-span-3">
-          <h1 class="font-tommy text-2xl  my-6   dark:text-white">Blogs</h1>
-          <div class="grid  grid-cols-1 md:grid-cols-3 gap-4 ">
-            <Blog title="Robotic arm playing rock paper scissors"
-              body="This is a robotic arm playing rock paper scissors , it uses gesture detection from media pipe and python"
-              imgpath="/assets/blogs/robot.jpg"  page="/blog1" />
-            <Blog />
-            <Blog />
-            
+  <h1 class="font-tommy text-xl sm:text-2xl my-6 dark:text-white">Blogs</h1>
+  
+  <!-- Container for blogs -->
+  <div class="flex overflow-x-auto sm:grid sm:grid-cols-3 sm:overflow-visible gap-4">
+    <Blog
+      title="Robotic arm playing rock paper scissors"
+      body="This is a robotic arm playing rock paper scissors, it uses gesture detection from MediaPipe and Python"
+      imgpath="/assets/blogs/robot.jpg"
+      page="/blog1"
+      class="min-w-full sm:min-w-0"
+    />
+    <Blog class="min-w-full sm:min-w-0" />
+    <Blog class="min-w-full sm:min-w-0" />
+  </div>
 
-          </div>
-          <a>View all > </a>
-        </div>
+  <a class="text-blue-500 hover:underline">View all &gt;</a>
+</div>
+
+
 
         <!-- Projects -->
         <div class="sm:col-span-3">
-          <h1 class="font-tommy text-2xl mx-auto my-6 text-left  dark:text-white">Projects</h1>
+          <h1 class="font-tommy text-xl sm:text-2xl mx-auto my-6 text-left  dark:text-white">Projects</h1>
         </div>
 
 
