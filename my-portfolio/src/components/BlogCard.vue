@@ -1,5 +1,5 @@
 <template>
-    <div class="border rounded-xl border-lightGray h-96 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:scale-105">
+    <div class="border rounded-xl  h-96 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:scale-105">
         <!-- Image Section -->
         <div class="h-1/2 bg-cover bg-center">
             <img :src="imgpath" alt="blog image" class="w-full h-full object-cover" />

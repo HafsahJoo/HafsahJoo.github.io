@@ -45,7 +45,7 @@
 
 
         <!-- about me -->
-        <div class="sm:col-span-3  my-10 border border-lighterGray  shadow-xl rounded-xl p-7">
+        <div class="sm:col-span-3  my-10 border  shadow-xl rounded-xl p-7">
           <div class="flex flex-col items-center justify-center">
             <h1 class="pb-4 font-lemonmilk font-medium text-lg dark:text-white ">About me</h1>
             <p class="font-inter text-center dark:text-lightGray mb-4">
@@ -55,7 +55,7 @@
             </p>
 
             <div class="flex flex-row w-full justify-end items-end">
-              <router-link to="/aboutme" class="p-2 rounded-xl border-2 border-lighterGray dark:bg-gray-600">
+              <router-link to="/aboutme" class="p-2">
                 <img v-if="isDarkMode" src="../assets/icons/darkmore.svg" alt="arrow" class="w-6" />
                 <img v-else src="../assets/icons/lightmore.svg" alt="arrow" class="w-6" />
               </router-link>
@@ -68,20 +68,22 @@
         <!-- blogs -->
           
         <div class="sm:col-span-3">
-          <h1 class="font-lemonmilk text-xl my-6 dark:text-white">Blogs</h1>
-          <div class="flex sm:overflow-x-auto sm:space-x-4 md:grid md:grid-cols-3 md:space-x-0 md:overflow-visible">
+          <h1 class="font-tommy text-2xl  my-6   dark:text-white">Blogs</h1>
+          <div class="grid  grid-cols-1 md:grid-cols-3 gap-4 ">
             <Blog title="Robotic arm playing rock paper scissors"
               body="This is a robotic arm playing rock paper scissors , it uses gesture detection from media pipe and python"
-              imgpath="/assets/blogs/robot.jpg" page="/blog1" />
+              imgpath="/assets/blogs/robot.jpg"  page="/blog1" />
             <Blog />
             <Blog />
+            
+
           </div>
           <a>View all > </a>
         </div>
 
         <!-- Projects -->
         <div class="sm:col-span-3">
-          <h1 class="font-lemonmilk text-lg mx-auto my-6 text-center dark:text-white">Projects</h1>
+          <h1 class="font-tommy text-2xl mx-auto my-6 text-left  dark:text-white">Projects</h1>
         </div>
 
 
