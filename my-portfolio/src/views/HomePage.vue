@@ -8,10 +8,9 @@
           <h1 class="font-lemonmilk font-bold text-xl sm:text-40px mb-4 text-LMBlue dark:text-DMyellow">
             Hafsah joomun
           </h1>
-          <p class="font-inter text-lighterGray">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-            tempore, neque accusantium placeat numquam a illum odit tempora
-            similique omnis.
+          <p class="font-inter text-lighterGray text-md sm:text-lg">
+            A curious mind from Mauritius, passionate about technology, coding, and mathematics. 
+            <br>This is my space to share my work and discoveries.
           </p>
           <div class="flex flex-row mt-4">
             <!-- links to social media icons -->
@@ -50,11 +49,9 @@
           <div class="flex flex-col items-center justify-center">
             <h1 class="pb-4 font-lemonmilk font-medium text-lg dark:text-white ">About me</h1>
             <p class="font-inter text-center dark:text-lightGray mb-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-              expedita saepe non voluptas consequatur libero rerum, impedit ipsa
-              assumenda, dolorem enim tempore explicabo hic voluptatibus mollitiarum
-              magni, aspernatur in rerum ab quae voluptate, fugiat nobis
-              distinctio fuga ipsa nihil unde? Ipsum, quos.
+              Hi, I’m Joomun hafsah, a Computer Science student who loves solving logical problems 
+              and exploring how technology works. <br>Click the arrow to know more about me!
+              
             </p>
 
             <div class="flex flex-row w-full justify-end items-end">
@@ -71,18 +68,23 @@
         <!-- blogs -->
           
         <div class="sm:col-span-3">
-          <h1 class="font-lemonmilk text-lg mx-auto my-6 text-center dark:text-white">Blogs</h1>
-          <div class="grid  grid-cols-1 md:grid-cols-3 gap-4 ">
+          <h1 class="font-lemonmilk text-xl my-6 dark:text-white">Blogs</h1>
+          <div class="flex sm:overflow-x-auto sm:space-x-4 md:grid md:grid-cols-3 md:space-x-0 md:overflow-visible">
             <Blog title="Robotic arm playing rock paper scissors"
               body="This is a robotic arm playing rock paper scissors , it uses gesture detection from media pipe and python"
-              imgpath="/assets/blogs/robot.jpg"  page="/blog1" />
+              imgpath="/assets/blogs/robot.jpg" page="/blog1" />
             <Blog />
-            
-
+            <Blog />
           </div>
+          <a>View all > </a>
         </div>
 
-        <!-- findings -->
+        <!-- Projects -->
+        <div class="sm:col-span-3">
+          <h1 class="font-lemonmilk text-lg mx-auto my-6 text-center dark:text-white">Projects</h1>
+        </div>
+
+
 
 
       </div>
