@@ -16,6 +16,11 @@ const routes = [
     }
     ,
     {
+        path: "/blogs",
+        component: BlogPage,
+    }
+    ,
+    {
         path: "/blog1",
         component: BlogPage,
     },

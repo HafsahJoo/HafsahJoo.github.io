@@ -9,7 +9,7 @@
             Hafsah joomun
           </h1>
           <p class="font-inter text-lighterGray text-md sm:text-lg">
-            A curious mind from Mauritius, passionate about technology, coding, and mathematics. 
+            A curious mind from Mauritius, passionate about technology, coding, and mathematics.
             <br>This is my space to share my work and discoveries.
           </p>
           <div class="flex flex-row mt-4">
@@ -49,9 +49,9 @@
           <div class="flex flex-col items-center justify-center">
             <h1 class="pb-4 font-lemonmilk font-medium text-lg dark:text-white ">About me</h1>
             <p class="font-inter text-center dark:text-lightGray mb-4">
-              Hi, I’m Joomun hafsah, a Computer Science student who loves solving logical problems 
+              Hi, I’m Joomun hafsah, a Computer Science student who loves solving logical problems
               and exploring how technology works. <br>Click the arrow to know more about me!
-              
+
             </p>
 
             <div class="flex flex-row w-full justify-end items-end">
@@ -66,31 +66,39 @@
         </div>
 
         <!-- blogs -->
-          
-        <div class="sm:col-span-3">
-  <h1 class="font-tommy text-xl sm:text-2xl my-6 dark:text-white">Blogs</h1>
-  
-  <!-- Container for blogs -->
-  <div class="flex overflow-x-auto sm:grid sm:grid-cols-3 sm:overflow-visible gap-4">
-    <Blog
-      title="Robotic arm playing rock paper scissors"
-      body="This is a robotic arm playing rock paper scissors, it uses gesture detection from MediaPipe and Python"
-      imgpath="/assets/blogs/robot.jpg"
-      page="/blog1"
-      class="min-w-full sm:min-w-0"
-    />
-    <Blog class="min-w-full sm:min-w-0" />
-    <Blog class="min-w-full sm:min-w-0" />
-  </div>
 
-  <a class="text-blue-500 hover:underline">View all &gt;</a>
-</div>
+        <div class="  sm:col-span-3">
+          <h1 class="font-tommy text-xl sm:text-2xl my-6 dark:text-white">Blogs</h1>
+
+          <!-- Container for blogs -->
+          <div class=" flex overflow-x-auto sm:grid sm:grid-cols-3 sm:overflow-visible gap-4 ">
+            <Blog title="Robotic arm playing rock paper scissors"
+              body="This is a robotic arm playing rock paper scissors, it uses gesture detection from MediaPipe and Python"
+              imgpath="/assets/blogs/robot.jpg" page="/blog1" class="min-w-full sm:min-w-0" />
+            <Blog class="min-w-full sm:min-w-0" />
+            <Blog class="min-w-full sm:min-w-0" />
+          </div>
+
+        <!-- add text to the left -->
+          <router-link to="/blogs" class="text-blue-500 hover:underline block mt-4 text-right ">
+            View all &gt;</router-link>
+
+        </div>
 
 
 
         <!-- Projects -->
         <div class="sm:col-span-3">
           <h1 class="font-tommy text-xl sm:text-2xl mx-auto my-6 text-left  dark:text-white">Projects</h1>
+
+          <!-- Container for projects -->
+          <!-- <div class="flex overflow-x-auto sm:grid sm:grid-cols-3 sm:overflow-visible gap-4">
+            <Blog title="Robotic arm playing rock paper scissors"
+              body="This is a robotic arm playing rock paper scissors, it uses gesture detection from MediaPipe and Python"
+              imgpath="/assets/blogs/robot.jpg" page="/blog1" class="min-w-full sm:min-w-0" />
+            <Blog class="min-w-full sm:min-w-0" />
+            <Blog class="min-w-full sm:min-w-0" />
+          </div> -->
         </div>
 
 
