@@ -4,6 +4,10 @@ import ProjectPage from "../views/ProjectPage.vue";
     // import BlogPage from "../views/BlogPage.vue";
 import BlogPage1 from "../views/BlogPage1.vue";
 import AboutmePage from "../views/AboutmePage.vue";
+import ProjectPage1 from "../views/ProjectPage1.vue";   
+import ProjectPage2 from "../views/ProjectPage2.vue";
+import ProjectPage3 from "../views/ProjectPage3.vue";
+import ProjectPage4 from "../views/ProjectPage4.vue";
 
 const routes = [
     {
@@ -16,6 +20,22 @@ const routes = [
         component: ProjectPage,
     }
     ,
+    {
+        path:"/project1",
+        component: ProjectPage1,
+    },
+    {
+        path:"/project2",
+        component: ProjectPage2,
+    },
+    {
+        path:"/project3",
+        component: ProjectPage3,
+    },
+    {
+        path:"/project4",
+        component: ProjectPage4,
+    },
     {
         path: "/blogs",
         component: BlogPage1,
