@@ -23,7 +23,6 @@
 <script setup>
 
 import AboutmePage from "../views/AboutmePage.vue";
-import Blogs from "../views/BlogPage.vue";
 
 
 </script>
