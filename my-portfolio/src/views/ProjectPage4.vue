@@ -1,182 +1,138 @@
 <template>
-    <div>
-      <Header />
-      <!-- Main content container with consistent styling from homepage -->
-      <div class="max-w-[1200px] px-8 sm:px-28 mx-auto w-full grid min-h-screen place-items-start">
-        <div class="grid grid-cols-1 gap-6 w-full mt-14 sm:mt-20">
-          
-          <!-- Blog navigation and date -->
-          <div class="flex justify-between items-center w-full mb-4">
-            <router-link to="/" class="text-LMBlue dark:text-DMyellow hover:underline flex items-center">
-              <span class="mr-2">←</span> Back to home
-            </router-link>
-            <span class="text-lighterGray text-sm">Published: June 15, 2023</span>
-          </div>
-          
-          <!-- Blog title -->
-          <h1 class="font-lemonmilk font-bold text-26px sm:text-36px mb-4 text-LMBlue dark:text-DMyellow drop-shadow-md">
-            Robotic arm playing rock paper scissors
-          </h1>
-          
-          <!-- Featured image with enhanced styling -->
-          <div class="w-full h-auto mb-8 overflow-hidden shadow-lg">
-            <img src="/assets/blogs/robot.jpg" alt="Robotic arm playing rock paper scissors" 
-                 class="w-full h-auto object-cover" />
-          </div>
-          
-          <!-- Blog content -->
-          <div class="font-inter text-gray-800 dark:text-lightGray leading-relaxed space-y-6">
-            <!-- Introduction -->
-            <p>
-              This is a robotic arm playing rock paper scissors. It uses gesture detection from MediaPipe and Python to recognize hand gestures and respond with its own moves.
-            </p>
-            
-            <!-- Project overview section -->
-            <div class="border border-gray-200 dark:border-gray-700 shadow-lg rounded-xl p-8 bg-white dark:bg-gray-800">
-              <h2 class="font-lemonmilk text-xl mb-4 text-LMBlue dark:text-DMyellow">Project Overview</h2>
-              <p class="mb-4">
-                I built this project to explore the intersection of computer vision and robotics. The system uses:
-              </p>
-              <ul class="list-disc pl-6 space-y-2">
-                <li>MediaPipe for real-time hand gesture recognition</li>
-                <li>Python for the backend processing and decision logic</li>
-                <li>A 3D-printed robotic arm with 5 degrees of freedom</li>
-                <li>Arduino for controlling the servos in the robotic arm</li>
-              </ul>
-            </div>
-            
-            <!-- How it works section -->
-            <h2 class="font-lemonmilk text-xl mt-8 mb-4 text-LMBlue dark:text-DMyellow">How It Works</h2>
-            <p>
-              The system operates through a simple but effective pipeline:
-            </p>
-            <ol class="list-decimal pl-6 space-y-2 mt-4">
-              <li>A webcam captures video input of the player's hand</li>
-              <li>MediaPipe processes the video stream to detect hand landmarks</li>
-              <li>Custom Python algorithms classify the hand gesture as rock, paper, or scissors</li>
-              <li>The system randomly selects its own move</li>
-              <li>The Arduino-controlled robotic arm physically forms the corresponding gesture</li>
-              <li>The winner is determined following standard rock-paper-scissors rules</li>
-            </ol>
-            
-            <!-- Technical challenges section -->
-            <div class="border border-gray-200 dark:border-gray-700 shadow-lg rounded-xl p-8 bg-white dark:bg-gray-800 mt-8">
-              <h2 class="font-lemonmilk text-xl mb-4 text-LMBlue dark:text-DMyellow">Technical Challenges</h2>
-              <p class="mb-4">
-                Building this system presented several interesting challenges:
-              </p>
-              <ul class="list-disc pl-6 space-y-2">
-                <li>Ensuring reliable gesture recognition under varying lighting conditions</li>
-                <li>Programming natural-looking movements for the robotic arm</li>
-                <li>Optimizing the processing pipeline to minimize latency</li>
-                <li>Designing finger mechanisms that could accurately form all three gestures</li>
-              </ul>
-            </div>
-            
-            <!-- Code snippet section -->
-            <h2 class="font-lemonmilk text-xl mt-8 mb-4 text-LMBlue dark:text-DMyellow">Code Implementation</h2>
-            <p class="mb-4">
-              Here's a simplified version of the gesture recognition algorithm:
-            </p>
-            <div class="bg-gray-100 dark:bg-gray-900 p-4 rounded-md overflow-x-auto">
-              <pre class="text-sm"><code>
-  # Sample Python code for gesture recognition
-  import mediapipe as mp
-  import cv2
-  
-  # Initialize MediaPipe Hands
-  mp_hands = mp.solutions.hands
-  hands = mp_hands.Hands(static_image_mode=False, max_num_hands=1, min_detection_confidence=0.7)
-  
-  def detect_gesture(frame):
-      # Convert the BGR image to RGB
-      rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-      
-      # Process the frame and detect hands
-      results = hands.process(rgb_frame)
-      
-      if results.multi_hand_landmarks:
-          landmarks = results.multi_hand_landmarks[0].landmark
-          
-          # Get finger positions
-          thumb_tip = landmarks[mp_hands.HandLandmark.THUMB_TIP]
-          index_tip = landmarks[mp_hands.HandLandmark.INDEX_FINGER_TIP]
-          middle_tip = landmarks[mp_hands.HandLandmark.MIDDLE_FINGER_TIP]
-          ring_tip = landmarks[mp_hands.HandLandmark.RING_FINGER_TIP]
-          pinky_tip = landmarks[mp_hands.HandLandmark.PINKY_TIP]
-          wrist = landmarks[mp_hands.HandLandmark.WRIST]
-          
-          # Check for rock (closed fist)
-          if all_fingers_closed(thumb_tip, index_tip, middle_tip, ring_tip, pinky_tip, wrist):
-              return "rock"
-              
-          # Check for paper (open hand)
-          elif all_fingers_open(thumb_tip, index_tip, middle_tip, ring_tip, pinky_tip, wrist):
-              return "paper"
-              
-          # Check for scissors (index and middle extended)
-          elif scissors_position(thumb_tip, index_tip, middle_tip, ring_tip, pinky_tip, wrist):
-              return "scissors"
-              
-      return "unknown"
-              </code></pre>
-            </div>
-            
-            <!-- Results and future work -->
-            <h2 class="font-lemonmilk text-xl mt-8 mb-4 text-LMBlue dark:text-DMyellow">Results and Future Work</h2>
-            <p>
-              The current system achieves a gesture recognition accuracy of approximately 95% under good 
-              lighting conditions. Response time is approximately 200ms from gesture to robot movement.
-            </p>
-            <p class="mt-4">
-              For future iterations, I'm planning to:
-            </p>
-            <ul class="list-disc pl-6 space-y-2 mt-2">
-              <li>Add a display to show the score and game history</li>
-              <li>Improve the arm's movement speed and fluidity</li>
-              <li>Add an optional "expert mode" where the system can detect and exploit patterns in human play</li>
-              <li>Create a more compact version that could be integrated into educational settings</li>
-            </ul>
-            
-            <!-- Conclusion -->
-            <p class="mt-8">
-              This project demonstrates how even simple computer vision techniques can create engaging 
-              interactive experiences. The combination of MediaPipe's accuracy and the physical presence 
-              of the robotic arm creates a unique gameplay experience that bridges the digital and physical worlds.
-            </p>
-            <p class="mt-4">
-              If you're interested in learning more about this project or have suggestions for improvements, 
-              feel free to contact me using any of the social links on my homepage!
-            </p>
-          </div>
-          
-          <!-- Share and contact section -->
-          <div class="border-t border-gray-200 dark:border-gray-700 pt-6 mt-10 w-full">
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
-              <div>
-                <h3 class="font-lemonmilk text-lg text-LMBlue dark:text-DMyellow mb-2">Share this project</h3>
-                <div class="flex space-x-4">
-                  <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-LMBlue dark:hover:text-DMyellow">Twitter</a>
-                  <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-LMBlue dark:hover:text-DMyellow">LinkedIn</a>
-                  <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-LMBlue dark:hover:text-DMyellow">Facebook</a>
-                </div>
-              </div>
-              <router-link to="/blogs" class="mt-4 sm:mt-0 text-LMBlue dark:text-DMyellow hover:underline">
-                View more blogs →
-              </router-link>
-            </div>
-          </div>
+  <div>
+    <Header />
+    <!-- Main content container with consistent styling from homepage -->
+    <div class="max-w-[1200px] px-8 sm:px-28 mx-auto w-full grid min-h-screen place-items-start">
+      <div class="grid grid-cols-1 gap-6 w-full mt-14 sm:mt-20">
+        
+        <!-- Blog navigation and date -->
+        <div class="flex justify-between items-center w-full mb-4">
+          <router-link to="/" class="text-LMBlue dark:text-DMyellow hover:underline flex items-center">
+            <span class="mr-2">←</span> Back to home
+          </router-link>
+          <span class="text-lighterGray text-sm">Published: February 15, 2023</span>
         </div>
+        
+        <!-- Project title -->
+        <h1 class="font-lemonmilk font-bold text-32px sm:text-44px mb-6 text-LMBlue dark:text-DMyellow drop-shadow-md">
+          Classic Tetris Game
+        </h1>
+        
+        <!-- Featured image with smaller size -->
+        <div class="w-full max-w-2xl mx-auto h-auto mb-8 overflow-hidden shadow-lg rounded-xl">
+          <img src="/assets/tetris2.png" alt="Tetris Game Screenshot" 
+               class="w-full h-auto object-cover" />
+        </div>
+        
+        <!-- Project content -->
+        <div class="font-inter text-gray-800 dark:text-lightGray leading-relaxed space-y-6">
+          <!-- Introduction -->
+          <p>
+            This project is a faithful recreation of the classic Tetris game using HTML, CSS, and JavaScript. It captures the nostalgic feel of the original while incorporating modern web technologies for smooth gameplay and responsive design.
+          </p>
+          
+          <!-- Project overview section -->
+          <div class="border border-gray-200 dark:border-gray-700 shadow-lg rounded-xl p-8 bg-white dark:bg-gray-800">
+            <h2 class="font-lemonmilk text-xl mb-4 text-LMBlue dark:text-DMyellow">Game Features</h2>
+            
+            <div class="space-y-4">
+              <div>
+                <h3 class="font-lemonmilk text-lg text-gray-800 dark:text-white mb-2">Authentic Gameplay</h3>
+                <p>
+                  The game faithfully reproduces the classic Tetris experience with accurate piece movements, rotations, and line-clearing mechanics. Players navigate falling tetrominos to create complete rows which then disappear, earning points.
+                </p>
+              </div>
+              
+              <div>
+                <h3 class="font-lemonmilk text-lg text-gray-800 dark:text-white mb-2">Score Tracking</h3>
+                <p>
+                  A real-time scoring system keeps track of points earned through line clears, with bonuses for clearing multiple lines simultaneously. The game also tracks the current level, which increases the falling speed of pieces as you progress.
+                </p>
+              </div>
+              
+              <div>
+                <h3 class="font-lemonmilk text-lg text-gray-800 dark:text-white mb-2">User Accounts</h3>
+                <p>
+                  Players can create accounts to save their high scores and track their progress over time. The login system securely stores user data and allows for personalized gameplay experiences.
+                </p>
+              </div>
+              
+              <div>
+                <h3 class="font-lemonmilk text-lg text-gray-800 dark:text-white mb-2">Responsive Controls</h3>
+                <p>
+                  The game features keyboard controls for desktop play, with left/right arrows to move pieces, up arrow to rotate, and down arrow to speed up descent. The space bar allows for an instant drop of the current piece.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project screenshots -->
+          <h2 class="font-lemonmilk text-xl mt-8 mb-4 text-LMBlue dark:text-DMyellow">Game Screens</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h3 class="font-lemonmilk text-lg text-gray-800 dark:text-white mb-3">Sign-up Screen</h3>
+              <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg overflow-hidden shadow-md">
+                <img src="/assets/tetris1.png" alt="Tetris Sign-up Screen" class="w-full h-auto rounded" />
+              </div>
+              <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">User registration page with clean design and simple form fields.</p>
+            </div>
+            
+            <div>
+              <h3 class="font-lemonmilk text-lg text-gray-800 dark:text-white mb-3">Gameplay Screen</h3>
+              <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg overflow-hidden shadow-md">
+                <img src="/assets/tetris2.png" alt="Tetris Gameplay Screen" class="w-full h-auto rounded" />
+              </div>
+              <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Main gameplay area showing falling blocks, score tracking, and next piece preview.</p>
+            </div>
+          </div>
+          
+          <!-- Technical Implementation -->
+          <div class="border border-gray-200 dark:border-gray-700 shadow-lg rounded-xl p-8 bg-white dark:bg-gray-800">
+            <h2 class="font-lemonmilk text-xl mb-4 text-LMBlue dark:text-DMyellow">Technical Implementation</h2>
+            
+            <div class="space-y-4">
+              <div>
+                <h3 class="font-lemonmilk text-lg text-gray-800 dark:text-white mb-2">HTML Canvas</h3>
+                <p>
+                  The game board is built using HTML Canvas, which allows for efficient rendering of game elements and smooth animations. The canvas is updated on each frame to reflect the current state of the game.
+                </p>
+              </div>
+              
+              <div>
+                <h3 class="font-lemonmilk text-lg text-gray-800 dark:text-white mb-2">JavaScript Game Logic</h3>
+                <p>
+                  The core game mechanics are powered by JavaScript, handling piece generation, movement calculations, collision detection, and line clearing logic. The game loop uses requestAnimationFrame for smooth performance.
+                </p>
+              </div>
+              
+              <div>
+                <h3 class="font-lemonmilk text-lg text-gray-800 dark:text-white mb-2">CSS Styling</h3>
+                <p>
+                  Custom CSS provides the nostalgic look and feel of classic Tetris while ensuring the interface is clean and modern. Responsive design principles ensure the game is playable on various screen sizes.
+                </p>
+              </div>
+              
+            </div>
+          </div>
+          
+         
+          
+
+        </div>
+        
+        
       </div>
-      
-      <!-- Footer added for consistency -->
-      <Footer class="mt-16" />
     </div>
-  </template>
-  
-  <script setup>
-  import { inject } from "vue";
-  import Header from "../components/Header.vue";
-  import Footer from "../components/Footer.vue";
-  const isDarkMode = inject("isDarkMode");
-  </script>
+    
+    <!-- Footer added for consistency -->
+    <Footer class="mt-16" />
+  </div>
+</template>
+
+<script setup>
+import { inject } from "vue";
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
+const isDarkMode = inject("isDarkMode");
+</script>
