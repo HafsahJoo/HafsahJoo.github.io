@@ -54,7 +54,7 @@
             <div class="p-6">
               <div class="flex justify-between items-start mb-2">
                 <h2 class="font-lemonmilk font-medium text-xl text-LMBlue dark:text-DMyellow">Pacman Game</h2>
-                <span class="text-gray-500 dark:text-gray-400 text-sm">2022</span>
+                <span class="text-gray-500 dark:text-gray-400 text-sm">2023</span>
               </div>
               <p class="font-inter text-gray-700 dark:text-lightGray mb-4">
                 An enhanced version of the classic Pac-Man game, along with a flappy bird mini game using Python
@@ -77,7 +77,7 @@
             <div class="p-6">
               <div class="flex justify-between items-start mb-2">
                 <h2 class="font-lemonmilk font-medium text-xl text-LMBlue dark:text-DMyellow">Vending Machine Robot</h2>
-                <span class="text-gray-500 dark:text-gray-400 text-sm">2022</span>
+                <span class="text-gray-500 dark:text-gray-400 text-sm">2024</span>
               </div>
               <p class="font-inter text-gray-700 dark:text-lightGray mb-4">
                 A vending machine built using Arduino, Esp32 cam along with QR code detection.
@@ -101,7 +101,7 @@
             <div class="p-6">
               <div class="flex justify-between items-start mb-2">
                 <h2 class="font-lemonmilk font-medium text-xl text-LMBlue dark:text-DMyellow">OIA Robot</h2>
-                <span class="text-gray-500 dark:text-gray-400 text-sm">2021</span>
+                <span class="text-gray-500 dark:text-gray-400 text-sm">2024</span>
               </div>
               <p class="font-inter text-gray-700 dark:text-lightGray mb-4">
                 A robotic arm for playing rock paper scissors.

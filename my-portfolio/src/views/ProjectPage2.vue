@@ -10,7 +10,6 @@
             <router-link to="/" class="text-LMBlue dark:text-DMyellow hover:underline flex items-center">
               <span class="mr-2">←</span> Back to home
             </router-link>
-            <span class="text-lighterGray text-sm">Published: October 12, 2023</span>
           </div>
           
           <!-- Project title -->
