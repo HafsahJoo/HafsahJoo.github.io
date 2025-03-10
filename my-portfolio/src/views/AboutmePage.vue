@@ -437,18 +437,6 @@
                                                     class="px-2 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-xs font-medium text-gray-700 dark:text-gray-200">Firebase</span>
                                             </div>
                                         </div>
-                                        <div class="p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                                            <span
-                                                class="font-lemonmilk text-LMBlue dark:text-DMyellow block mb-2 text-sm">Specialized</span>
-                                            <div class="flex flex-wrap gap-2">
-                                                <span
-                                                    class="px-2 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-xs font-medium text-gray-700 dark:text-gray-200">Robotics</span>
-                                                <span
-                                                    class="px-2 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-xs font-medium text-gray-700 dark:text-gray-200">Blockchain</span>
-                                                <span
-                                                    class="px-2 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-xs font-medium text-gray-700 dark:text-gray-200">Bash/Batch</span>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
