@@ -342,6 +342,8 @@
                                                         <span
                                                             class="px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200">Power BI</span>
                                                         <span
+                                                            class="px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200">Informatica</span>
+                                                        <span
                                                             class="px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200">Talend ETL</span>
                                                         <span
                                                             class="px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200">Bash/Batch</span>
@@ -498,7 +500,7 @@
                                             </h3>
                                             <span
                                                 class="px-2 py-1 bg-LMBlue/10 dark:bg-DMyellow/10 text-LMBlue dark:text-DMyellow rounded-full text-xs sm:text-sm font-medium mt-1 sm:mt-0 inline-block">
-                                                2022-2023 | Part time
+                                                2021-2023 | Part time
                                             </span>
                                         </div>
                                         <ul
