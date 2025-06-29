@@ -8,6 +8,7 @@ import ProjectPage1 from "../views/ProjectPage1.vue";
 import ProjectPage2 from "../views/ProjectPage2.vue";
 import ProjectPage3 from "../views/ProjectPage3.vue";
 import ProjectPage4 from "../views/ProjectPage4.vue";
+import GamingPage from "../views/GamingPage.vue";
 
 const routes = [
     {
@@ -48,6 +49,11 @@ const routes = [
     {
         path: "/aboutme",
         component: AboutmePage,
+    },
+    {
+        path: "/gaming",
+        component: GamingPage,
+
     }
 ];
 
