@@ -1,17 +1,16 @@
 <template>
-    <footer
-        class="border-t-2 border-x-0 mt-20 border-gray-300 dark:border-gray-700 flex flex-row items-center justify-center">
-        <div class="w-full max-w-[1200px] flex my-2 flex-row items-center justify-between p-2">
-            <div class="mx-8">
-                <span class="text-gray-600 dark:text-gray-300">© 2024 HAFSAH JOOMUN</span>
+    <footer class="border-t-2 border-sand/30 dark:border-gray-600 mt-12 sm:mt-20 flex flex-row items-center justify-center">
+        <div class="w-full max-w-[1200px] px-8 sm:px-28 flex flex-col sm:flex-row items-center justify-between py-3 sm:py-6 space-y-2 sm:space-y-0">
+            <div>
+                <span class="font-pixel text-text-secondary dark:text-gray-300 text-xs uppercase tracking-wider">© 2025 HJ</span>
             </div>
-            <div class="mx-8 flex flex-row">
+            <div class="flex flex-row items-center space-x-3 sm:space-x-4">
                 <router-link to="/aboutme">
-                    <a class="text-LMBlue dark:text-DMyellow font-light hover:underline">About me</a>
+                    <a class="font-pixel text-xs uppercase tracking-wider text-mocha dark:text-DMyellow hover:text-sage dark:hover:text-amber-300 transition-colors duration-300">About</a>
                 </router-link>
-                <span class="text-gray-500 dark:text-gray-400 font-light mx-2">|</span>
+                <span class="text-sand dark:text-gray-600">|</span>
                 <router-link to="/blogs">
-                    <a class="text-LMBlue dark:text-DMyellow font-light hover:underline">Blogs</a>
+                    <a class="font-pixel text-xs uppercase tracking-wider text-mocha dark:text-DMyellow hover:text-sage dark:hover:text-amber-300 transition-colors duration-300">Blogs</a>
                 </router-link>
             </div>
         </div>

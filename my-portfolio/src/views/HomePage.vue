@@ -1,163 +1,337 @@
 <template>
-  <div class="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+  <div class="min-h-screen bg-LMveryLightBeige dark:bg-black transition-colors duration-500">
     <Header />
     
-    <!-- Subtle background pattern -->
-    <div class="absolute inset-0 bg-grid-pattern opacity-5 dark:opacity-3 pointer-events-none"></div>
+    <!-- Enhanced background with subtle patterns for both light and dark modes -->
+    <div class="fixed inset-0 bg-gradient-to-br from-LMlightBeige/20 via-transparent to-LMbeige/10 dark:from-gray-800/30 dark:via-transparent dark:to-gray-700/10 pointer-events-none"></div>
+    <div class="fixed inset-0 bg-grid-pattern-light dark:bg-grid-pattern-dark opacity-3 dark:opacity-20 pointer-events-none"></div>
+    
     
     <!-- Main content with enhanced visual elements -->
     <div class="max-w-[1200px] px-8 sm:px-28 mx-auto w-full grid min-h-screen place-items-start relative z-10">
-      <div class="grid grid-cols-1 gap-8 sm:grid-cols-3 mt-14 sm:mt-28">
+      <div class="grid grid-cols-1 gap-12 mt-14 sm:mt-28">
         
-        <!-- Profile section with refined styling and adjusted padding -->
-        <div class="col-span-1 sm:col-span-2 relative pl-6">
-          <!-- Enhanced decorative accent element aligned with About Me box -->
-          <div class="absolute left-0 top-0 h-full w-2 bg-gradient-to-b from-LMBlue via-purple-500 to-indigo-300 dark:from-DMyellow dark:via-amber-500 dark:to-amber-300 rounded-full opacity-80 hidden sm:block"></div>
+        <!-- Profile section with full width like terminals -->
+        <div class="col-span-1 grid grid-cols-1 sm:grid-cols-3 gap-8 items-center">
+          <!-- Text content -->
+          <div class="col-span-1 sm:col-span-2 relative">
+          <!-- Enhanced name with better typography -->
+          <div class="relative">
+              <h1 class="font-pixel font-normal text-2xl sm:text-3xl mb-6 text-mocha dark:text-DMyellow drop-shadow-lg relative z-10 uppercase">
+              Hafsah joomun
+            </h1>
+          </div>
           
-          <h1 class="font-lemonmilk font-bold text-32px sm:text-40px mb-6 text-LMBlue dark:text-DMyellow drop-shadow-md">
-            Hafsah joomun
-          </h1>
-          <p class="font-inter text-lighterGray text-md sm:text-lg leading-relaxed">
-            A curious mind from Mauritius, passionate about technology, coding, and mathematics.
-            <br>This is my space to share my work and discoveries.
-          </p>
+          <!-- Enhanced description with better styling -->
+          <div class="relative">
+              <p class="font-inter text-text-secondary text-md sm:text-lg leading-relaxed mb-4 relative z-10">
+              A curious mind from Mauritius, passionate about technology, coding, and mathematics.
+            </p>
+              <p class="font-inter text-text-secondary text-md sm:text-lg leading-relaxed relative z-10">
+              This is my space to share my work and discoveries.
+            </p>
+            <!-- Decorative underline -->
+              <div class="w-24 h-0.5 bg-gradient-to-r from-mocha dark:from-DMyellow to-sage dark:to-purple-900 mt-4 rounded-full"></div>
+          </div>
           
-          <!-- Social media links with enhanced styling -->
-          <div class="flex flex-row mt-8">
+            <!-- Clean social media icons -->
+            <div class="flex flex-row mt-8 space-x-8">
             <a href="https://www.linkedin.com/in/hafsah-joomun/" 
-               class="transform transition-all duration-300 hover:scale-110 mr-6 bg-white dark:bg-gray-800 p-3 rounded-full shadow-md hover:shadow-lg">
-              <img v-if="isDarkMode" src="../assets/icons/darklinkedin.svg" alt="linkedin" class="w-8 h-8" />
-              <img v-else src="../assets/icons/lightlinkedin.svg" alt="linkedin" class="w-8 h-8" />
+                 class="group transform transition-all duration-300 hover:scale-125">
+                <img v-if="isDarkMode" src="../assets/icons/darklinkedin.svg" alt="linkedin" class="w-12 h-12 transition-transform duration-300" />
+                <img v-else src="../assets/icons/lightlinkedin.svg" alt="linkedin" class="w-12 h-12 transition-transform duration-300" />
             </a>
             <a href="#" 
-               class="transform transition-all duration-300 hover:scale-110 mr-6 bg-white dark:bg-gray-800 p-3 rounded-full shadow-md hover:shadow-lg">
-              <img v-if="isDarkMode" src="../assets/icons/darkgithub.svg" alt="github" class="w-8 h-8" />
-              <img v-else src="../assets/icons/lightgithub.svg" alt="github" class="w-8 h-8" />
+                 class="group transform transition-all duration-300 hover:scale-125">
+                <img v-if="isDarkMode" src="../assets/icons/darkgithub.svg" alt="github" class="w-12 h-12 transition-transform duration-300" />
+                <img v-else src="../assets/icons/lightgithub.svg" alt="github" class="w-12 h-12 transition-transform duration-300" />
             </a>
             <a href="mailto:hafsah260103@gmail.com" 
-               class="transform transition-all duration-300 hover:scale-110 bg-white dark:bg-gray-800 p-3 rounded-full shadow-md hover:shadow-lg">
-              <img v-if="isDarkMode" src="../assets/icons/darkmail.svg" alt="mail" class="w-8 h-8" />
-              <img v-else src="../assets/icons/lightmail.svg" alt="mail" class="w-8 h-8" />
+                 class="group transform transition-all duration-300 hover:scale-125">
+                <img v-if="isDarkMode" src="../assets/icons/darkmail.svg" alt="mail" class="w-12 h-12 transition-transform duration-300" />
+                <img v-else src="../assets/icons/lightmail.svg" alt="mail" class="w-12 h-12 transition-transform duration-300" />
             </a>
           </div>
         </div>
         
-        <!-- Profile picture with subtle floating animation but no background -->
-        <div class="col-span-1 hidden sm:block my-auto">
-          <div v-if="isDarkMode" class="transition-transform hover:scale-105 animate-float">
+          <!-- Profile picture -->
+          <div class="col-span-1 hidden sm:block">
+          <div v-if="isDarkMode" class="transition-transform hover:scale-105">
             <img src="../assets/icons/lightprofile.svg" alt="Dark Mode" class="w-full h-auto" />
           </div>
-          <div v-else class="transition-transform hover:scale-105 animate-float">
+          <div v-else class="transition-transform hover:scale-105">
             <img src="../assets/icons/darkprofile.svg" alt="Light Mode" class="w-full h-auto" />
+            </div>
           </div>
         </div>
         
-        <!-- About me section with enhanced styling (without dot patterns) -->
-        <div class="sm:col-span-3 my-10 border border-gray-200 dark:border-gray-700 shadow-xl rounded-xl bg-white dark:bg-gray-800 transition-all hover:shadow-2xl relative overflow-hidden group">
-          <!-- Decorative background elements -->
-          <div class="absolute -right-16 -bottom-16 w-64 h-64 bg-gradient-to-tr from-LMBlue/10 to-purple-500/5 dark:from-DMyellow/10 dark:to-amber-500/5 rounded-full transform group-hover:scale-110 transition-transform duration-700"></div>
-          <div class="absolute -left-16 -top-16 w-64 h-64 bg-gradient-to-br from-LMBlue/10 to-purple-500/5 dark:from-DMyellow/10 dark:to-amber-500/5 rounded-full transform group-hover:scale-110 transition-transform duration-700"></div>
-          
-          <!-- Content container with padding -->
-          <div class="relative z-10 p-10">
-            <div class="flex flex-col items-center justify-center">
-              <!-- Title with decorative elements -->
-              <div class="relative mb-8">
-                <h1 class="font-lemonmilk font-medium text-xl text-LMBlue dark:text-DMyellow relative z-10">About me</h1>
-                <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-LMBlue to-purple-500 dark:from-DMyellow dark:to-amber-500 rounded-full"></div>
+        <!-- Clean Terminal About Me Section -->
+        <div class="col-span-1 my-10">
+          <div>
+            <!-- Clean Terminal Interface -->
+            <div class="bg-charcoal dark:bg-gray-900 border-2 border-mocha dark:border-DMyellow shadow-2xl overflow-hidden">
+              
+              <!-- Terminal Title Bar -->
+              <div class="bg-mocha dark:bg-gray-700 px-4 py-3 border-b border-sand dark:border-gray-600">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center space-x-3">
+                    <!-- Terminal Controls -->
+                    <div class="flex space-x-2">
+                      <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                      <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                      <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                    </div>
+                    <span class="font-pixel text-white dark:text-DMyellow text-xs uppercase">ABOUT_ME.EXE</span>
+                  </div>
+                  <div class="font-mono text-xs text-white/70 dark:text-gray-300 hidden sm:block">
+                    hafsah@portfolio:~/about
+                  </div>
+                </div>
               </div>
               
-              <!-- About content with enhanced typography -->
-              <p class="font-inter text-center dark:text-lightGray mb-8 max-w-2xl mx-auto leading-relaxed">
-                Hi, I'm Joomun hafsah, a <span class="text-LMBlue dark:text-DMyellow font-medium">Computer Science</span> student who loves solving logical problems
-                and exploring how technology works. <br>Click the arrow to know more about me!
-              </p>
-              
-              <!-- Enhanced arrow button with animation -->
-              <div class="flex flex-row w-full justify-end items-end">
-                <router-link to="/aboutme" 
-                  class="p-3 bg-gray-100 dark:bg-gray-700 rounded-full shadow-md hover:shadow-lg transition-all duration-500 hover:bg-LMBlue hover:text-white dark:hover:bg-DMyellow group relative overflow-hidden">
-                  <!-- Arrow background pulse effect -->
-                  <div class="absolute inset-0 bg-LMBlue/20 dark:bg-DMyellow/20 rounded-full transform scale-0 group-hover:scale-150 transition-transform duration-700 opacity-0 group-hover:opacity-100"></div>
-                  <!-- Arrow icon -->
-                  <img v-if="isDarkMode" src="../assets/icons/darkmore.svg" alt="arrow" 
-                    class="w-6 h-6 relative z-10 group-hover:filter group-hover:brightness-150 transform group-hover:translate-x-1 transition-transform duration-300" />
-                  <img v-else src="../assets/icons/lightmore.svg" alt="arrow" 
-                    class="w-6 h-6 relative z-10 group-hover:filter group-hover:brightness-0 group-hover:invert transform group-hover:translate-x-1 transition-transform duration-300" />
-                </router-link>
+              <!-- Terminal Content -->
+              <div class="p-8 bg-charcoal dark:bg-gray-900 min-h-[400px]">
+                <div class="font-mono text-sm space-y-3">
+                  <!-- ASCII Art Header -->
+                  <div class="text-sand dark:text-amber-400 mb-6">
+                    <pre class="text-center hidden sm:block text-xs">
+                      ⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⡴⣆⠀⠀⠀⠀⠀⣠⡀ ᶻ 𝗓 𐰁 .ᐟ ⣼⣿⡗⠀⠀⠀⠀
+⠀⠀⠀⣠⠟⠀⠘⠷⠶⠶⠶⠾⠉⢳⡄⠀⠀⠀⠀⠀⣧⣿⠀⠀⠀⠀⠀
+⠀⠀⣰⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣤⣤⣤⣤⣤⣿⢿⣄⠀⠀⠀⠀
+⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣧⠀⠀⠀⠀⠀⠀⠙⣷⡴⠶⣦
+⠀⠀⢱⡀⠀⠉⠉⠀⠀⠀⠀⠛⠃⠀⢠⡟⠀⠀⠀⢀⣀⣠⣤⠿⠞⠛⠋
+⣠⠾⠋⠙⣶⣤⣤⣤⣤⣤⣀⣠⣤⣾⣿⠴⠶⠚⠋⠉⠁⠀⠀⠀⠀⠀⠀
+⠛⠒⠛⠉⠉⠀⠀⠀⣴⠟⢃⡴⠛⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                    </pre>
+                    <!-- Mobile ASCII Art -->
+                    <pre class="text-center block sm:hidden text-xs">
+                      ⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⡴⣆⠀⠀⠀⠀⠀⣠⡀ ᶻ 𝗓 𐰁 .ᐟ ⣼⣿⡗⠀⠀⠀⠀
+⠀⠀⠀⣠⠟⠀⠘⠷⠶⠶⠶⠾⠉⢳⡄⠀⠀⠀⠀⠀⣧⣿⠀⠀⠀⠀⠀
+⠀⠀⣰⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣤⣤⣤⣤⣤⣿⢿⣄⠀⠀⠀⠀
+⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣧⠀⠀⠀⠀⠀⠀⠙⣷⡴⠶⣦
+⠀⠀⢱⡀⠀⠉⠉⠀⠀⠀⠀⠛⠃⠀⢠⡟⠀⠀⠀⢀⣀⣠⣤⠿⠞⠛⠋
+⣠⠾⠋⠙⣶⣤⣤⣤⣤⣤⣀⣠⣤⣾⣿⠴⠶⠚⠋⠉⠁⠀⠀⠀⠀⠀⠀
+⠛⠒⠛⠉⠉⠀⠀⠀⣴⠟⢃⡴⠛
+                    </pre>
+                  </div>
+                  
+                   <!-- Animated terminal lines -->
+                   <div v-for="(line, index) in aboutTerminalLines" :key="index" class="terminal-line" :class="{ 'typing': line.typing, 'visible': line.visible }">
+                     <div v-if="line.type === 'prompt'" class="flex flex-wrap items-center break-all">
+                       <span class="text-sage dark:text-DMyellow">user@portfolio</span>
+                       <span class="text-white">:</span>
+                       <span class="text-sand dark:text-amber-400">~/about</span>
+                       <span class="text-white">$ </span>
+                       <span class="typed-text text-white">{{ line.displayText }}</span>
+                       <span v-if="line.showCursor" class="animate-pulse text-white bg-white w-2 h-4 ml-1"></span>
+                    </div>
+                     <div v-else-if="line.type === 'output'" class="ml-2 sm:ml-4 break-words" :class="line.class" style="white-space: pre-line;">
+                       {{ line.displayText }}
+                    </div>
+                  </div>
+                  
+                   <!-- Learn More Button - only show after animation completes -->
+                   <div v-if="aboutAnimationComplete" class="flex justify-end pt-6 fade-in">
+                    <router-link to="/aboutme" 
+                       class="font-pixel text-xs uppercase tracking-wider group inline-flex items-center px-4 py-2 bg-mocha hover:bg-sage dark:bg-gray-800 dark:hover:bg-DMyellow border-2 border-mocha dark:border-gray-600 text-white dark:text-DMyellow hover:text-charcoal dark:hover:text-black transition-all duration-300 hover:shadow-lg">
+                      <span class="mr-2">></span>
+                      LEARN_MORE.EXE
+                    </router-link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
         
-        <!-- Projects section with enhanced styling to match About Me (without vertical line and dots) -->
-        <div class="sm:col-span-3 mb-16 relative">
+        <!-- Revamped Projects Section with Pixel Theme -->
+        <div class="col-span-1 mb-16 relative">
           <div class="relative z-10">
-            <!-- Section header with matching font and styling -->
-            <div class="flex items-center mb-8 group">
+            <!-- Pixel-styled section header -->
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 sm:mb-12 space-y-4 sm:space-y-0">
               <div class="relative">
-                <h1 class="font-lemonmilk font-medium text-xl text-LMBlue dark:text-DMyellow">Projects</h1>
-                <div class="absolute -bottom-3 left-0 w-12 h-1 bg-gradient-to-r from-LMBlue to-purple-500 dark:from-DMyellow dark:to-amber-500 rounded-full transition-width duration-500 group-hover:w-full"></div>
+                <h1 class="font-pixel font-normal text-xl text-mocha dark:text-DMyellow uppercase tracking-wider">Projects</h1>
+                <div class="absolute -bottom-2 left-0 w-20 h-1 bg-gradient-to-r from-mocha to-sage dark:from-DMyellow dark:to-purple-900"></div>
               </div>
-              <div class="flex-grow mx-6 h-px bg-gray-200 dark:bg-gray-700"></div>
               <router-link to="/projects" 
-                class="text-LMBlue dark:text-DMyellow font-medium transition-all duration-300 flex items-center bg-white dark:bg-gray-800 px-4 py-2 rounded-full shadow-sm hover:shadow-md">
-                View all
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transition-transform duration-300 transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
+                class="font-pixel text-xs uppercase tracking-wider group inline-flex items-center px-4 py-2 bg-mocha hover:bg-sage dark:bg-gray-800 dark:hover:bg-DMyellow border-2 border-mocha dark:border-gray-600 text-white dark:text-DMyellow hover:text-charcoal dark:hover:text-black transition-all duration-300 hover:shadow-lg self-start sm:self-auto">
+                <span class="mr-2">></span>
+                VIEW_ALL
               </router-link>
             </div>
             
-            <!-- Projects grid with enhanced card effects -->
-            <div class="flex overflow-x-auto pb-4 sm:grid sm:grid-cols-3 sm:overflow-visible gap-8 scrollbar-hide">
-              <Blog title="OIA ROBOT"
-                body="This is a robotic arm playing rock paper scissors, it uses gesture detection from MediaPipe and Python"
-                imgpath="/assets/oia2.jpg" page="/project1" 
-                class="min-w-full sm:min-w-0 transition-all duration-500 hover:scale-105 hover:rotate-1 hover:shadow-xl" />
-              <Blog title="Vending Machine Robot"
-                body="This is a vending machine built using Arduino, Esp32 cam along with QR code detection."
-                imgpath="/assets/vm.jpg" page="/project2" 
-                class="min-w-full sm:min-w-0 transition-all duration-500 hover:scale-105 hover:rotate-1 hover:shadow-xl" />
-              <Blog title="Pacman Game"
-                body="This is a pacman game built using python"
-                imgpath="/assets/pacman4.png" page="/project3" 
-                class="min-w-full sm:min-w-0 transition-all duration-500 hover:scale-105 hover:rotate-1 hover:shadow-xl" />
+            <!-- Pixel-themed projects carousel/grid -->
+            <div class="overflow-x-auto sm:overflow-visible">
+              <div class="flex space-x-6 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-x-0 pb-4 sm:pb-0">
+              <!-- Project 1: OIA ROBOT -->
+              <div class="group relative bg-gradient-to-br from-cream/30 to-sand/20 dark:from-gray-800/50 dark:to-gray-700/30 border-2 border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-all duration-500 overflow-hidden flex-shrink-0 w-80 sm:w-auto">
+                <div class="aspect-video bg-gradient-to-br from-LMBlue/10 to-LMbeige/20 dark:from-gray-700 dark:to-gray-600 relative overflow-hidden">
+                  <img src="/assets/oia2.jpg" alt="OIA ROBOT" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                </div>
+                <div class="p-6">
+                  <h3 class="font-pixel text-sm text-mocha dark:text-DMyellow uppercase mb-3 tracking-wide">OIA ROBOT</h3>
+                  <p class="font-inter text-sm text-text-secondary dark:text-gray-300 leading-relaxed mb-4">
+                    Robotic arm playing rock paper scissors using gesture detection from MediaPipe and Python
+                  </p>
+                  <router-link to="/project1" 
+                    class="font-pixel text-xs uppercase tracking-wider inline-flex items-center text-mocha dark:text-DMyellow hover:text-sage dark:hover:text-amber-300 transition-colors duration-300">
+                    <span class="mr-2">></span>
+                    EXPLORE
+                  </router-link>
+                </div>
+              </div>
+
+              <!-- Project 2: Vending Machine -->
+              <div class="group relative bg-gradient-to-br from-cream/30 to-sand/20 dark:from-gray-800/50 dark:to-gray-700/30 border-2 border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-all duration-500 overflow-hidden flex-shrink-0 w-80 sm:w-auto">
+                <div class="aspect-video bg-gradient-to-br from-LMBlue/10 to-LMbeige/20 dark:from-gray-700 dark:to-gray-600 relative overflow-hidden">
+                  <img src="/assets/vm.jpg" alt="Vending Machine Robot" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                </div>
+                <div class="p-6">
+                  <h3 class="font-pixel text-sm text-mocha dark:text-DMyellow uppercase mb-3 tracking-wide">Vending Machine</h3>
+                  <p class="font-inter text-sm text-text-secondary dark:text-gray-300 leading-relaxed mb-4">
+                    Smart vending machine built using Arduino, ESP32 cam with QR code detection technology
+                  </p>
+                  <router-link to="/project2" 
+                    class="font-pixel text-xs uppercase tracking-wider inline-flex items-center text-mocha dark:text-DMyellow hover:text-sage dark:hover:text-amber-300 transition-colors duration-300">
+                    <span class="mr-2">></span>
+                    EXPLORE
+                  </router-link>
+                </div>
+              </div>
+
+              <!-- Project 3: Pacman Game -->
+              <div class="group relative bg-gradient-to-br from-cream/30 to-sand/20 dark:from-gray-800/50 dark:to-gray-700/30 border-2 border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-all duration-500 overflow-hidden flex-shrink-0 w-80 sm:w-auto">
+                <div class="aspect-video bg-gradient-to-br from-LMBlue/10 to-LMbeige/20 dark:from-gray-700 dark:to-gray-600 relative overflow-hidden">
+                  <img src="/assets/pacman4.png" alt="Pacman Game" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                </div>
+                <div class="p-6">
+                  <h3 class="font-pixel text-sm text-mocha dark:text-DMyellow uppercase mb-3 tracking-wide">Pacman Game</h3>
+                  <p class="font-inter text-sm text-text-secondary dark:text-gray-300 leading-relaxed mb-4">
+                    Classic Pacman game recreation built using Python with modern gameplay mechanics
+                  </p>
+                  <router-link to="/project3" 
+                    class="font-pixel text-xs uppercase tracking-wider inline-flex items-center text-mocha dark:text-DMyellow hover:text-sage dark:hover:text-amber-300 transition-colors duration-300">
+                    <span class="mr-2">></span>
+                    EXPLORE
+                  </router-link>
+                </div>
+              </div>
+              </div>
             </div>
           </div>
         </div>
         
-        <!-- Blogs section with "Under Construction" message -->
-        <div class="sm:col-span-3 mb-16 relative">
+        <!-- Revamped Blogs Section with Pixel Theme -->
+        <div class="col-span-1 mb-16 relative">
           <div class="relative z-10">
-            <!-- Section header with matching font and styling -->
-            <div class="flex items-center mb-8 group">
+            <!-- Pixel-styled section header -->
+            <div class="flex items-center justify-between mb-12">
               <div class="relative">
-                <h1 class="font-lemonmilk font-medium text-xl text-LMBlue dark:text-DMyellow">Blogs</h1>
-                <div class="absolute -bottom-3 left-0 w-12 h-1 bg-gradient-to-r from-LMBlue to-purple-500 dark:from-DMyellow dark:to-amber-500 rounded-full transition-width duration-500 group-hover:w-full"></div>
+                <h1 class="font-pixel font-normal text-xl text-mocha dark:text-DMyellow uppercase tracking-wider">Blogs</h1>
+                <div class="absolute -bottom-2 left-0 w-20 h-1 bg-gradient-to-r from-mocha to-sage dark:from-DMyellow dark:to-purple-900"></div>
               </div>
-              <div class="flex-grow mx-6 h-px bg-gray-200 dark:bg-gray-700"></div>
-              <router-link to="/blogs" 
-                class="text-LMBlue dark:text-DMyellow font-medium transition-all duration-300 flex items-center bg-white dark:bg-gray-800 px-4 py-2 rounded-full shadow-sm hover:shadow-md">
-                View all
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transition-transform duration-300 transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </router-link>
+              <!-- <router-link to="/blogs" 
+                class="font-pixel text-xs uppercase tracking-wider group inline-flex items-center px-4 py-2 bg-mocha hover:bg-sage dark:bg-gray-800 dark:hover:bg-DMyellow border-2 border-mocha dark:border-gray-600 text-white dark:text-DMyellow hover:text-charcoal dark:hover:text-black transition-all duration-300 hover:shadow-lg">
+                <span class="mr-2">></span>
+                VIEW_ALL
+              </router-link> -->
             </div>
             
-            <!-- Under Construction message -->
-            <div class="border border-gray-200 dark:border-gray-700 shadow-md rounded-xl bg-white dark:bg-gray-800 p-8 text-center">
-              <div class="flex flex-col items-center">
-                <!-- Construction icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mb-4 text-LMBlue dark:text-DMyellow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                </svg>
+            <!-- Clean Terminal Interface -->
+            <div class="bg-charcoal dark:bg-gray-900 border-2 border-mocha dark:border-DMyellow shadow-2xl overflow-hidden">
+              
+              <!-- Terminal Title Bar -->
+              <div class="bg-mocha dark:bg-gray-700 px-4 py-3 border-b border-sand dark:border-gray-600">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center space-x-3">
+                    <!-- Terminal Controls -->
+                    <div class="flex space-x-2">
+                      <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                      <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                      <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                    </div>
+                    <span class="font-pixel text-white dark:text-DMyellow text-xs uppercase">BLOG_SYSTEM.EXE</span>
+                  </div>
+                  <div class="font-mono text-xs text-white/70 dark:text-gray-300 hidden sm:block">
+                    hafsah@portfolio:~/blogs
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Terminal Content -->
+              <div class="p-8 bg-charcoal dark:bg-gray-900 min-h-[300px]">
+                <div class="font-mono text-sm space-y-3">
+                  <!-- Welcome message -->
+                  <div class="text-sand dark:text-amber-400 mb-6">
+                    <div class="flex items-center mb-2">
+                      <span class="text-green-400">✓</span>
+                      <span class="ml-2">Initializing blog system...</span>
+                    </div>
+                    <div class="flex items-center mb-2">
+                      <span class="text-green-400">✓</span>
+                      <span class="ml-2">Loading content management...</span>
+                    </div>
+                    <div class="flex items-center mb-4">
+                      <span class="text-red-400">⚠</span>
+                      <span class="ml-2 text-red-400">Blog posts not found</span>
+                    </div>
+                  </div>
+                  
+                  <!-- Command line interaction -->
+                  <div class="space-y-2">
+                    <div class="flex flex-wrap items-center break-all">
+                      <span class="text-sage dark:text-DMyellow">user@portfolio</span>
+                      <span class="text-white">:</span>
+                      <span class="text-sand dark:text-amber-400">~/blogs</span>
+                      <span class="text-white">$ ls -la</span>
+                    </div>
+                    <div class="text-gray-400 ml-2 sm:ml-4 break-words">
+                      <div class="break-all">total 0</div>
+                      <div class="break-all">drwxr-xr-x 2 user user 4096 Oct  2 2025 .</div>
+                      <div class="break-all">drwxr-xr-x 8 user user 4096 Oct  2 2025 ..</div>
+                      <div class="break-all">-rw-r--r-- 1 user user   42 Oct  2 2025 .gitkeep</div>
+                    </div>
+                  </div>
+                  
+                  <div class="space-y-2 mt-6">
+                    <div class="flex flex-wrap items-center break-all">
+                      <span class="text-sage dark:text-DMyellow">user@portfolio</span>
+                      <span class="text-white">:</span>
+                      <span class="text-sand dark:text-amber-400">~/blogs</span>
+                      <span class="text-white">$ cat .gitkeep</span>
+                    </div>
+                    <div class="text-sand ml-2 sm:ml-4 break-words">
+                      <div class="break-words"># Blog posts coming soon!</div>
+                      <div class="break-words"># Stay tuned for updates...</div>
+                    </div>
+                </div>
                 
-                <h2 class="font-lemonmilk text-lg text-gray-800 dark:text-white mb-3">Under Construction</h2>
-                <p class="font-inter text-gray-600 dark:text-gray-300 max-w-lg mx-auto">
-                  Blog section coming soon! Check back later for updates, articles, and insights.
-                </p>
+                  <div class="space-y-2 mt-6">
+                    <div class="flex flex-wrap items-center break-all">
+                      <span class="text-sage dark:text-DMyellow">user@portfolio</span>
+                      <span class="text-white">:</span>
+                      <span class="text-sand dark:text-amber-400">~/blogs</span>
+                      <span class="text-white">$ echo "Status: In Development"</span>
+                    </div>
+                    <div class="text-green-400 ml-2 sm:ml-4 mb-4 break-words">
+                      Status: In Development
+                    </div>
+                  </div>
+                  
+                  <!-- Current command line with cursor -->
+                  <div class="flex flex-wrap items-center mt-8 break-all">
+                    <span class="text-sage dark:text-DMyellow">user@portfolio</span>
+                    <span class="text-white">:</span>
+                    <span class="text-sand dark:text-amber-400">~/blogs</span>
+                    <span class="text-white">$ </span>
+                    <span class="animate-pulse text-white bg-white w-2 h-4 ml-1"></span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -170,48 +344,135 @@
 </template>
 
 <script setup>
-import { inject } from "vue";
+import { inject, ref, onMounted } from "vue";
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
 import Blog from "../components/BlogCard.vue";
+
 const isDarkMode = inject("isDarkMode");
+const aboutTerminalLines = ref([]);
+const aboutAnimationComplete = ref(false);
+
+// About terminal animation sequence
+const aboutSequence = [
+  { type: 'prompt', delay: 1000 },
+  { type: 'command', text: 'whoami', class: 'text-white', delay: 0 },
+  { type: 'output', text: 'Hafsah Joomun - Computer Science Student', class: 'text-mocha dark:text-cyan-400', delay: 400 },
+  { type: 'prompt', delay: 1200 },
+  { type: 'command', text: 'cat about.txt', class: 'text-white', delay: 0 },
+  { type: 'output', text: 'Hi, I\'m Joomun hafsah, a Computer Science student\nwho loves solving logical problems and exploring technology.\nFrom the beautiful island of Mauritius 🇲🇺', class: 'text-gray-400 dark:text-yellow-300', delay: 600 },
+  { type: 'prompt', delay: 1000 },
+  { type: 'command', text: 'ls skills/', class: 'text-white', delay: 0 },
+  { type: 'output', text: 'programming/  mathematics/  robotics/  problem-solving/', class: 'text-LMbeige dark:text-magenta-400', delay: 500 }
+];
+
+const typeText = (text, speed = 80) => {
+  return new Promise((resolve) => {
+    let i = 0;
+    const currentLine = aboutTerminalLines.value[aboutTerminalLines.value.length - 1];
+    currentLine.showCursor = true;
+    
+    const typeInterval = setInterval(() => {
+      currentLine.displayText = text.substring(0, i + 1);
+      i++;
+      
+      if (i >= text.length) {
+        clearInterval(typeInterval);
+        currentLine.showCursor = false;
+        resolve();
+      }
+    }, speed);
+  });
+};
+
+const addAboutLine = (lineData) => {
+  const line = {
+    type: lineData.type,
+    displayText: '',
+    fullText: lineData.text,
+    class: lineData.class,
+    visible: true,
+    typing: false,
+    showCursor: false
+  };
+  
+  aboutTerminalLines.value.push(line);
+  return line;
+};
+
+const runAboutAnimation = async () => {
+  let currentPromptLine = null;
+  
+  for (let i = 0; i < aboutSequence.length; i++) {
+    const step = aboutSequence[i];
+    
+    await new Promise(resolve => setTimeout(resolve, step.delay));
+    
+    if (step.type === 'prompt') {
+      currentPromptLine = addAboutLine(step);
+      currentPromptLine.type = 'prompt';
+      currentPromptLine.displayText = '';
+      currentPromptLine.showCursor = true;
+    } else if (step.type === 'command') {
+      if (currentPromptLine) {
+        await typeText(step.text, 80);
+        currentPromptLine.showCursor = false;
+        currentPromptLine = null;
+      }
+    } else if (step.type === 'output') {
+      const outputLine = addAboutLine(step);
+      outputLine.displayText = step.text;
+    }
+  }
+  
+  setTimeout(() => {
+    const finalLine = {
+      type: 'prompt',
+      displayText: '',
+      visible: true,
+      showCursor: true
+    };
+    aboutTerminalLines.value.push(finalLine);
+    aboutAnimationComplete.value = true;
+  }, 1000);
+};
+
+onMounted(() => {
+  setTimeout(() => {
+    runAboutAnimation();
+  }, 500);
+});
 </script>
 
-<style>
-/* Hide scrollbar for Chrome, Safari and Opera */
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
+<style scoped>
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Background pattern */
-.bg-grid-pattern {
-  background-image: 
-    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
-  background-size: 20px 20px;
+.terminal-line {
+  opacity: 0;
+  animation: slideIn 0.3s ease-out forwards;
 }
 
-/* Subtle floating animation for profile picture */
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-/* Smooth transitions */
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 </style>

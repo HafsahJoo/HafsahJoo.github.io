@@ -1,33 +1,27 @@
 <template>
-  <div
-    class="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
-  >
-    <!-- Subtle background pattern -->
-    <div
-      class="absolute inset-0 bg-grid-pattern opacity-5 dark:opacity-3 pointer-events-none"
-    ></div>
+  <div class="min-h-screen bg-LMveryLightBeige dark:bg-black relative overflow-hidden">
+    <!-- Background gradient to match homepage -->
+    <div class="absolute inset-0 bg-gradient-to-br from-LMlightBeige/20 via-transparent to-LMbeige/10 dark:from-gray-800/20 dark:via-transparent dark:to-gray-700/10"></div>
+    <!-- Background grid pattern -->
+    <div class="fixed inset-0 bg-grid-pattern-light dark:bg-grid-pattern-dark opacity-60 dark:opacity-40 pointer-events-none"></div>
 
     <!-- Header with proper spacing -->
     <div class="mb-10 sm:mb-16 relative z-10">
       <Header />
     </div>
 
-    <!-- Main content with enhanced styling -->
-    <div class="flex flex-col items-start min-h-screen relative z-10">
-      <div
-        class="mx-4 sm:mx-10 sm:ml-auto sm:mr-auto sm:w-full max-w-[1200px] sm:px-10"
-      >
-        <div>
+    <!-- Main content with homepage styling -->
+    <div class="max-w-[1200px] px-8 sm:px-28 mx-auto w-full relative z-10">
           <div class="flex flex-col items-start mb-8">
             <!-- Page title with decorative element -->
             <div class="relative mb-8 sm:mb-12 w-full">
               <h2
                 class="font-tommy font-medium text-2xl sm:text-4xl mb-2 text-gray-800 dark:text-white"
               >
-                Who I Am<span class="text-LMBlue dark:text-DMyellow">...</span>
+                Who I Am<span class="text-mocha dark:text-DMyellow">...</span>
               </h2>
               <div
-                class="w-20 h-1 bg-gradient-to-r from-LMBlue to-purple-500 dark:from-DMyellow dark:to-amber-500 rounded-full"
+                class="w-20 h-1 bg-gradient-to-r from-mocha to-sage dark:from-DMyellow dark:to-purple-900 rounded-full"
               ></div>
             </div>
 
@@ -35,18 +29,18 @@
             <div class="w-full relative group">
               <!-- Decorative background -->
               <div
-                class="absolute -inset-1 bg-gradient-to-r from-LMBlue/20 via-purple-500/20 to-pink-500/20 dark:from-DMyellow/20 dark:via-amber-500/20 dark:to-orange-500/20 rounded-2xl blur-sm opacity-0 group-hover:opacity-100 transition-all duration-700"
+                class="absolute -inset-1 bg-gradient-to-r from-mocha/20 via-sage/20 to-sand/20 dark:from-DMyellow/20 dark:via-amber-500/20 dark:to-orange-500/20  blur-sm opacity-0 group-hover:opacity-100 transition-all duration-700"
               ></div>
 
               <div
-                class="relative p-6 sm:p-8 border border-gray-200 dark:border-gray-700 rounded-2xl bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden"
+                class="relative p-6 sm:p-8 border border-sand/40 dark:border-gray-700 bg-cream/40 dark:bg-gray-800/80 backdrop-blur-sm shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden"
               >
                 <!-- Animated background pattern -->
                 <div
-                  class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-LMBlue/5 to-purple-500/5 dark:from-DMyellow/5 dark:to-amber-500/5 rounded-full blur-3xl animate-pulse"
+                  class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-mocha/5 to-sage/5 dark:from-DMyellow/5 dark:to-amber-500/5  blur-3xl animate-pulse"
                 ></div>
                 <div
-                  class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-pink-500/5 to-LMBlue/5 dark:from-orange-500/5 dark:to-DMyellow/5 rounded-full blur-2xl animate-pulse delay-1000"
+                  class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-sand/5 to-mocha/5 dark:from-orange-500/5 dark:to-DMyellow/5  blur-2xl animate-pulse delay-1000"
                 ></div>
 
                 <div
@@ -59,7 +53,7 @@
                     >
                       <!-- Static gradient border -->
                       <div
-                        class="absolute inset-0 bg-gradient-to-r from-LMBlue via-purple-500 to-pink-500 dark:from-DMyellow dark:via-amber-500 dark:to-orange-500 rounded-full p-1"
+                        class="absolute inset-0 bg-gradient-to-r from-mocha via-sage to-sand dark:from-DMyellow dark:via-amber-500 dark:to-orange-500 rounded-full p-1"
                       >
                         <div
                           class="w-full h-full bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center overflow-hidden"
@@ -81,7 +75,7 @@
                     <div class="space-y-2">
                       <div class="flex items-center gap-3">
                         <h1
-                          class="font-lemonmilk font-bold text-2xl sm:text-3xl lg:text-4xl text-LMBlue dark:text-DMyellow"
+                          class="font-pixel font-bold text-2xl sm:text-3xl lg:text-4xl text-mocha dark:text-DMyellow uppercase"
                         >
                           Hafsah Joomun
                         </h1>
@@ -103,7 +97,7 @@
                           class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400"
                         >
                           <svg
-                            class="w-4 h-4 text-LMBlue dark:text-DMyellow"
+                            class="w-4 h-4 text-mocha dark:text-DMyellow"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -136,7 +130,7 @@
                         >
                           Hi there! 👋 I'm a passionate
                           <span
-                            class="font-semibold text-LMBlue dark:text-DMyellow"
+                            class="font-semibold text-mocha dark:text-DMyellow"
                             >Computer Science student</span
                           >
                           who loves exploring creative and practical tech
@@ -165,31 +159,11 @@
                     <div class="flex flex-col sm:flex-row gap-3 pt-2">
                       <button
                         @click="openCV"
-                        class="group relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium text-white bg-LMBlue dark:bg-DMyellow rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                        class="font-pixel text-xs uppercase tracking-wider group inline-flex items-center px-4 py-2 bg-mocha hover:bg-sage dark:bg-gray-800 dark:hover:bg-DMyellow border-2 border-mocha dark:border-gray-600 text-white dark:text-DMyellow hover:text-charcoal dark:hover:text-black transition-all duration-300 hover:shadow-lg"
                       >
-                        <span
-                          class="absolute inset-0 w-full h-full bg-gradient-to-r from-LMBlue to-purple-500 dark:from-DMyellow dark:to-amber-500"
-                        ></span>
-                        <span
-                          class="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-pink-500 dark:bg-orange-500 rounded-full opacity-30 group-hover:rotate-90 ease"
-                        ></span>
-                        <span
-                          class="relative text-white dark:text-gray-900 font-inter font-medium flex items-center gap-2"
-                        >
-                          <svg
-                            class="w-5 h-5"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                            ></path>
-                          </svg>
-                          View My CV
+                        <span class="mr-2">></span>
+                        <span class="flex items-center gap-2">
+                          VIEW_CV
                         </span>
                       </button>
                     </div>
@@ -202,24 +176,24 @@
             <div class="mt-6 w-full">
               <!-- Personal Life & Interests Section -->
               <div
-                class="mb-6 border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300"
+                class="mb-6 border border-sand/40 dark:border-gray-700  overflow-hidden bg-cream/40 dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300"
               >
                 <div
                   @click="toggleSection('personal')"
-                  class="cursor-pointer flex items-center justify-between p-3 sm:p-4 bg-gradient-to-r from-gray-50 to-white dark:from-gray-800 dark:to-gray-700"
+                  class="cursor-pointer flex items-center justify-between p-3 sm:p-4 bg-gradient-to-r from-cream/40 to-cream dark:from-gray-800 dark:to-gray-700"
                 >
                   <div class="flex items-center">
                     <div
-                      class="w-1 h-6 bg-LMBlue dark:bg-DMyellow rounded-full mr-2 sm:mr-3"
+                      class="w-1 h-6 bg-mocha dark:bg-DMyellow  mr-2 sm:mr-3"
                     ></div>
                     <h2
-                      class="font-lemonmilk font-medium text-base sm:text-xl text-gray-800 dark:text-white"
+                      class="font-pixel font-normal text-sm sm:text-lg text-mocha dark:text-DMyellow uppercase tracking-wider"
                     >
                       Personal Life & Interests
                     </h2>
                   </div>
                   <span
-                    class="text-LMBlue dark:text-DMyellow text-xl sm:text-2xl mr-2 sm:mr-4 transition-transform duration-300"
+                    class="text-mocha dark:text-DMyellow text-xl sm:text-2xl mr-2 sm:mr-4 transition-transform duration-300"
                     :class="{ 'transform rotate-180': isOpen.personal }"
                   >
                     <svg
@@ -246,11 +220,11 @@
                   <div class="space-y-6">
                     <!-- Hobbies & Interests -->
                     <div
-                      class="border border-gray-200 dark:border-gray-600 rounded-lg p-4 bg-gray-50 dark:bg-gray-700/50 hover:border-LMBlue dark:hover:border-DMyellow transition-all duration-300"
+                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700/50 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
                     >
                       <div class="flex items-center mb-4">
                         <div
-                          class="w-8 h-8 bg-LMBlue dark:bg-DMyellow rounded-md flex items-center justify-center mr-3"
+                          class="w-8 h-8 bg-mocha dark:bg-DMyellow  flex items-center justify-center mr-3"
                         >
                           <svg
                             class="w-4 h-4 text-white dark:text-gray-900"
@@ -267,14 +241,14 @@
                           </svg>
                         </div>
                         <h3
-                          class="font-lemonmilk text-sm sm:text-base text-gray-800 dark:text-white"
+                          class="font-pixel text-xs sm:text-sm text-mocha dark:text-DMyellow uppercase tracking-wide"
                         >
                           What I Love Doing
                         </h3>
                       </div>
                       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div
-                          class="flex items-start space-x-3 p-3 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-600"
+                          class="flex items-start space-x-3 p-3 bg-sand/30 dark:bg-gray-800  border border-sand/50 dark:border-gray-600"
                         >
                           <div class="text-2xl">🎮</div>
                           <div class="flex-1">
@@ -288,21 +262,10 @@
                               I'm deep into indie games and anything with a good
                               story. Nothing beats a weekend gaming session.
                             </p>
-                            <router-link to="/gaming" 
-                                class="group inline-flex items-center gap-2 px-4 py-2 bg-LMBlue dark:bg-DMyellow text-white dark:text-gray-900 rounded-full hover:bg-LMBlue/80 dark:hover:bg-DMyellow/80 transition-all duration-200 hover:scale-105 shadow-sm hover:shadow-md">
-                                
-                                <!-- Text -->
-                                <span class="text-sm font-medium">View more</span>
-                                
-                                <!-- Arrow icon -->
-                                <svg class="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </router-link>
                                                     </div>
                         </div>
                         <div
-                          class="flex items-start space-x-3 p-3 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-600"
+                          class="flex items-start space-x-3 p-3 bg-sand/30 dark:bg-gray-800  border border-sand/50 dark:border-gray-600"
                         >
                           <div class="text-2xl">🧱</div>
                           <div>
@@ -320,7 +283,7 @@
                           </div>
                         </div>
                         <div
-                          class="flex items-start space-x-3 p-3 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-600"
+                          class="flex items-start space-x-3 p-3 bg-sand/30 dark:bg-gray-800  border border-sand/50 dark:border-gray-600"
                         >
                           <div class="text-2xl">🌿</div>
                           <div>
@@ -341,11 +304,11 @@
 
                     <!-- Background & Values -->
                     <div
-                      class="border border-gray-200 dark:border-gray-600 rounded-lg p-4 bg-gray-50 dark:bg-gray-700/50 hover:border-LMBlue dark:hover:border-DMyellow transition-all duration-300"
+                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700/50 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
                     >
                       <div class="flex items-center mb-4">
                         <div
-                          class="w-8 h-8 bg-LMBlue dark:bg-DMyellow rounded-md flex items-center justify-center mr-3"
+                          class="w-8 h-8 bg-mocha dark:bg-DMyellow  flex items-center justify-center mr-3"
                         >
                           <svg
                             class="w-4 h-4 text-white dark:text-gray-900"
@@ -362,7 +325,7 @@
                           </svg>
                         </div>
                         <h3
-                          class="font-lemonmilk text-sm sm:text-base text-gray-800 dark:text-white"
+                          class="font-pixel text-xs sm:text-sm text-mocha dark:text-DMyellow uppercase tracking-wide"
                         >
                           How I See Things
                         </h3>
@@ -395,24 +358,24 @@
               <!-- Skills Section -->
 
               <div
-                class="mb-6 border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300"
+                class="mb-6 border border-sand/40 dark:border-gray-700  overflow-hidden bg-cream/40 dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300"
               >
                 <div
                   @click="toggleSection('skills')"
-                  class="cursor-pointer flex items-center justify-between p-3 sm:p-4 bg-gradient-to-r from-gray-50 to-white dark:from-gray-800 dark:to-gray-700"
+                  class="cursor-pointer flex items-center justify-between p-3 sm:p-4 bg-gradient-to-r from-cream/40 to-cream dark:from-gray-800 dark:to-gray-700"
                 >
                   <div class="flex items-center">
                     <div
-                      class="w-1 h-6 bg-LMBlue dark:bg-DMyellow rounded-full mr-2 sm:mr-3"
+                      class="w-1 h-6 bg-mocha dark:bg-DMyellow  mr-2 sm:mr-3"
                     ></div>
                     <h2
-                      class="font-lemonmilk font-medium text-base sm:text-xl text-gray-800 dark:text-white"
+                      class="font-pixel font-normal text-sm sm:text-lg text-mocha dark:text-DMyellow uppercase tracking-wider"
                     >
                       Skills
                     </h2>
                   </div>
                   <span
-                    class="text-LMBlue dark:text-DMyellow text-xl sm:text-2xl mr-2 sm:mr-4 transition-transform duration-300"
+                    class="text-mocha dark:text-DMyellow text-xl sm:text-2xl mr-2 sm:mr-4 transition-transform duration-300"
                     :class="{ 'transform rotate-180': isOpen.skills }"
                   >
                     <svg
@@ -439,10 +402,10 @@
                   <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
                     <!-- Problem-Solving -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-LMBlue dark:text-DMyellow"
+                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -463,10 +426,10 @@
 
                     <!-- Web Development -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-LMBlue dark:text-DMyellow"
+                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -487,10 +450,10 @@
 
                     <!-- Collaboration & Teamwork -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-LMBlue dark:text-DMyellow"
+                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -511,10 +474,10 @@
 
                     <!-- Version Control (Git) -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-LMBlue dark:text-DMyellow"
+                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -535,10 +498,10 @@
 
                     <!-- Project Management -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-LMBlue dark:text-DMyellow"
+                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -559,10 +522,10 @@
 
                     <!-- Power BI -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-LMBlue dark:text-DMyellow"
+                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -583,10 +546,10 @@
 
                     <!-- ETL Processing -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-LMBlue dark:text-DMyellow"
+                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -607,10 +570,10 @@
 
                     <!-- Programming -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-LMBlue dark:text-DMyellow"
+                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -631,10 +594,10 @@
 
                     <!-- Database -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-LMBlue dark:text-DMyellow"
+                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -655,10 +618,10 @@
 
                     <!-- Robotics -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-LMBlue dark:text-DMyellow"
+                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -679,10 +642,10 @@
 
                     <!-- Blockchain Development -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-LMBlue dark:text-DMyellow"
+                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -703,10 +666,10 @@
 
                     <!-- Bash/Batch Scripting -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-LMBlue dark:text-DMyellow"
+                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -727,10 +690,10 @@
 
                     <!-- Informatica -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-LMBlue dark:text-DMyellow"
+                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -754,24 +717,24 @@
 
               <!-- Technologies & Tools Section -->
               <div
-                class="mb-6 border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300"
+                class="mb-6 border border-sand/40 dark:border-gray-700  overflow-hidden bg-cream/40 dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300"
               >
                 <div
                   @click="toggleSection('tools')"
-                  class="cursor-pointer flex items-center justify-between p-3 sm:p-4 bg-gradient-to-r from-gray-50 to-white dark:from-gray-800 dark:to-gray-700"
+                  class="cursor-pointer flex items-center justify-between p-3 sm:p-4 bg-gradient-to-r from-cream/40 to-cream dark:from-gray-800 dark:to-gray-700"
                 >
                   <div class="flex items-center">
                     <div
-                      class="w-1 h-6 bg-LMBlue dark:bg-DMyellow rounded-full mr-2 sm:mr-3"
+                      class="w-1 h-6 bg-mocha dark:bg-DMyellow  mr-2 sm:mr-3"
                     ></div>
                     <h2
-                      class="font-lemonmilk font-medium text-base sm:text-xl text-gray-800 dark:text-white"
+                      class="font-pixel font-normal text-sm sm:text-lg text-mocha dark:text-DMyellow uppercase tracking-wider"
                     >
                       Technologies & Tools
                     </h2>
                   </div>
                   <span
-                    class="text-LMBlue dark:text-DMyellow text-xl sm:text-2xl mr-2 sm:mr-4 transition-transform duration-300"
+                    class="text-mocha dark:text-DMyellow text-xl sm:text-2xl mr-2 sm:mr-4 transition-transform duration-300"
                     :class="{ 'transform rotate-180': isOpen.tools }"
                   >
                     <svg
@@ -798,11 +761,11 @@
                   <div class="space-y-6">
                     <!-- Programming Languages -->
                     <div
-                      class="border border-gray-200 dark:border-gray-600 rounded-lg p-4 bg-gray-50 dark:bg-gray-700/50 hover:border-LMBlue dark:hover:border-DMyellow transition-all duration-300"
+                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700/50 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
                     >
                       <div class="flex items-center mb-3">
                         <div
-                          class="w-8 h-8 bg-LMBlue dark:bg-DMyellow rounded-md flex items-center justify-center mr-3"
+                          class="w-8 h-8 bg-mocha dark:bg-DMyellow  flex items-center justify-center mr-3"
                         >
                           <svg
                             class="w-4 h-4 text-white dark:text-gray-900"
@@ -819,34 +782,34 @@
                           </svg>
                         </div>
                         <h3
-                          class="font-lemonmilk text-sm sm:text-base text-gray-800 dark:text-white"
+                          class="font-pixel text-xs sm:text-sm text-mocha dark:text-DMyellow uppercase tracking-wide"
                         >
                           Programming Languages
                         </h3>
                       </div>
                       <div class="flex flex-wrap gap-2">
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >JavaScript</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Python</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Java</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >C++</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >C</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Dart</span
                         >
                       </div>
@@ -854,11 +817,11 @@
 
                     <!-- Frameworks & Libraries -->
                     <div
-                      class="border border-gray-200 dark:border-gray-600 rounded-lg p-4 bg-gray-50 dark:bg-gray-700/50 hover:border-LMBlue dark:hover:border-DMyellow transition-all duration-300"
+                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700/50 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
                     >
                       <div class="flex items-center mb-3">
                         <div
-                          class="w-8 h-8 bg-LMBlue dark:bg-DMyellow rounded-md flex items-center justify-center mr-3"
+                          class="w-8 h-8 bg-mocha dark:bg-DMyellow  flex items-center justify-center mr-3"
                         >
                           <svg
                             class="w-4 h-4 text-white dark:text-gray-900"
@@ -875,30 +838,30 @@
                           </svg>
                         </div>
                         <h3
-                          class="font-lemonmilk text-sm sm:text-base text-gray-800 dark:text-white"
+                          class="font-pixel text-xs sm:text-sm text-mocha dark:text-DMyellow uppercase tracking-wide"
                         >
                           Frameworks & Libraries
                         </h3>
                       </div>
                       <div class="flex flex-wrap gap-2">
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Vue.js</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >TailwindCSS</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Bootstrap</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Node.js</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Flutter</span
                         >
                       </div>
@@ -906,11 +869,11 @@
 
                     <!-- Development Tools -->
                     <div
-                      class="border border-gray-200 dark:border-gray-600 rounded-lg p-4 bg-gray-50 dark:bg-gray-700/50 hover:border-LMBlue dark:hover:border-DMyellow transition-all duration-300"
+                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700/50 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
                     >
                       <div class="flex items-center mb-3">
                         <div
-                          class="w-8 h-8 bg-LMBlue dark:bg-DMyellow rounded-md flex items-center justify-center mr-3"
+                          class="w-8 h-8 bg-mocha dark:bg-DMyellow  flex items-center justify-center mr-3"
                         >
                           <svg
                             class="w-4 h-4 text-white dark:text-gray-900"
@@ -933,34 +896,34 @@
                           </svg>
                         </div>
                         <h3
-                          class="font-lemonmilk text-sm sm:text-base text-gray-800 dark:text-white"
+                          class="font-pixel text-xs sm:text-sm text-mocha dark:text-DMyellow uppercase tracking-wide"
                         >
                           Development Tools
                         </h3>
                       </div>
                       <div class="flex flex-wrap gap-2">
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Git</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >GitHub</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >VS Code</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Figma</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Postman</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Bash/Batch</span
                         >
                       </div>
@@ -968,11 +931,11 @@
 
                     <!-- Data & Analytics Tools -->
                     <div
-                      class="border border-gray-200 dark:border-gray-600 rounded-lg p-4 bg-gray-50 dark:bg-gray-700/50 hover:border-LMBlue dark:hover:border-DMyellow transition-all duration-300"
+                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700/50 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
                     >
                       <div class="flex items-center mb-3">
                         <div
-                          class="w-8 h-8 bg-LMBlue dark:bg-DMyellow rounded-md flex items-center justify-center mr-3"
+                          class="w-8 h-8 bg-mocha dark:bg-DMyellow  flex items-center justify-center mr-3"
                         >
                           <svg
                             class="w-4 h-4 text-white dark:text-gray-900"
@@ -989,26 +952,26 @@
                           </svg>
                         </div>
                         <h3
-                          class="font-lemonmilk text-sm sm:text-base text-gray-800 dark:text-white"
+                          class="font-pixel text-xs sm:text-sm text-mocha dark:text-DMyellow uppercase tracking-wide"
                         >
                           Data & Analytics
                         </h3>
                       </div>
                       <div class="flex flex-wrap gap-2">
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Power BI</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Informatica</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Talend ETL</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Snowflake</span
                         >
                       </div>
@@ -1016,11 +979,11 @@
 
                     <!-- Databases & Storage -->
                     <div
-                      class="border border-gray-200 dark:border-gray-600 rounded-lg p-4 bg-gray-50 dark:bg-gray-700/50 hover:border-LMBlue dark:hover:border-DMyellow transition-all duration-300"
+                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700/50 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
                     >
                       <div class="flex items-center mb-3">
                         <div
-                          class="w-8 h-8 bg-LMBlue dark:bg-DMyellow rounded-md flex items-center justify-center mr-3"
+                          class="w-8 h-8 bg-mocha dark:bg-DMyellow  flex items-center justify-center mr-3"
                         >
                           <svg
                             class="w-4 h-4 text-white dark:text-gray-900"
@@ -1037,30 +1000,30 @@
                           </svg>
                         </div>
                         <h3
-                          class="font-lemonmilk text-sm sm:text-base text-gray-800 dark:text-white"
+                          class="font-pixel text-xs sm:text-sm text-mocha dark:text-DMyellow uppercase tracking-wide"
                         >
                           Databases & Storage
                         </h3>
                       </div>
                       <div class="flex flex-wrap gap-2">
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >MySQL</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >SQLite</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >MongoDB</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Firebase</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-md text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-600 hover:border-LMBlue dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >PostgreSQL</span
                         >
                       </div>
@@ -1071,24 +1034,24 @@
 
               <!-- Experience Section -->
               <div
-                class="mb-6 border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300"
+                class="mb-6 border border-sand/40 dark:border-gray-700  overflow-hidden bg-cream/40 dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300"
               >
                 <div
                   @click="toggleSection('experience')"
-                  class="cursor-pointer flex items-center justify-between p-3 sm:p-4 bg-gradient-to-r from-gray-50 to-white dark:from-gray-800 dark:to-gray-700"
+                  class="cursor-pointer flex items-center justify-between p-3 sm:p-4 bg-gradient-to-r from-cream/40 to-cream dark:from-gray-800 dark:to-gray-700"
                 >
                   <div class="flex items-center">
                     <div
-                      class="w-1 h-6 bg-LMBlue dark:bg-DMyellow rounded-full mr-2 sm:mr-3"
+                      class="w-1 h-6 bg-mocha dark:bg-DMyellow  mr-2 sm:mr-3"
                     ></div>
                     <h2
-                      class="font-lemonmilk font-medium text-base sm:text-xl text-gray-800 dark:text-white"
+                      class="font-pixel font-normal text-sm sm:text-lg text-mocha dark:text-DMyellow uppercase tracking-wider"
                     >
                       Experience
                     </h2>
                   </div>
                   <span
-                    class="text-LMBlue dark:text-DMyellow text-xl sm:text-2xl mr-2 sm:mr-4 transition-transform duration-300"
+                    class="text-mocha dark:text-DMyellow text-xl sm:text-2xl mr-2 sm:mr-4 transition-transform duration-300"
                     :class="{ 'transform rotate-180': isOpen.experience }"
                   >
                     <svg
@@ -1113,18 +1076,18 @@
                   class="p-3 sm:p-4 transition-all duration-500"
                 >
                   <div
-                    class="mb-6 p-3 sm:p-4 border-l-4 border-LMBlue dark:border-DMyellow bg-gray-50 dark:bg-gray-700 rounded-r-lg"
+                    class="mb-6 p-3 sm:p-4 border-l-4 border-mocha dark:border-DMyellow bg-sand/25 dark:bg-gray-700 "
                   >
                     <div
                       class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2"
                     >
-                      <h3
-                        class="font-lemonmilk text-base sm:text-lg text-gray-800 dark:text-white"
+                        <h3
+                        class="font-pixel text-sm sm:text-base text-mocha dark:text-DMyellow uppercase tracking-wide"
                       >
                         Pick and Buy Ltd
                       </h3>
                       <span
-                        class="px-2 py-1 bg-LMBlue/10 dark:bg-DMyellow/10 text-LMBlue dark:text-DMyellow rounded-full text-xs sm:text-sm font-medium mt-1 sm:mt-0 inline-block"
+                        class="px-2 py-1 bg-mocha/10 dark:bg-DMyellow/10 text-mocha dark:text-DMyellow  text-xs sm:text-sm font-medium mt-1 sm:mt-0 inline-block"
                       >
                         May 2024 - August 2024
                       </span>
@@ -1169,18 +1132,18 @@
                   </div>
 
                   <div
-                    class="p-3 sm:p-4 border-l-4 border-LMBlue dark:border-DMyellow bg-gray-50 dark:bg-gray-700 rounded-r-lg"
+                    class="p-3 sm:p-4 border-l-4 border-mocha dark:border-DMyellow bg-sand/25 dark:bg-gray-700 "
                   >
                     <div
                       class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2"
                     >
-                      <h3
-                        class="font-lemonmilk text-base sm:text-lg text-gray-800 dark:text-white"
+                        <h3
+                        class="font-pixel text-sm sm:text-base text-mocha dark:text-DMyellow uppercase tracking-wide"
                       >
                         IDP Education Ltd
                       </h3>
                       <span
-                        class="px-2 py-1 bg-LMBlue/10 dark:bg-DMyellow/10 text-LMBlue dark:text-DMyellow rounded-full text-xs sm:text-sm font-medium mt-1 sm:mt-0 inline-block"
+                        class="px-2 py-1 bg-mocha/10 dark:bg-DMyellow/10 text-mocha dark:text-DMyellow  text-xs sm:text-sm font-medium mt-1 sm:mt-0 inline-block"
                       >
                         2021-2023 | Part time
                       </span>
@@ -1215,24 +1178,24 @@
 
               <!-- Education Section -->
               <div
-                class="mb-6 border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300"
+                class="mb-6 border border-sand/40 dark:border-gray-700  overflow-hidden bg-cream/40 dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300"
               >
                 <div
                   @click="toggleSection('education')"
-                  class="cursor-pointer flex items-center justify-between p-3 sm:p-4 bg-gradient-to-r from-gray-50 to-white dark:from-gray-800 dark:to-gray-700"
+                  class="cursor-pointer flex items-center justify-between p-3 sm:p-4 bg-gradient-to-r from-cream/40 to-cream dark:from-gray-800 dark:to-gray-700"
                 >
                   <div class="flex items-center">
                     <div
-                      class="w-1 h-6 bg-LMBlue dark:bg-DMyellow rounded-full mr-2 sm:mr-3"
+                      class="w-1 h-6 bg-mocha dark:bg-DMyellow  mr-2 sm:mr-3"
                     ></div>
                     <h2
-                      class="font-lemonmilk font-medium text-base sm:text-xl text-gray-800 dark:text-white"
+                      class="font-pixel font-normal text-sm sm:text-lg text-mocha dark:text-DMyellow uppercase tracking-wider"
                     >
                       Education
                     </h2>
                   </div>
                   <span
-                    class="text-LMBlue dark:text-DMyellow text-xl sm:text-2xl mr-2 sm:mr-4 transition-transform duration-300"
+                    class="text-mocha dark:text-DMyellow text-xl sm:text-2xl mr-2 sm:mr-4 transition-transform duration-300"
                     :class="{ 'transform rotate-180': isOpen.education }"
                   >
                     <svg
@@ -1257,18 +1220,18 @@
                   class="p-3 sm:p-4 transition-all duration-500"
                 >
                   <div
-                    class="p-3 sm:p-4 border-l-4 border-LMBlue dark:border-DMyellow bg-gray-50 dark:bg-gray-700 rounded-r-lg mb-4 sm:mb-6"
+                    class="p-3 sm:p-4 border-l-4 border-mocha dark:border-DMyellow bg-sand/25 dark:bg-gray-700  mb-4 sm:mb-6"
                   >
                     <div
                       class="flex flex-col sm:flex-row sm:items-center sm:justify-between"
                     >
-                      <h3
-                        class="font-lemonmilk text-base sm:text-lg text-gray-800 dark:text-white"
+                        <h3
+                        class="font-pixel text-sm sm:text-base text-mocha dark:text-DMyellow uppercase tracking-wide"
                       >
                         Middlesex University Mauritius
                       </h3>
                       <span
-                        class="px-2 py-1 bg-LMBlue/10 dark:bg-DMyellow/10 text-LMBlue dark:text-DMyellow rounded-full text-xs sm:text-sm font-medium mt-1 sm:mt-0 inline-block"
+                        class="px-2 py-1 bg-mocha/10 dark:bg-DMyellow/10 text-mocha dark:text-DMyellow  text-xs sm:text-sm font-medium mt-1 sm:mt-0 inline-block"
                       >
                         2023-2025
                       </span>
@@ -1281,18 +1244,18 @@
                   </div>
 
                   <div
-                    class="p-3 sm:p-4 border-l-4 border-LMBlue dark:border-DMyellow bg-gray-50 dark:bg-gray-700 rounded-r-lg"
+                    class="p-3 sm:p-4 border-l-4 border-mocha dark:border-DMyellow bg-sand/25 dark:bg-gray-700 "
                   >
                     <div
                       class="flex flex-col sm:flex-row sm:items-center sm:justify-between"
                     >
-                      <h3
-                        class="font-lemonmilk text-base sm:text-lg text-gray-800 dark:text-white"
+                        <h3
+                        class="font-pixel text-sm sm:text-base text-mocha dark:text-DMyellow uppercase tracking-wide"
                       >
                         Queen Elizabeth College
                       </h3>
                       <span
-                        class="px-2 py-1 bg-LMBlue/10 dark:bg-DMyellow/10 text-LMBlue dark:text-DMyellow rounded-full text-xs sm:text-sm font-medium mt-1 sm:mt-0 inline-block"
+                        class="px-2 py-1 bg-mocha/10 dark:bg-DMyellow/10 text-mocha dark:text-DMyellow  text-xs sm:text-sm font-medium mt-1 sm:mt-0 inline-block"
                       >
                         2015-2022
                       </span>
@@ -1308,24 +1271,24 @@
 
               <!-- Certifications Section -->
               <div
-                class="mb-6 border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300"
+                class="mb-6 border border-sand/40 dark:border-gray-700  overflow-hidden bg-cream/40 dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300"
               >
                 <div
                   @click="toggleSection('certifications')"
-                  class="cursor-pointer flex items-center justify-between p-3 sm:p-4 bg-gradient-to-r from-gray-50 to-white dark:from-gray-800 dark:to-gray-700"
+                  class="cursor-pointer flex items-center justify-between p-3 sm:p-4 bg-gradient-to-r from-cream/40 to-cream dark:from-gray-800 dark:to-gray-700"
                 >
                   <div class="flex items-center">
                     <div
-                      class="w-1 h-6 bg-LMBlue dark:bg-DMyellow rounded-full mr-2 sm:mr-3"
+                      class="w-1 h-6 bg-mocha dark:bg-DMyellow  mr-2 sm:mr-3"
                     ></div>
                     <h2
-                      class="font-lemonmilk font-medium text-base sm:text-xl text-gray-800 dark:text-white"
+                      class="font-pixel font-normal text-sm sm:text-lg text-mocha dark:text-DMyellow uppercase tracking-wider"
                     >
                       Certifications
                     </h2>
                   </div>
                   <span
-                    class="text-LMBlue dark:text-DMyellow text-xl sm:text-2xl mr-2 sm:mr-4 transition-transform duration-300"
+                    class="text-mocha dark:text-DMyellow text-xl sm:text-2xl mr-2 sm:mr-4 transition-transform duration-300"
                     :class="{ 'transform rotate-180': isOpen.certifications }"
                   >
                     <svg
@@ -1350,18 +1313,18 @@
                   class="p-3 sm:p-4 transition-all duration-500"
                 >
                   <div
-                    class="p-3 sm:p-4 border-l-4 border-LMBlue dark:border-DMyellow bg-gray-50 dark:bg-gray-700 rounded-r-lg"
+                    class="p-3 sm:p-4 border-l-4 border-mocha dark:border-DMyellow bg-sand/25 dark:bg-gray-700 "
                   >
                     <div
                       class="flex flex-col sm:flex-row sm:items-center sm:justify-between"
                     >
-                      <h3
-                        class="font-lemonmilk text-base sm:text-lg text-gray-800 dark:text-white"
+                        <h3
+                        class="font-pixel text-sm sm:text-base text-mocha dark:text-DMyellow uppercase tracking-wide"
                       >
                         Certified in Cybersecurity (CC)
                       </h3>
                       <span
-                        class="px-2 py-1 bg-LMBlue/10 dark:bg-DMyellow/10 text-LMBlue dark:text-DMyellow rounded-full text-xs sm:text-sm font-medium mt-1 sm:mt-0 inline-block"
+                        class="px-2 py-1 bg-mocha/10 dark:bg-DMyellow/10 text-mocha dark:text-DMyellow  text-xs sm:text-sm font-medium mt-1 sm:mt-0 inline-block"
                       >
                         ISC2
                       </span>
@@ -1377,47 +1340,16 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
     </div>
 
-    <!-- Footer -->
-    <footer
-      class="border-t-2 border-x-0 mt-16 border-gray-300 dark:border-gray-700 bg-white dark:bg-DMdarkGray flex flex-row items-center justify-center relative z-10"
-    >
-      <div
-        class="w-full max-w-[1200px] flex my-2 flex-row items-center justify-between p-2"
-      >
-        <div class="mx-4 sm:mx-8">
-          <span class="text-gray-600 dark:text-gray-300 text-sm sm:text-base"
-            >© 2024 HAFSAH JOOMUN</span
-          >
-        </div>
-        <div class="mx-4 sm:mx-8 flex flex-row">
-          <router-link to="/aboutme">
-            <a
-              class="text-LMBlue dark:text-DMyellow font-light hover:underline text-sm sm:text-base"
-              >About me</a
-            >
-          </router-link>
-          <span class="text-gray-500 dark:text-gray-400 font-light mx-2"
-            >|</span
-          >
-          <router-link to="/blogs">
-            <a
-              class="text-LMBlue dark:text-DMyellow fontlight hover:underline text-sm sm:text-base"
-              >Blogs</a
-            >
-          </router-link>
-        </div>
-      </div>
-    </footer>
+    <Footer class="relative z-10" />
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
 import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
 
 const openCV = () => {
   const cvPath = "hafsah_joomun_cv.pdf";
@@ -1438,62 +1370,3 @@ const toggleSection = (section) => {
 };
 </script>
 
-<style>
-/* Background pattern */
-.bg-grid-pattern {
-  background-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.05) 1px,
-      transparent 1px
-    ),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
-  background-size: 20px 20px;
-}
-
-/* Custom animations */
-@keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.animate-spin-slow {
-  animation: spin-slow 8s linear infinite;
-}
-
-/* Prose styling for better text appearance */
-.prose {
-  max-width: none;
-}
-
-.prose p {
-  margin-bottom: 1rem;
-}
-
-/* For very small screens, adjust spacing */
-@media (max-width: 360px) {
-  .mx-4 {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-  }
-
-  .p-3 {
-    padding: 0.5rem;
-  }
-}
-
-/* Enhanced hover effects */
-.group:hover .group-hover\:animate-spin {
-  animation: spin 1s linear infinite;
-}
-
-/* Backdrop blur support */
-@supports (backdrop-filter: blur(0)) {
-  .backdrop-blur-sm {
-    backdrop-filter: blur(4px);
-  }
-}
-</style>
