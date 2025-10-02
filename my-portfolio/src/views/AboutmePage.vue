@@ -220,7 +220,7 @@
                   <div class="space-y-6">
                     <!-- Hobbies & Interests -->
                     <div
-                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700/50 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
+                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
                     >
                       <div class="flex items-center mb-4">
                         <div
@@ -304,7 +304,7 @@
 
                     <!-- Background & Values -->
                     <div
-                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700/50 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
+                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
                     >
                       <div class="flex items-center mb-4">
                         <div
@@ -402,7 +402,7 @@
                   <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
                     <!-- Problem-Solving -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
                         class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
@@ -419,14 +419,14 @@
                         ></path>
                       </svg>
                       <span
-                        class="text-gray-700 dark:text-lightGray font-medium text-sm sm:text-base"
+                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
                         >Problem-Solving</span
                       >
                     </div>
 
                     <!-- Web Development -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
                         class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
@@ -443,14 +443,14 @@
                         ></path>
                       </svg>
                       <span
-                        class="text-gray-700 dark:text-lightGray font-medium text-sm sm:text-base"
+                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
                         >Web Development</span
                       >
                     </div>
 
                     <!-- Collaboration & Teamwork -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
                         class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
@@ -467,14 +467,14 @@
                         ></path>
                       </svg>
                       <span
-                        class="text-gray-700 dark:text-lightGray font-medium text-sm sm:text-base"
+                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
                         >Communication</span
                       >
                     </div>
 
                     <!-- Version Control (Git) -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
                         class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
@@ -491,14 +491,14 @@
                         ></path>
                       </svg>
                       <span
-                        class="text-gray-700 dark:text-lightGray font-medium text-sm sm:text-base"
+                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
                         >Version Control</span
                       >
                     </div>
 
                     <!-- Project Management -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
                         class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
@@ -515,14 +515,14 @@
                         ></path>
                       </svg>
                       <span
-                        class="text-gray-700 dark:text-lightGray font-medium text-sm sm:text-base"
+                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
                         >Project Management</span
                       >
                     </div>
 
                     <!-- Power BI -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
                         class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
@@ -539,14 +539,14 @@
                         ></path>
                       </svg>
                       <span
-                        class="text-gray-700 dark:text-lightGray font-medium text-sm sm:text-base"
+                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
                         >Power BI</span
                       >
                     </div>
 
                     <!-- ETL Processing -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
                         class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
@@ -563,14 +563,14 @@
                         ></path>
                       </svg>
                       <span
-                        class="text-gray-700 dark:text-lightGray font-medium text-sm sm:text-base"
+                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
                         >ETL Processing
                       </span>
                     </div>
 
                     <!-- Programming -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
                         class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
@@ -587,14 +587,14 @@
                         ></path>
                       </svg>
                       <span
-                        class="text-gray-700 dark:text-lightGray font-medium text-sm sm:text-base"
+                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
                         >Programming (Python, C, C++, Dart)</span
                       >
                     </div>
 
                     <!-- Database -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
                         class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
@@ -611,14 +611,14 @@
                         ></path>
                       </svg>
                       <span
-                        class="text-gray-700 dark:text-lightGray font-medium text-sm sm:text-base"
+                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
                         >Database (Firebase, MongoDB, SQL)</span
                       >
                     </div>
 
                     <!-- Robotics -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
                         class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
@@ -635,14 +635,14 @@
                         ></path>
                       </svg>
                       <span
-                        class="text-gray-700 dark:text-lightGray font-medium text-sm sm:text-base"
+                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
                         >Robotics</span
                       >
                     </div>
 
                     <!-- Blockchain Development -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
                         class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
@@ -659,14 +659,14 @@
                         ></path>
                       </svg>
                       <span
-                        class="text-gray-700 dark:text-lightGray font-medium text-sm sm:text-base"
+                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
                         >Blockchain Development</span
                       >
                     </div>
 
                     <!-- Bash/Batch Scripting -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
                         class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
@@ -683,14 +683,14 @@
                         ></path>
                       </svg>
                       <span
-                        class="text-gray-700 dark:text-lightGray font-medium text-sm sm:text-base"
+                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
                         >Bash/Batch Scripting</span
                       >
                     </div>
 
                     <!-- Informatica -->
                     <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
                       <svg
                         class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
@@ -707,7 +707,7 @@
                         ></path>
                       </svg>
                       <span
-                        class="text-gray-700 dark:text-lightGray font-medium text-sm sm:text-base"
+                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
                         >Informatica</span
                       >
                     </div>
@@ -761,7 +761,7 @@
                   <div class="space-y-6">
                     <!-- Programming Languages -->
                     <div
-                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700/50 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
+                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
                     >
                       <div class="flex items-center mb-3">
                         <div
@@ -789,27 +789,27 @@
                       </div>
                       <div class="flex flex-wrap gap-2">
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >JavaScript</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Python</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Java</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >C++</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >C</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Dart</span
                         >
                       </div>
@@ -817,7 +817,7 @@
 
                     <!-- Frameworks & Libraries -->
                     <div
-                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700/50 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
+                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
                     >
                       <div class="flex items-center mb-3">
                         <div
@@ -845,23 +845,23 @@
                       </div>
                       <div class="flex flex-wrap gap-2">
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Vue.js</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >TailwindCSS</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Bootstrap</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Node.js</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Flutter</span
                         >
                       </div>
@@ -869,7 +869,7 @@
 
                     <!-- Development Tools -->
                     <div
-                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700/50 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
+                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
                     >
                       <div class="flex items-center mb-3">
                         <div
@@ -903,27 +903,27 @@
                       </div>
                       <div class="flex flex-wrap gap-2">
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Git</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >GitHub</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >VS Code</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Figma</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Postman</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Bash/Batch</span
                         >
                       </div>
@@ -931,7 +931,7 @@
 
                     <!-- Data & Analytics Tools -->
                     <div
-                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700/50 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
+                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
                     >
                       <div class="flex items-center mb-3">
                         <div
@@ -959,19 +959,19 @@
                       </div>
                       <div class="flex flex-wrap gap-2">
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Power BI</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Informatica</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Talend ETL</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Snowflake</span
                         >
                       </div>
@@ -979,7 +979,7 @@
 
                     <!-- Databases & Storage -->
                     <div
-                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 to-sand/35 dark:bg-gray-700/50 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
+                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
                     >
                       <div class="flex items-center mb-3">
                         <div
@@ -1007,23 +1007,23 @@
                       </div>
                       <div class="flex flex-wrap gap-2">
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >MySQL</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >SQLite</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >MongoDB</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Firebase</span
                         >
                         <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-text-secondary dark:text-gray-200  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >PostgreSQL</span
                         >
                       </div>
