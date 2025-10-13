@@ -1,19 +1,14 @@
 <template>
   <div class="min-h-screen bg-LMveryLightBeige dark:bg-black relative overflow-hidden">
-    <!-- Background gradient to match homepage -->
     <div class="absolute inset-0 bg-gradient-to-br from-LMlightBeige/20 via-transparent to-LMbeige/10 dark:from-gray-800/20 dark:via-transparent dark:to-gray-700/10"></div>
-    <!-- Background grid pattern -->
     <div class="fixed inset-0 bg-grid-pattern-light dark:bg-grid-pattern-dark opacity-60 dark:opacity-40 pointer-events-none"></div>
 
-    <!-- Header with proper spacing -->
     <div class="mb-10 sm:mb-16 relative z-10">
       <Header />
     </div>
 
-    <!-- Main content with homepage styling -->
     <div class="max-w-[1200px] px-8 sm:px-28 mx-auto w-full relative z-10">
       <div class="flex flex-col items-start">
-        <!-- Page title with decorative element -->
         <div class="relative mb-8 sm:mb-12 w-full">
           <h2 class="font-pixel font-medium text-2xl sm:text-4xl mb-2 text-mocha dark:text-DMyellow uppercase">
             Blog Posts
@@ -21,16 +16,12 @@
           <div class="w-20 h-1 bg-gradient-to-r from-mocha to-sage dark:from-DMyellow dark:to-purple-900 rounded-full"></div>
         </div>
         
-        <!-- Terminal-style Under Construction Content -->
         <div class="w-full">
-          <!-- Clean Terminal Interface -->
           <div class="bg-charcoal dark:bg-gray-900 border-2 border-mocha dark:border-DMyellow shadow-2xl overflow-hidden">
             
-            <!-- Terminal Title Bar -->
             <div class="bg-mocha dark:bg-gray-700 px-4 py-3 border-b border-sand dark:border-gray-600">
               <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-3">
-                  <!-- Terminal Controls -->
                   <div class="flex space-x-2">
                     <div class="w-3 h-3 bg-red-500 rounded-full"></div>
                     <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
@@ -41,10 +32,8 @@
               </div>
             </div>
             
-            <!-- Terminal Content -->
             <div class="p-8 bg-charcoal dark:bg-gray-900 min-h-[400px]">
               <div class="font-mono text-sm space-y-4">
-                <!-- Animated terminal lines -->
                 <div v-for="(line, index) in terminalLines" :key="index" class="terminal-line" :class="{ 'typing': line.typing, 'visible': line.visible }">
                   <div v-if="line.type === 'prompt'" class="flex items-center">
                     <span class="text-sage dark:text-DMyellow">user@portfolio</span>
@@ -63,7 +52,6 @@
                   </div>
                 </div>
                 
-                <!-- Action buttons - only show after animation completes -->
                 <div v-if="animationComplete" class="flex flex-col sm:flex-row gap-4 pt-6 fade-in">
                   <router-link to="/projects" 
                     class="font-pixel text-xs uppercase tracking-wider group inline-flex items-center px-4 py-2 bg-mocha hover:bg-sage dark:bg-gray-800 dark:hover:bg-DMyellow border-2 border-mocha dark:border-gray-600 text-white dark:text-DMyellow hover:text-charcoal dark:hover:text-black transition-all duration-300 hover:shadow-lg">

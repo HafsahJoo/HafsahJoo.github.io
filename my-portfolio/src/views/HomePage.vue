@@ -2,27 +2,21 @@
   <div class="min-h-screen bg-LMveryLightBeige dark:bg-black transition-colors duration-500">
     <Header />
     
-    <!-- Enhanced background with subtle patterns for both light and dark modes -->
     <div class="fixed inset-0 bg-gradient-to-br from-LMlightBeige/20 via-transparent to-LMbeige/10 dark:from-gray-800/30 dark:via-transparent dark:to-gray-700/10 pointer-events-none"></div>
     <div class="fixed inset-0 bg-grid-pattern-light dark:bg-grid-pattern-dark opacity-3 dark:opacity-20 pointer-events-none"></div>
     
-    
-    <!-- Main content with enhanced visual elements -->
     <div class="max-w-[1200px] px-8 sm:px-28 mx-auto w-full grid min-h-screen place-items-start relative z-10">
       <div class="grid grid-cols-1 gap-12 mt-14 sm:mt-28">
         
-        <!-- Profile section with full width like terminals -->
+        <!-- Profile Section -->
         <div class="col-span-1 grid grid-cols-1 sm:grid-cols-3 gap-8 items-center">
-          <!-- Text content -->
           <div class="col-span-1 sm:col-span-2 relative">
-          <!-- Enhanced name with better typography -->
           <div class="relative">
               <h1 class="font-pixel font-normal text-2xl sm:text-3xl mb-6 text-mocha dark:text-DMyellow drop-shadow-lg relative z-10 uppercase">
               Hafsah joomun
             </h1>
           </div>
           
-          <!-- Enhanced description with better styling -->
           <div class="relative">
               <p class="font-inter text-text-secondary text-md sm:text-lg leading-relaxed mb-4 relative z-10">
               A curious mind from Mauritius, passionate about technology, coding, and mathematics.
@@ -30,11 +24,9 @@
               <p class="font-inter text-text-secondary text-md sm:text-lg leading-relaxed relative z-10">
               This is my space to share my work and discoveries.
             </p>
-            <!-- Decorative underline -->
               <div class="w-24 h-0.5 bg-gradient-to-r from-mocha dark:from-DMyellow to-sage dark:to-purple-900 mt-4 rounded-full"></div>
           </div>
           
-            <!-- Clean social media icons -->
             <div class="flex flex-row mt-8 space-x-8">
             <a href="https://www.linkedin.com/in/hafsah-joomun/" 
                  class="group transform transition-all duration-300 hover:scale-125">
@@ -54,7 +46,6 @@
           </div>
         </div>
         
-          <!-- Profile picture -->
           <div class="col-span-1 hidden sm:block">
           <div v-if="isDarkMode" class="transition-transform hover:scale-105">
             <img src="../assets/icons/lightprofile.svg" alt="Dark Mode" class="w-full h-auto" />
@@ -65,17 +56,14 @@
           </div>
         </div>
         
-        <!-- Clean Terminal About Me Section -->
+        <!-- About Me Section -->
         <div class="col-span-1 my-10">
           <div>
-            <!-- Clean Terminal Interface -->
             <div class="bg-charcoal dark:bg-gray-900 border-2 border-mocha dark:border-DMyellow shadow-2xl overflow-hidden">
               
-              <!-- Terminal Title Bar -->
               <div class="bg-mocha dark:bg-gray-700 px-4 py-3 border-b border-sand dark:border-gray-600">
                 <div class="flex items-center justify-between">
                   <div class="flex items-center space-x-3">
-                    <!-- Terminal Controls -->
                     <div class="flex space-x-2">
                       <div class="w-3 h-3 bg-red-500 rounded-full"></div>
                       <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
@@ -89,11 +77,9 @@
                 </div>
               </div>
               
-              <!-- Terminal Content -->
-              <div class="p-8 bg-charcoal dark:bg-gray-900 min-h-[400px]">
-                <div class="font-mono text-sm space-y-3">
-                  <!-- ASCII Art Header -->
-                  <div class="text-sand dark:text-amber-400 mb-6">
+              <div class="p-8 bg-charcoal dark:bg-gray-900 h-[600px] flex flex-col">
+                <div class="font-mono text-sm space-y-3 flex-grow">
+                  <div class="text-sand dark:text-amber-400 mt-6">
                     <pre class="text-center hidden sm:block text-xs">
                       ⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀
 ⠀⠀⠀⠀⢀⡴⣆⠀⠀⠀⠀⠀⣠⡀ ᶻ 𝗓 𐰁 .ᐟ ⣼⣿⡗⠀⠀⠀⠀
@@ -104,7 +90,6 @@
 ⣠⠾⠋⠙⣶⣤⣤⣤⣤⣤⣀⣠⣤⣾⣿⠴⠶⠚⠋⠉⠁⠀⠀⠀⠀⠀⠀
 ⠛⠒⠛⠉⠉⠀⠀⠀⣴⠟⢃⡴⠛⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
                     </pre>
-                    <!-- Mobile ASCII Art -->
                     <pre class="text-center block sm:hidden text-xs">
                       ⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀
 ⠀⠀⠀⠀⢀⡴⣆⠀⠀⠀⠀⠀⣠⡀ ᶻ 𝗓 𐰁 .ᐟ ⣼⣿⡗⠀⠀⠀⠀
@@ -117,7 +102,6 @@
                     </pre>
                   </div>
                   
-                   <!-- Animated terminal lines -->
                    <div v-for="(line, index) in aboutTerminalLines" :key="index" class="terminal-line" :class="{ 'typing': line.typing, 'visible': line.visible }">
                      <div v-if="line.type === 'prompt'" class="flex flex-wrap items-center break-all">
                        <span class="text-sage dark:text-DMyellow">user@portfolio</span>
@@ -131,25 +115,23 @@
                        {{ line.displayText }}
                     </div>
                   </div>
-                  
-                   <!-- Learn More Button - only show after animation completes -->
-                   <div v-if="aboutAnimationComplete" class="flex justify-end pt-6 fade-in">
-                    <router-link to="/aboutme" 
-                       class="font-pixel text-xs uppercase tracking-wider group inline-flex items-center px-4 py-2 bg-mocha hover:bg-sage dark:bg-gray-800 dark:hover:bg-DMyellow border-2 border-mocha dark:border-gray-600 text-white dark:text-DMyellow hover:text-charcoal dark:hover:text-black transition-all duration-300 hover:shadow-lg">
-                      <span class="mr-2">></span>
-                      LEARN_MORE.EXE
-                    </router-link>
-                  </div>
+                </div>
+                
+                <div class="flex justify-end pt-6">
+                  <router-link to="/aboutme" 
+                     class="font-pixel text-xs uppercase tracking-wider group inline-flex items-center px-4 py-2 bg-mocha hover:bg-sage dark:bg-gray-800 dark:hover:bg-DMyellow border-2 border-mocha dark:border-gray-600 text-white dark:text-DMyellow hover:text-charcoal dark:hover:text-black transition-all duration-300 hover:shadow-lg">
+                    <span class="mr-2">></span>
+                    About me 
+                  </router-link>
                 </div>
               </div>
             </div>
           </div>
         </div>
         
-        <!-- Revamped Projects Section with Pixel Theme -->
+        <!-- Projects Section -->
         <div class="col-span-1 mb-16 relative">
           <div class="relative z-10">
-            <!-- Pixel-styled section header -->
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 sm:mb-12 space-y-4 sm:space-y-0">
               <div class="relative">
                 <h1 class="font-pixel font-normal text-xl text-mocha dark:text-DMyellow uppercase tracking-wider">Projects</h1>
@@ -162,10 +144,8 @@
               </router-link>
             </div>
             
-            <!-- Pixel-themed projects carousel/grid -->
             <div class="overflow-x-auto sm:overflow-visible">
               <div class="flex space-x-6 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-x-0 pb-4 sm:pb-0">
-              <!-- Project 1: OIA ROBOT -->
               <div class="group relative bg-gradient-to-br from-cream/30 to-sand/20 dark:from-gray-800/50 dark:to-gray-700/30 border-2 border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-all duration-500 overflow-hidden flex-shrink-0 w-80 sm:w-auto">
                 <div class="aspect-video bg-gradient-to-br from-LMBlue/10 to-LMbeige/20 dark:from-gray-700 dark:to-gray-600 relative overflow-hidden">
                   <img src="/assets/oia2.jpg" alt="OIA ROBOT" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
@@ -184,7 +164,6 @@
                 </div>
               </div>
 
-              <!-- Project 2: Vending Machine -->
               <div class="group relative bg-gradient-to-br from-cream/30 to-sand/20 dark:from-gray-800/50 dark:to-gray-700/30 border-2 border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-all duration-500 overflow-hidden flex-shrink-0 w-80 sm:w-auto">
                 <div class="aspect-video bg-gradient-to-br from-LMBlue/10 to-LMbeige/20 dark:from-gray-700 dark:to-gray-600 relative overflow-hidden">
                   <img src="/assets/vm.jpg" alt="Vending Machine Robot" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
@@ -203,7 +182,6 @@
                 </div>
               </div>
 
-              <!-- Project 3: Pacman Game -->
               <div class="group relative bg-gradient-to-br from-cream/30 to-sand/20 dark:from-gray-800/50 dark:to-gray-700/30 border-2 border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-all duration-500 overflow-hidden flex-shrink-0 w-80 sm:w-auto">
                 <div class="aspect-video bg-gradient-to-br from-LMBlue/10 to-LMbeige/20 dark:from-gray-700 dark:to-gray-600 relative overflow-hidden">
                   <img src="/assets/pacman4.png" alt="Pacman Game" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
@@ -226,30 +204,21 @@
           </div>
         </div>
         
-        <!-- Revamped Blogs Section with Pixel Theme -->
+        <!-- Blogs Section -->
         <div class="col-span-1 mb-16 relative">
           <div class="relative z-10">
-            <!-- Pixel-styled section header -->
             <div class="flex items-center justify-between mb-12">
               <div class="relative">
                 <h1 class="font-pixel font-normal text-xl text-mocha dark:text-DMyellow uppercase tracking-wider">Blogs</h1>
                 <div class="absolute -bottom-2 left-0 w-20 h-1 bg-gradient-to-r from-mocha to-sage dark:from-DMyellow dark:to-purple-900"></div>
               </div>
-              <!-- <router-link to="/blogs" 
-                class="font-pixel text-xs uppercase tracking-wider group inline-flex items-center px-4 py-2 bg-mocha hover:bg-sage dark:bg-gray-800 dark:hover:bg-DMyellow border-2 border-mocha dark:border-gray-600 text-white dark:text-DMyellow hover:text-charcoal dark:hover:text-black transition-all duration-300 hover:shadow-lg">
-                <span class="mr-2">></span>
-                VIEW_ALL
-              </router-link> -->
             </div>
             
-            <!-- Clean Terminal Interface -->
             <div class="bg-charcoal dark:bg-gray-900 border-2 border-mocha dark:border-DMyellow shadow-2xl overflow-hidden">
               
-              <!-- Terminal Title Bar -->
               <div class="bg-mocha dark:bg-gray-700 px-4 py-3 border-b border-sand dark:border-gray-600">
                 <div class="flex items-center justify-between">
                   <div class="flex items-center space-x-3">
-                    <!-- Terminal Controls -->
                     <div class="flex space-x-2">
                       <div class="w-3 h-3 bg-red-500 rounded-full"></div>
                       <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
@@ -263,10 +232,8 @@
                 </div>
               </div>
               
-              <!-- Terminal Content -->
               <div class="p-8 bg-charcoal dark:bg-gray-900 min-h-[300px]">
                 <div class="font-mono text-sm space-y-3">
-                  <!-- Welcome message -->
                   <div class="text-sand dark:text-amber-400 mb-6">
                     <div class="flex items-center mb-2">
                       <span class="text-green-400">✓</span>
@@ -282,7 +249,6 @@
                     </div>
                   </div>
                   
-                  <!-- Command line interaction -->
                   <div class="space-y-2">
                     <div class="flex flex-wrap items-center break-all">
                       <span class="text-sage dark:text-DMyellow">user@portfolio</span>
@@ -323,7 +289,6 @@
                     </div>
                   </div>
                   
-                  <!-- Current command line with cursor -->
                   <div class="flex flex-wrap items-center mt-8 break-all">
                     <span class="text-sage dark:text-DMyellow">user@portfolio</span>
                     <span class="text-white">:</span>

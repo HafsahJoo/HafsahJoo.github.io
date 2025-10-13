@@ -1,11 +1,8 @@
 <template>
   <div class="min-h-screen bg-LMveryLightBeige dark:bg-black relative overflow-hidden">
-    <!-- Background gradient to match homepage -->
     <div class="absolute inset-0 bg-gradient-to-br from-LMlightBeige/20 via-transparent to-LMbeige/10 dark:from-gray-800/20 dark:via-transparent dark:to-gray-700/10"></div>
-    <!-- Background grid pattern -->
     <div class="fixed inset-0 bg-grid-pattern-light dark:bg-grid-pattern-dark opacity-60 dark:opacity-40 pointer-events-none"></div>
 
-    <!-- Header with proper spacing -->
     <div class="mb-10 sm:mb-16 relative z-10">
       <Header />
     </div>
@@ -51,7 +48,6 @@
                     <div
                       class="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 relative"
                     >
-                      <!-- Static gradient border -->
                       <div
                         class="absolute inset-0 bg-gradient-to-r from-mocha via-sage to-sand dark:from-DMyellow dark:via-amber-500 dark:to-orange-500 rounded-full p-1"
                       >
@@ -81,7 +77,6 @@
                         </h1>
                       </div>
 
-                      <!-- Professional title with animated typing effect -->
                       <div
                         class="flex items-center gap-2 text-lg sm:text-xl text-gray-600 dark:text-gray-300"
                       >
@@ -228,15 +223,11 @@
                         >
                           <svg
                             class="w-4 h-4 text-white dark:text-gray-900"
-                            fill="none"
-                            stroke="currentColor"
+                            fill="currentColor"
                             viewBox="0 0 24 24"
                           >
                             <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293H15M9 10v4a2 2 0 002 2h2a2 2 0 002-2v-4M9 10V9a2 2 0 012-2h2a2 2 0 012 2v1"
+                              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
                             ></path>
                           </svg>
                         </div>
@@ -246,7 +237,7 @@
                           What I Love Doing
                         </h3>
                       </div>
-                      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div
                           class="flex items-start space-x-3 p-3 bg-sand/30 dark:bg-gray-800  border border-sand/50 dark:border-gray-600"
                         >
@@ -282,23 +273,6 @@
                             </p>
                           </div>
                         </div>
-                        <div
-                          class="flex items-start space-x-3 p-3 bg-sand/30 dark:bg-gray-800  border border-sand/50 dark:border-gray-600"
-                        >
-                          <div class="text-2xl">🌿</div>
-                          <div>
-                            <h4
-                              class="font-medium text-gray-800 dark:text-white"
-                            >
-                              Nature Walks
-                            </h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">
-                              Mauritius has some incredible trails and hidden
-                              spots. I love discovering new paths and taking
-                              photos of random insects or weird plants I find.
-                            </p>
-                          </div>
-                        </div>
                       </div>
                     </div>
 
@@ -320,7 +294,13 @@
                               stroke-linecap="round"
                               stroke-linejoin="round"
                               stroke-width="2"
-                              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                            ></path>
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
                             ></path>
                           </svg>
                         </div>
@@ -520,7 +500,7 @@
                       >
                     </div>
 
-                    <!-- Power BI -->
+                    <!-- BI Tools -->
                     <div
                       class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
                     >
@@ -540,7 +520,7 @@
                       </svg>
                       <span
                         class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
-                        >Power BI</span
+                        >BI Tools (Power BI, Looker)</span
                       >
                     </div>
 
@@ -564,7 +544,31 @@
                       </svg>
                       <span
                         class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
-                        >ETL Processing
+                        >ETL Processing (Talend, Informatica)
+                      </span>
+                    </div>
+
+                    <!-- AWS Technologies -->
+                    <div
+                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
+                    >
+                      <svg
+                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
+                        ></path>
+                      </svg>
+                      <span
+                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
+                        >AWS Technologies
                       </span>
                     </div>
 
@@ -607,7 +611,7 @@
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           stroke-width="2"
-                          d="M4 7v10c0 2 1 3 3 3h10c2 0 3-1 3-3V7c0-2-1-3-3-3H7a2 2 0 00-2 2v12a2 2 0 002 2z"
+                          d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"
                         ></path>
                       </svg>
                       <span
@@ -799,7 +803,7 @@
                         <span
                           class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Java</span
-                        >
+                        > 
                         <span
                           class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >C++</span
@@ -964,6 +968,10 @@
                         >
                         <span
                           class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          >Looker</span
+                        >
+                        <span
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Informatica</span
                         >
                         <span
@@ -973,6 +981,42 @@
                         <span
                           class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
                           >Snowflake</span
+                        >
+                      </div>
+                    </div>
+
+                    <!-- Cloud Technologies -->
+                    <div
+                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
+                    >
+                      <div class="flex items-center mb-3">
+                        <div
+                          class="w-8 h-8 bg-mocha dark:bg-DMyellow  flex items-center justify-center mr-3"
+                        >
+                          <svg
+                            class="w-4 h-4 text-white dark:text-gray-900"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
+                            ></path>
+                          </svg>
+                        </div>
+                        <h3
+                          class="font-pixel text-xs sm:text-sm text-mocha dark:text-DMyellow uppercase tracking-wide"
+                        >
+                          Cloud Technologies
+                        </h3>
+                      </div>
+                      <div class="flex flex-wrap gap-2">
+                        <span
+                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
+                          >AWS</span
                         >
                       </div>
                     </div>
@@ -1084,14 +1128,87 @@
                         <h3
                         class="font-pixel text-sm sm:text-base text-mocha dark:text-DMyellow uppercase tracking-wide"
                       >
-                        Pick and Buy Ltd
+                        Checkout.com
                       </h3>
                       <span
                         class="px-2 py-1 bg-mocha/10 dark:bg-DMyellow/10 text-mocha dark:text-DMyellow  text-xs sm:text-sm font-medium mt-1 sm:mt-0 inline-block"
                       >
-                        May 2024 - August 2024
+                        Aug 2025 - Present
                       </span>
                     </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-xs sm:text-sm italic mb-2">
+                      Data Insights & Analytics
+                    </p>
+                    <ul
+                      class="mt-3 list-disc pl-4 sm:pl-6 text-gray-700 dark:text-gray-300 space-y-1 sm:space-y-2 text-sm sm:text-base"
+                    >
+                      <li class="leading-relaxed">
+                        Identifying manual processes and proposing automation opportunities to improve efficiency.
+                      </li>
+                      <li class="leading-relaxed">
+                        Building dashboards in Looker and Zendesk using data from snowflake/GCP.
+                      </li>
+                      <li class="leading-relaxed">
+                        Creating KPI scorecards for teams to track and evaluate employee performance.
+                      </li>
+                      <li class="leading-relaxed">
+                        Building a cost of service model to measure and optimize team operations.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div
+                    class="mb-6 p-3 sm:p-4 border-l-4 border-mocha dark:border-DMyellow bg-sand/25 dark:bg-gray-700 "
+                  >
+                    <div
+                      class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2"
+                    >
+                        <h3
+                        class="font-pixel text-sm sm:text-base text-mocha dark:text-DMyellow uppercase tracking-wide"
+                      >
+                        Accenture
+                      </h3>
+                      <span
+                        class="px-2 py-1 bg-mocha/10 dark:bg-DMyellow/10 text-mocha dark:text-DMyellow  text-xs sm:text-sm font-medium mt-1 sm:mt-0 inline-block"
+                      >
+                        May 2025 - Aug 2025
+                      </span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-xs sm:text-sm italic mb-2">
+                      Packaged App Development Associate
+                    </p>
+                    <ul
+                      class="mt-3 list-disc pl-4 sm:pl-6 text-gray-700 dark:text-gray-300 space-y-1 sm:space-y-2 text-sm sm:text-base"
+                    >
+                      <li class="leading-relaxed">
+                        Built, tested, and deployed interfaces using the Informatica Application Integration Platform.
+                      </li>
+                      <li class="leading-relaxed">
+                        Designed and implemented data pipelines and transformations with Informatica Data Integration Platform.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div
+                    class="mb-6 p-3 sm:p-4 border-l-4 border-mocha dark:border-DMyellow bg-sand/25 dark:bg-gray-700 "
+                  >
+                    <div
+                      class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2"
+                    >
+                        <h3
+                        class="font-pixel text-sm sm:text-base text-mocha dark:text-DMyellow uppercase tracking-wide"
+                      >
+                        Pick and Buy Ltd (Winners)
+                      </h3>
+                      <span
+                        class="px-2 py-1 bg-mocha/10 dark:bg-DMyellow/10 text-mocha dark:text-DMyellow  text-xs sm:text-sm font-medium mt-1 sm:mt-0 inline-block"
+                      >
+                        May 2024 - Aug 2024
+                      </span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-xs sm:text-sm italic mb-2">
+                      Business Intelligence (BI) Intern
+                    </p>
                     <ul
                       class="mt-3 list-disc pl-4 sm:pl-6 text-gray-700 dark:text-gray-300 space-y-1 sm:space-y-2 text-sm sm:text-base"
                     >
@@ -1148,6 +1265,9 @@
                         2021-2023 | Part time
                       </span>
                     </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-xs sm:text-sm italic mb-2">
+                      Trainee
+                    </p>
                     <ul
                       class="mt-3 list-disc pl-4 sm:pl-6 text-gray-700 dark:text-gray-300 space-y-1 sm:space-y-2 text-sm sm:text-base"
                     >
@@ -1239,7 +1359,7 @@
                     <p
                       class="mt-2 text-gray-700 dark:text-gray-300 text-sm sm:text-base"
                     >
-                      BSc Computer Science
+                      BSc Computer Science & Systems engineering
                     </p>
                   </div>
 

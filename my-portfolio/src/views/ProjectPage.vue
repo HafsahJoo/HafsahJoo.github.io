@@ -1,19 +1,14 @@
 <template>
   <div class="min-h-screen bg-LMveryLightBeige dark:bg-black relative overflow-hidden">
-    <!-- Background gradient to match homepage -->
     <div class="absolute inset-0 bg-gradient-to-br from-LMlightBeige/20 via-transparent to-LMbeige/10 dark:from-gray-800/20 dark:via-transparent dark:to-gray-700/10"></div>
-    <!-- Background grid pattern -->
     <div class="fixed inset-0 bg-grid-pattern-light dark:bg-grid-pattern-dark opacity-60 dark:opacity-40 pointer-events-none"></div>
 
-    <!-- Header with proper spacing -->
     <div class="mb-10 sm:mb-16 relative z-10">
       <Header />
     </div>
 
-    <!-- Main content with homepage styling -->
     <div class="max-w-[1200px] px-8 sm:px-28 mx-auto w-full relative z-10">
       <div class="flex flex-col items-start mb-8">
-        <!-- Page title with decorative element -->
         <div class="relative mb-8 sm:mb-12 w-full">
           <h2 class="font-pixel font-medium text-2xl sm:text-4xl mb-2 text-mocha dark:text-DMyellow uppercase">
             My Projects
@@ -21,19 +16,15 @@
           <div class="w-20 h-1 bg-gradient-to-r from-mocha to-sage dark:from-DMyellow dark:to-purple-900 rounded-full"></div>
         </div>
         
-        <!-- Brief introduction -->
         <p class="font-inter text-text-secondary dark:text-gray-300 text-md sm:text-lg leading-relaxed mb-8">
           Here are some of the projects I've been working on. Each demonstrates my skills in various technologies
           and problem-solving approaches.
         </p>
-        <!-- Projects section with enhanced styling -->
+        
         <div class="w-full">
-          <!-- Projects grid - 2x2 layout for medium screens and larger -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           
-            <!-- Project 1: Tetris game -->
             <div class="group relative bg-cream/50 dark:bg-gray-700 border-2 border-mocha dark:border-DMyellow overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 min-h-[400px] sm:min-h-[450px]">
-              <!-- Terminal header -->
               <div class="bg-mocha dark:bg-gray-900 px-4 py-3 flex items-center">
                 <div class="flex items-center space-x-2">
                   <div class="w-3 h-3 rounded-full bg-red-500"></div>
@@ -61,9 +52,7 @@
               </div>
             </div>
           
-            <!-- Project 2: Pacman game -->
             <div class="group relative bg-cream/50 dark:bg-gray-800 border-2 border-mocha dark:border-DMyellow overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 min-h-[400px] sm:min-h-[450px]">
-              <!-- Terminal header -->
               <div class="bg-mocha dark:bg-gray-900 px-4 py-3 flex items-center">
                 <div class="flex items-center space-x-2">
                   <div class="w-3 h-3 rounded-full bg-red-500"></div>
@@ -91,9 +80,7 @@
               </div>
             </div>
           
-            <!-- Project 3: Vending Machine Robot -->
             <div class="group relative bg-cream/50 dark:bg-gray-800 border-2 border-mocha dark:border-DMyellow overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 min-h-[400px] sm:min-h-[450px]">
-              <!-- Terminal header -->
               <div class="bg-mocha dark:bg-gray-900 px-4 py-3 flex items-center">
                 <div class="flex items-center space-x-2">
                   <div class="w-3 h-3 rounded-full bg-red-500"></div>
@@ -121,9 +108,7 @@
               </div>
             </div>
           
-            <!-- Project 4: OIA Robot -->
             <div class="group relative bg-cream/50 dark:bg-gray-800 border-2 border-mocha dark:border-DMyellow overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 min-h-[400px] sm:min-h-[450px]">
-              <!-- Terminal header -->
               <div class="bg-mocha dark:bg-gray-900 px-4 py-3 flex items-center">
                 <div class="flex items-center space-x-2">
                   <div class="w-3 h-3 rounded-full bg-red-500"></div>

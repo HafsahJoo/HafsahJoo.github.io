@@ -1,27 +1,39 @@
 <template>
-<header class="border-b-2 border-sand/30 dark:border-gray-600 flex flex-row items-center justify-center">
-    <div class="w-full max-w-[1200px] px-8 sm:px-28 flex flex-row items-center justify-between py-4">
-        <div>
-            <router-link to="/">
-                <h1 class="font-pixel text-mocha dark:text-DMyellow font-normal text-lg uppercase tracking-wider hover:text-sage dark:hover:text-amber-300 transition-colors duration-300">HJ</h1>
-            </router-link>
-        </div>
-        <div>
-            <label class="switch">
-                <input class="toggle" type="checkbox" :checked="isDarkMode" @change="toggleDarkMode" />
-                <span class="slider"></span>
-            </label>
-        </div>
+  <header
+    class="border-b-2 border-sand/30 dark:border-gray-600 flex flex-row items-center justify-center"
+  >
+    <div
+      class="w-full max-w-[1200px] px-8 sm:px-28 flex flex-row items-center justify-between py-4"
+    >
+      <div>
+        <router-link to="/">
+          <h1
+            class="font-pixel text-mocha dark:text-DMyellow font-normal text-lg uppercase tracking-wider hover:text-sage dark:hover:text-purple-300 transition-colors duration-300"
+          >
+            HJ
+          </h1>
+        </router-link>
+      </div>
+      <div>
+        <label class="switch">
+          <input
+            class="toggle"
+            type="checkbox"
+            :checked="isDarkMode"
+            @change="toggleDarkMode"
+          />
+          <span class="slider"></span>
+        </label>
+      </div>
     </div>
-</header>
+  </header>
 </template>
  
 <script setup>
-import { inject } from 'vue';
+import { inject } from "vue";
 
-// Inject the dark mode and the toggle function
-const isDarkMode = inject('isDarkMode');
-const toggleDarkMode = inject('toggleDarkMode');
+const isDarkMode = inject("isDarkMode");
+const toggleDarkMode = inject("toggleDarkMode");
 </script>
 
 <style scoped>
@@ -73,5 +85,4 @@ const toggleDarkMode = inject('toggleDarkMode');
 .toggle:checked + .slider:before {
   transform: translateX(32px);
 }
-
 </style>
