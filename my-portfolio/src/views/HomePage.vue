@@ -4,7 +4,7 @@ import SiteHeader from '../components/SiteHeader.vue'
 import SiteFooter from '../components/SiteFooter.vue'
 import { dark } from '../lib/theme'
 
-const U = 11
+const uTotal = ref(11)
 const FAR = { p: [0, 9.6, 0], yaw: 0.78, pitch: 0.5, dist: 43 }
 const FAR_NARROW = { p: [0, 6.8, 0], yaw: 0.78, pitch: 0.5, dist: 26, shift: -1.4 }
 const EXIT = { p: [0, -4.6, 0], yaw: 1.3, pitch: 0.62, dist: 36 }
@@ -60,7 +60,7 @@ function buildTimeline(isWide) {
     const v = isWide ? s.view : { ...s.view, shift: 1 }
     keys.push({ u: s.hold[0], view: v }, { u: s.hold[1], view: v })
   })
-  keys.push({ u: U, view: EXIT })
+  keys.push({ u: uTotal.value, view: EXIT })
   return keys
 }
 
@@ -72,7 +72,7 @@ function applyLayout(isWide) {
 function progress() {
   const el = sectionRef.value
   if (!el) return 0
-  return Math.max(0, Math.min(U, -el.getBoundingClientRect().top / unit()))
+  return Math.max(0, Math.min(uTotal.value, -el.getBoundingClientRect().top / unit()))
 }
 
 function update() {
@@ -81,7 +81,7 @@ function update() {
   const h = heroRef.value, hint = hintRef.value, rail = railRef.value
   if (h) { const k = Math.min(1, u / 0.7); h.style.opacity = String(1 - k); h.style.transform = `translateY(${-k * 70}px)` }
   if (hint) hint.style.opacity = String(1 - Math.min(1, u / 0.25))
-  if (rail) { const on = u > 0.7 && u < U - 0.6; rail.style.opacity = on ? '1' : '0'; rail.style.pointerEvents = on ? 'auto' : 'none' }
+  if (rail) { const on = u > 0.7 && u < 10.4; rail.style.opacity = on ? '1' : '0'; rail.style.pointerEvents = on ? 'auto' : 'none' }
   let s = -1
   STOPS.forEach((st, i) => { if (u >= st.hold[0] - 0.28 && u <= st.hold[1] + 0.28) s = i })
   if (s !== stop.value) { stop.value = s; if (s >= 0) shownStop.value = s }
@@ -104,6 +104,7 @@ function onResize() {
   const w = window.innerWidth, h = window.innerHeight
   if (!vh || Math.abs(h - vh) / vh > 0.25) vh = h
   const isWide = w >= 900
+  uTotal.value = isWide ? 11 : 10.5
   if (isWide !== wide.value || !laidOut) {
     laidOut = true
     wide.value = isWide
@@ -178,7 +179,7 @@ const railStyle = computed(() => {
   <div style="min-height:100vh;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans',system-ui,sans-serif;transition:background-color .6s ease,color .6s ease">
     <SiteHeader active="home" fixed :wide="wide" />
 
-    <section ref="sectionRef" style="position:relative;height:760vh">
+    <section ref="sectionRef" :style="{ height: (1 + 0.6 * uTotal) * 100 + 'vh' }" style="position:relative">
       <div style="position:sticky;top:0;height:100svh;min-height:520px;overflow:hidden">
         <div ref="stageRef" style="position:absolute;inset:0;z-index:1"></div>
 
@@ -233,7 +234,7 @@ const railStyle = computed(() => {
       </div>
     </section>
 
-    <section id="expertise" style="max-width:1240px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(16px,3vw,40px) 40px;display:flex;flex-direction:column;gap:36px">
+    <section id="expertise" style="max-width:1240px;margin:0 auto;padding:clamp(24px,9vw,120px) clamp(16px,3vw,40px) 40px;display:flex;flex-direction:column;gap:36px">
       <div style="display:flex;flex-direction:column;gap:14px">
         <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--kick)">What I do</span>
         <h2 style="margin:0;font-size:clamp(40px,5.4vw,76px);font-family:'Young Serif',serif;font-weight:400;letter-spacing:-0.025em;line-height:.95">The whole lifecycle<span style="color:#bc4749">.</span></h2>
