@@ -26,7 +26,7 @@ defineProps({
       <button @click="toggleTheme" aria-label="Toggle dark mode" title="Toggle day / night" style="position:relative;width:70px;height:38px;border-radius:999px;border:2px solid var(--line);background:var(--track);cursor:pointer;padding:0;transition:background .6s ease;flex:none">
         <span style="position:absolute;top:5px;left:6px;width:24px;height:24px;border-radius:50%;background:var(--knob);box-shadow:var(--knobShadow);transform:translateX(var(--knobX)) rotate(var(--knobR));transition:transform .6s cubic-bezier(.5,1.5,.4,1),background .5s,box-shadow .5s"></span>
       </button>
-      <a v-if="wide" href="/uploads/cv.pdf" target="_blank" style="padding:10px 18px;border-radius:999px;background:var(--ink);color:var(--bg);font-weight:700;font-size:15px;border:2px solid var(--line)">Résumé</a>
+      <a v-if="wide" href="/uploads/Hafsah_Joomun_CV.pdf" target="_blank" style="padding:10px 18px;border-radius:999px;background:var(--ink);color:var(--bg);font-weight:700;font-size:15px;border:2px solid var(--line)">Résumé</a>
     </div>
   </header>
 </template>

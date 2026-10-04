@@ -59,10 +59,10 @@ export function createRoom(container, opts = {}) {
     m.castShadow = true; parent.add(m); return m;
   }
 
-  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance', preserveDrawingBuffer: true });
   const lowPower = opts.lowPower ?? (Math.min(window.innerWidth, window.innerHeight) < 700);
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, lowPower ? 1.5 : 2));
-  renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFShadowMap;
+  renderer.shadowMap.enabled = true; renderer.shadowMap.autoUpdate = !lowPower; renderer.shadowMap.type = THREE.PCFShadowMap;
   renderer.toneMapping = THREE.NeutralToneMapping; renderer.outputColorSpace = THREE.SRGBColorSpace; renderer.setClearColor(0x000000, 0);
   const canvas = renderer.domElement;
   Object.assign(canvas.style, { width: '100%', height: '100%', display: 'block', touchAction: 'pan-y', outline: 'none' });
@@ -320,19 +320,19 @@ export function createRoom(container, opts = {}) {
     add(spin, G(new THREE.SphereGeometry(0.025, 8, 6)), M('accent'), ...d.clone().multiplyScalar(0.37).toArray());
   });
   const snake = piece(null, 0.75, 0.82, -2.85);
-  add(snake, G(new THREE.CylinderGeometry(0.12, 0.09, 0.2, 12)), M('pot'), 0, 0.1, 0);
+  add(snake, G(new THREE.CylinderGeometry(0.12, 0.09, 0.2, 12)), M('pot'), 0, 0.1, 0, { recv: false });
   for (let i = 0; i < 6; i++) { const a = (i / 6) * Math.PI * 2; add(snake, G(new THREE.ConeGeometry(0.035, 0.42 + (i % 3) * 0.08, 4)), M(i % 2 ? 'leaf' : 'leaf2', { flatShading: true }), Math.cos(a) * 0.05, 0.4, Math.sin(a) * 0.05, { rx: Math.sin(a) * 0.18, rz: -Math.cos(a) * 0.18 }); }
 
   const tree = piece(null, 2.95, 0, -2.85);
-  add(tree, G(new THREE.CylinderGeometry(0.26, 0.2, 0.5, 14)), M('pot'), 0, 0.25, 0);
-  add(tree, G(new THREE.CylinderGeometry(0.23, 0.23, 0.02, 14)), M('woodDark'), 0, 0.49, 0, { cast: false });
+  add(tree, G(new THREE.CylinderGeometry(0.26, 0.2, 0.5, 14)), M('pot'), 0, 0.25, 0, { recv: false });
+  add(tree, G(new THREE.CylinderGeometry(0.23, 0.23, 0.02, 14)), M('woodDark'), 0, 0.506, 0, { cast: false });
   rod(tree, [0, 0.5, 0], [0.02, 1.4, 0], 0.03, M('trunk'));
   const fol = new THREE.Group(); tree.add(fol);
   [[0, 1.55, 0, 0.38, 'leaf'], [0.17, 1.28, 0.12, 0.28, 'leaf2'], [-0.15, 1.88, -0.05, 0.27, 'leaf2'], [-0.12, 1.3, -0.1, 0.22, 'leaf']].forEach(([x, y, z, r, c]) => add(fol, G(new THREE.IcosahedronGeometry(r, 0)), M(c, { flatShading: true }), x, y, z));
 
   const shelf = piece('shelf', -2.95, 0, -0.75);
   add(shelf, rbox(0.55, 2.7, 0.08, 0.025), M('wood'), 0, 1.35, -0.91); add(shelf, rbox(0.55, 2.7, 0.08, 0.025), M('wood'), 0, 1.35, 0.91);
-  add(shelf, rbox(0.6, 0.08, 1.98, 0.025), M('wood'), 0, 2.66, 0); add(shelf, rbox(0.55, 0.12, 1.9, 0.02), M('woodDark'), 0, 0.06, 0);
+  add(shelf, rbox(0.6, 0.08, 1.98, 0.025), M('wood'), 0, 2.66, 0); add(shelf, rbox(0.58, 0.11, 1.96, 0.02), M('woodDark'), 0, 0.06, 0);
   add(shelf, box(0.03, 2.55, 1.78), M('woodDark'), -0.255, 1.35, 0);
   [0.75, 1.4, 2.05].forEach((y) => add(shelf, rbox(0.5, 0.05, 1.78, 0.015), M('wood'), 0, y, 0));
   const rb = rng(11), bookCols = ['white', 'beige', 'sand', 'dark', 'top', 'beigeDark', 'accent', 'sage', 'mustard'];
@@ -511,7 +511,7 @@ export function createRoom(container, opts = {}) {
   key.shadow.mapSize.set(lowPower ? 1024 : 2048, lowPower ? 1024 : 2048); Object.assign(key.shadow.camera, { left: -7, right: 7, top: 7, bottom: -7, near: 1, far: 30 });
   key.shadow.bias = -0.0004; key.shadow.normalBias = 0.03; scene.add(key); scene.add(key.target);
   const spot = new THREE.SpotLight('#ffd9a0', 1.6, 0, 0.36, 0.3, 0); spot.position.set(WCX + 1.4, 6.2, Z0 - 4.4);
-  spot.target.position.set(WCX - 0.7, 0, -0.4); spot.castShadow = true; spot.shadow.mapSize.set(lowPower ? 512 : 1024, lowPower ? 512 : 1024); spot.shadow.bias = -0.0006; spot.shadow.normalBias = 0.03;
+  spot.target.position.set(WCX - 0.7, 0, -0.4); spot.castShadow = !lowPower; spot.shadow.mapSize.set(lowPower ? 512 : 1024, lowPower ? 512 : 1024); spot.shadow.bias = -0.0006; spot.shadow.normalBias = 0.03;
   scene.add(spot); scene.add(spot.target);
   const bias = new THREE.PointLight(P.led, 0, 0, 2); bias.position.set(-1.75, 1.95, -3.13); scene.add(bias);
   const towerLight = new THREE.PointLight(P.rgb, 0, 0, 2); towerLight.position.set(-0.35, 1.6, -2.55); scene.add(towerLight);
@@ -548,14 +548,17 @@ export function createRoom(container, opts = {}) {
   }
   let themeP = opts.dark ? 1 : 0, themeTarget = themeP; applyTheme(themeP);
 
-  const camera = new THREE.PerspectiveCamera(opts.fov || 32, 1, 0.1, 300);
+  const camera = new THREE.PerspectiveCamera(opts.fov || 32, 1, 1, 150);
   const HOME = { p: [0, 1.5, 0], yaw: 0.78, pitch: 0.5, dist: 21 };
   let timeline = null, progress = 0, layout = { sx: 0, sy: 0, fit: null };
   const cur = { t: new V3(...HOME.p), yaw: HOME.yaw, pitch: HOME.pitch, dist: HOME.dist };
   const des = { t: new V3(), yaw: 0, pitch: 0, dist: 0 };
   let asp = 1, tf = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)), snapped = false;
+  let sized = false, sizedW = 0, sizedH = 0;
   function resize() {
-    const w = container.clientWidth || 1, h = container.clientHeight || 1; asp = w / h;
+    const w = container.clientWidth || 1, h = container.clientHeight || 1;
+    if (sized && lowPower && w === sizedW && Math.abs(h - sizedH) < 160) return;
+    sized = true; sizedW = w; sizedH = h; asp = w / h;
     renderer.setSize(w, h, false); camera.aspect = asp; camera.updateProjectionMatrix();
   }
   resize();
@@ -583,7 +586,7 @@ export function createRoom(container, opts = {}) {
   }
   function setHover(id) { if (id === hoverId) return; hoverId = id; canvas.style.cursor = id ? 'pointer' : 'default'; opts.onHover && opts.onHover(id); }
   function localXY(e) { const r = canvas.getBoundingClientRect(); return [e.clientX - r.left, e.clientY - r.top, r.width, r.height]; }
-  const onMove = (e) => { const [x, y, w, h] = localXY(e); Object.assign(ptr, { x, y, nx: (x / w) * 2 - 1, ny: (y / h) * 2 - 1, inside: true, moved: true }); if (opts.tipEl) opts.tipEl.style.translate = `${x}px ${y}px`; };
+  const onMove = (e) => { if (e.pointerType === 'touch') return; const [x, y, w, h] = localXY(e); Object.assign(ptr, { x, y, nx: (x / w) * 2 - 1, ny: (y / h) * 2 - 1, inside: true, moved: true }); if (opts.tipEl) opts.tipEl.style.translate = `${x}px ${y}px`; };
   const onDown = (e) => { ptr.down = { x: e.clientX, y: e.clientY }; };
   const onUp = (e) => {
     if (ptr.down && Math.hypot(e.clientX - ptr.down.x, e.clientY - ptr.down.y) < 6) { const [x, y, w, h] = localXY(e); opts.onSelect && opts.onSelect(pick((x / w) * 2 - 1, (y / h) * 2 - 1)); }
@@ -595,12 +598,10 @@ export function createRoom(container, opts = {}) {
   const ro = new ResizeObserver(resize); ro.observe(container);
   let visible = true; const io = new IntersectionObserver((en) => { visible = en[0].isIntersecting; }); io.observe(container);
 
-  let tStart = null, last = performance.now(), raf = 0, scrTimer = 1, frameN = 0, lastStep = performance.now();
+  let tStart = null, last = performance.now(), raf = 0, scrTimer = 1, frameN = 0;
   function frame(now) { raf = requestAnimationFrame(frame); step(now); }
-  const watchdog = setInterval(() => { const n = performance.now(); if (n - lastStep > 120) step(n); }, 40);
   const right = new V3(), up = new V3();
   function step(now) {
-    lastStep = now;
     const dt = Math.min(0.1, (now - last) / 1000); last = now;
     if (!visible) return;
     if (tStart === null) tStart = now;
@@ -616,7 +617,7 @@ export function createRoom(container, opts = {}) {
     spin.rotation.y += dt * 0.3; fol.rotation.z = Math.sin(t * 1.1) * 0.02; palm.rotation.z = Math.sin(t * 1.4) * 0.04;
     { const h = (t * 0.08) % 1; fanMat.color.setHSL(h, 0.9, 0.55); fanMat.emissive.setHSL(h, 1, 0.5); towerLight.color.setHSL(h, 1, 0.55);
       fanMat.emissiveIntensity = lerp(TH.fanE[0], TH.fanE[1], themeN); }
-    scrTimer += dt; if (scrTimer > 0.25) { scrTimer = 0; scrMain.draw(t, themeN); scrCode.draw(t, themeN); swScr.draw(t); }
+    scrTimer += dt; if (scrTimer > (lowPower ? 0.5 : 0.25)) { scrTimer = 0; scrMain.draw(t, themeN); scrCode.draw(t, themeN); swScr.draw(t); }
     const v = viewAt(progress);
     const af = layout.fit != null ? layout.fit : Math.pow(Math.max(1, (opts.refAspect || 1.6) / asp), 0.8);
     des.t.set(v.p[0], v.p[1], v.p[2]); des.dist = v.dist * af;
@@ -632,6 +633,7 @@ export function createRoom(container, opts = {}) {
     cur.t.lerp(des.t, kc); cur.yaw += (des.yaw - cur.yaw) * kc; cur.pitch += (des.pitch - cur.pitch) * kc; cur.dist += (des.dist - cur.dist) * kc;
     camera.position.set(cur.t.x + Math.sin(cur.yaw) * Math.cos(cur.pitch) * cur.dist, cur.t.y + Math.sin(cur.pitch) * cur.dist, cur.t.z + Math.cos(cur.yaw) * Math.cos(cur.pitch) * cur.dist);
     camera.lookAt(cur.t);
+    if (lowPower && (t < 2 || frameN % 8 === 0)) renderer.shadowMap.needsUpdate = true;
     renderer.render(scene, camera);
   }
   raf = requestAnimationFrame(frame);
@@ -640,11 +642,9 @@ export function createRoom(container, opts = {}) {
     setTheme(dark, instant) { themeTarget = dark ? 1 : 0; if (instant) { themeP = themeTarget; applyTheme(themeP); } },
     setTimeline(keys) { timeline = keys; },
     setProgress(u) { progress = u; },
-    advance(sec = 3) { let n = performance.now(); for (let i = 0; i < sec * 10; i++) { n += 100; last = n - 100; step(n); } last = performance.now(); },
-    debug() { const a = performance.now(); renderer.render(scene, camera); const b = performance.now(); renderer.shadowMap.autoUpdate = false; renderer.render(scene, camera); const c = performance.now(); renderer.shadowMap.autoUpdate = true; return { visible, lastStepAgo: +(performance.now() - lastStep).toFixed(0), renderMs: +(b - a).toFixed(1), noShadowMs: +(c - b).toFixed(1), programs: renderer.info.programs.length, calls: renderer.info.render.calls, tris: renderer.info.render.triangles, frameN }; },
     setLayout(l) { layout = { sx: l.sx || 0, sy: l.sy || 0, fit: l.fit ?? null }; },
     dispose() {
-      cancelAnimationFrame(raf); clearInterval(watchdog); ro.disconnect(); io.disconnect();
+      cancelAnimationFrame(raf); ro.disconnect(); io.disconnect();
       canvas.removeEventListener('pointermove', onMove); canvas.removeEventListener('pointerdown', onDown);
       canvas.removeEventListener('pointerup', onUp); canvas.removeEventListener('pointerleave', onLeave);
       geos.forEach((g) => g.dispose && g.dispose()); Object.values(mats).forEach((m) => m.dispose());
@@ -658,15 +658,15 @@ function makeScreen(P, kind) {
   const c = document.createElement('canvas'); c.width = W; c.height = H;
   const x = c.getContext('2d'); const tex = new THREE.CanvasTexture(c); tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 4;
   const code = [
-    ['#7b818c', '# placeholder'],
-    ['#ff8a6b', 'import ', '#ccd5ae', 'module', '#cfd3da', ', other ', '#ff8a6b', 'as ', '#cfd3da', 'x'],
-    ['#ff8a6b', 'def ', '#ccd5ae', 'placeholder', '#cfd3da', '(a, b):'],
-    ['#ff8a6b', '    for ', '#cfd3da', 'item ', '#ff8a6b', 'in ', '#cfd3da', 'items:'],
-    ['#cfd3da', '        value = ', '#ccd5ae', 'compute', '#cfd3da', '(item)'],
-    ['#cfd3da', '        value.', '#ccd5ae', 'update', '#cfd3da', '()'],
-    ['#cfd3da', '        state.', '#ccd5ae', 'step', '#cfd3da', '()'],
-    ['#ff8a6b', '    return ', '#cfd3da', 'a'],
-    ['#7b818c', '# placeholder output'],
+    ['#7b818c', '# train.py'],
+    ['#ff8a6b', 'import ', '#ccd5ae', 'torch', '#cfd3da', ', pandas ', '#ff8a6b', 'as ', '#cfd3da', 'pd'],
+    ['#ff8a6b', 'def ', '#ccd5ae', 'train', '#cfd3da', '(model, loader):'],
+    ['#ff8a6b', '    for ', '#cfd3da', 'x, y ', '#ff8a6b', 'in ', '#cfd3da', 'loader:'],
+    ['#cfd3da', '        loss = ', '#ccd5ae', 'criterion', '#cfd3da', '(model(x), y)'],
+    ['#cfd3da', '        loss.', '#ccd5ae', 'backward', '#cfd3da', '()'],
+    ['#cfd3da', '        opt.', '#ccd5ae', 'step', '#cfd3da', '()'],
+    ['#ff8a6b', '    return ', '#cfd3da', 'model'],
+    ['#7b818c', '# epoch 12/20  loss 0.214  acc 0.931'],
   ];
   function chrome(title) {
     x.fillStyle = P.screenBg; x.fillRect(0, 0, W, H);
@@ -697,9 +697,9 @@ function makeScreen(P, kind) {
     arm(t, true); hud(1, 10);
   }
   function dash(t) {
-    chrome('placeholder.ipynb');
+    chrome('analysis.ipynb');
     x.font = '12px ui-monospace, Menlo, monospace';
-    [['#d4a373', 'metric 1', '0.00'], ['#ccd5ae', 'metric 2', '0.00'], ['#9cc3cc', 'metric 3', '0.00']].forEach(([col, lab, val], i) => {
+    [['#d4a373', 'accuracy', '0.93'], ['#ccd5ae', 'f1 score', '0.88'], ['#9cc3cc', 'auc', '0.95']].forEach(([col, lab, val], i) => {
       const bx = 18 + i * (W - 36) / 3, bw = (W - 36) / 3 - 12; x.fillStyle = 'rgba(255,255,255,0.05)'; x.fillRect(bx, 40, bw, 70);
       x.fillStyle = 'rgba(255,255,255,0.55)'; x.fillText(lab, bx + 10, 58); x.fillStyle = '#f2e8cf'; x.font = '600 20px ui-monospace, Menlo, monospace'; x.fillText(val, bx + 10, 84); x.font = '12px ui-monospace, Menlo, monospace';
       x.strokeStyle = col; x.lineWidth = 2.5; x.beginPath();
@@ -707,7 +707,7 @@ function makeScreen(P, kind) {
     });
     const top = 126, bh = H - top - 22, half = W / 2;
     x.fillStyle = 'rgba(255,255,255,0.04)'; x.fillRect(18, top, half - 28, bh); x.fillRect(half + 6, top, half - 24, bh);
-    x.fillStyle = 'rgba(255,255,255,0.5)'; x.fillText('chart 1', 28, top + 18); x.fillText('chart 2', half + 16, top + 18);
+    x.fillStyle = 'rgba(255,255,255,0.5)'; x.fillText('training loss', 28, top + 18); x.fillText('feature importance', half + 16, top + 18);
     x.strokeStyle = 'rgba(255,255,255,0.12)'; x.lineWidth = 1; for (let g = 1; g < 4; g++) { x.beginPath(); x.moveTo(28, top + 26 + g * (bh - 40) / 4); x.lineTo(half - 20, top + 26 + g * (bh - 40) / 4); x.stroke(); }
     [['#bc4749', 0], ['#9cc3cc', 0.25]].forEach(([col, o]) => { x.strokeStyle = col; x.lineWidth = 2.5; x.beginPath();
       for (let k = 0; k <= 40; k++) { const px = 30 + k * (half - 54) / 40, py = top + 30 + (bh - 46) * (1 - Math.exp(-k / (9 + o * 8))) * (0.92 - o * 0.25) + Math.sin(k * 1.7 + t) * 1.5; k ? x.lineTo(px, py) : x.moveTo(px, py); } x.stroke(); });
@@ -715,7 +715,7 @@ function makeScreen(P, kind) {
       x.fillStyle = i === 0 ? '#d4a373' : 'rgba(204,213,174,0.8)'; x.fillRect(half + 40, yy, w, (bh - 42) / 6 - 6); x.fillStyle = 'rgba(255,255,255,0.45)'; x.fillText('f' + (i + 1), half + 16, yy + 10); });
   }
   function codeScreen(t) {
-    chrome('placeholder.py');
+    chrome('train.py');
     const fs = Math.round(15 * W / 448), lh = Math.round(fs * 1.65);
     x.font = fs + 'px ui-monospace, Menlo, monospace';
     const shown = Math.min(code.length, 5 + Math.floor((t % 6) * 1.2));
@@ -769,20 +769,20 @@ function makeScreen(P, kind) {
     x.fillStyle = '#2b2d31'; x.fillRect(46, 0, 104, H);
     x.fillStyle = '#313338'; x.fillRect(150, 0, W - 150, H);
     [['#5865f2', 'A'], ['#3ba55d', 'B'], ['#bc4749', 'C'], ['#d4a373', 'D']].forEach(([c, l], i) => { const cy = 26 + i * 42; x.fillStyle = c; x.beginPath(); x.arc(23, cy, 16, 0, 7); x.fill(); x.fillStyle = '#fff'; x.font = '600 11px sans-serif'; x.textAlign = 'center'; x.fillText(l, 23, cy + 4); x.textAlign = 'left'; if (i === 1) { x.fillStyle = '#fff'; x.fillRect(0, cy - 10, 3, 20); } });
-    x.fillStyle = '#f2f3f5'; x.font = '600 12px sans-serif'; x.fillText('server name', 56, 22);
+    x.fillStyle = '#f2f3f5'; x.font = '600 12px sans-serif'; x.fillText('study group', 56, 22);
     x.fillStyle = 'rgba(255,255,255,0.08)'; x.fillRect(46, 32, 104, 1);
     x.font = '11px sans-serif';
-    ['# channel-1', '# channel-2', '# channel-3', '# channel-4'].forEach((ch, i) => { if (i === 1) { x.fillStyle = 'rgba(255,255,255,0.08)'; x.fillRect(52, 40 + i * 20, 92, 18); } x.fillStyle = i === 1 ? '#f2f3f5' : '#949ba4'; x.fillText(ch, 58, 53 + i * 20); });
+    ['# general', '# projects', '# resources', '# random'].forEach((ch, i) => { if (i === 1) { x.fillStyle = 'rgba(255,255,255,0.08)'; x.fillRect(52, 40 + i * 20, 92, 18); } x.fillStyle = i === 1 ? '#f2f3f5' : '#949ba4'; x.fillText(ch, 58, 53 + i * 20); });
     x.fillStyle = '#949ba4'; x.font = '600 9px sans-serif'; x.fillText('VOICE', 56, 140);
     x.font = '11px sans-serif'; x.fillStyle = '#f2f3f5'; x.fillText('\u{1F50A} voice', 56, 157);
     ['user 1', 'user 2', 'user 3'].forEach((n, i) => { const sp = i === 0 || Math.sin(t * 3 + i * 2) > 0.3; x.strokeStyle = sp ? '#3ba55d' : 'transparent'; x.lineWidth = 2; x.fillStyle = ['#e9a3ad', '#9cc3cc', '#d4a373'][i]; x.beginPath(); x.arc(68, 172 + i * 18, 6, 0, 7); x.fill(); x.stroke(); x.fillStyle = '#b5bac1'; x.fillText(n, 80, 176 + i * 18); });
     x.fillStyle = '#232428'; x.fillRect(46, H - 34, 104, 34); x.fillStyle = '#e9a3ad'; x.beginPath(); x.arc(62, H - 17, 9, 0, 7); x.fill(); x.fillStyle = '#3ba55d'; x.beginPath(); x.arc(68, H - 11, 3.5, 0, 7); x.fill(); x.fillStyle = '#f2f3f5'; x.font = '600 10px sans-serif'; x.fillText('user 1', 76, H - 14);
-    x.fillStyle = '#f2f3f5'; x.font = '600 12px sans-serif'; x.fillText('# channel-2', 162, 22); x.fillStyle = 'rgba(0,0,0,0.25)'; x.fillRect(150, 32, W - 150, 1);
-    const msgs = [['user 2', '#9cc3cc', 'Placeholder message'], ['user 1', '#e9a3ad', 'Placeholder message'], ['user 3', '#d4a373', 'Placeholder message'], ['user 1', '#e9a3ad', 'Placeholder message']];
+    x.fillStyle = '#f2f3f5'; x.font = '600 12px sans-serif'; x.fillText('# projects', 162, 22); x.fillStyle = 'rgba(0,0,0,0.25)'; x.fillRect(150, 32, W - 150, 1);
+    const msgs = [['user 2', '#9cc3cc', 'finished the data pipeline!'], ['user 1', '#e9a3ad', 'nice, the dashboard looks great'], ['user 3', '#d4a373', 'anyone up for a game tonight?'], ['user 1', '#e9a3ad', 'yes, give me ten minutes']];
     const shown = 2 + Math.floor((t / 2.5) % 3);
     msgs.slice(0, shown).forEach(([n, c, m], i) => { const y = 50 + i * 44; x.fillStyle = c; x.beginPath(); x.arc(172, y + 8, 10, 0, 7); x.fill(); x.fillStyle = c; x.font = '600 11px sans-serif'; x.fillText(n, 188, y + 6); x.fillStyle = '#949ba4'; x.font = '9px sans-serif'; x.fillText('Today at 21:' + String(10 + i * 3).padStart(2, '0'), 188 + x.measureText(n).width + 30, y + 6); x.fillStyle = '#dbdee1'; x.font = '11px sans-serif'; x.fillText(m, 188, y + 22); });
     if (shown < 4 && Math.floor(t * 2) % 2) { x.fillStyle = '#949ba4'; x.font = 'italic 10px sans-serif'; x.fillText('user 3 is typing\u2026', 162, H - 44); }
-    x.fillStyle = '#383a40'; x.fillRect(160, H - 34, W - 172, 24); x.fillStyle = '#6d6f78'; x.font = '11px sans-serif'; x.fillText('Message', 172, H - 18);
+    x.fillStyle = '#383a40'; x.fillRect(160, H - 34, W - 172, 24); x.fillStyle = '#6d6f78'; x.font = '11px sans-serif'; x.fillText('Message #projects', 172, H - 18);
   }
   function draw(t, n) {
     if (kind === 'main') (n > 0.5 ? game : codeScreen)(t); else (n > 0.5 ? cave : dash)(t);
@@ -825,7 +825,7 @@ function makeSwitchScreen() {
     const ph = (t % 2.6) / 2.6, jump = ph > 0.55 && ph < 0.85, jy = jump ? Math.sin(((ph - 0.55) / 0.3) * Math.PI) * 46 : 0;
     hero(70, gy - 16 - jy, Math.floor(t * 8) % 2, jump);
     x.fillStyle = '#fff'; x.font = 'bold 9px monospace';
-    x.fillText('PLAYER', 14, 14); x.fillText(String(12450 + Math.floor(t * 10) * 10).padStart(6, '0'), 14, 25);
+    x.fillText('PLAYER 1', 14, 14); x.fillText(String(12450 + Math.floor(t * 10) * 10).padStart(6, '0'), 14, 25);
     x.fillText('\u25CFx' + String(17 + Math.floor(t / 3) % 20).padStart(2, '0'), 92, 25);
     x.fillText('WORLD', 160, 14); x.fillText('1-1', 168, 25); x.fillText('TIME', 250, 14); x.fillText(String(400 - Math.floor(t) % 400).padStart(3, '0'), 254, 25);
     tex.needsUpdate = true;
@@ -843,19 +843,19 @@ function makeWhiteboard(P) {
   [[L, M1], [M1, O]].forEach(([a, b]) => a.forEach((p) => b.forEach((q) => { x.beginPath(); x.moveTo(p[0], p[1]); x.lineTo(q[0], q[1]); x.stroke(); })));
   [[L, '#335c67'], [M1, '#24261c'], [O, '#bc4749']].forEach(([pts, col]) => pts.forEach(([px, py]) => { x.fillStyle = '#fbfbf7'; x.strokeStyle = col; x.lineWidth = 4; x.beginPath(); x.arc(px, py, 17, 0, 7); x.fill(); x.stroke(); }));
   x.font = '600 30px "Comic Sans MS", "Segoe Print", cursive'; x.fillStyle = '#24261c';
-  x.fillText('placeholder', 400, 80);
-  x.fillStyle = '#335c67'; x.fillText('text', 400, 135);
+  x.fillText('y = σ(Wx + b)', 400, 80);
+  x.fillStyle = '#335c67'; x.fillText('∇θ L(θ)', 400, 135);
   x.strokeStyle = '#24261c'; x.lineWidth = 3; x.beginPath(); x.moveTo(420, 190); x.lineTo(420, 360); x.lineTo(680, 360); x.stroke();
   x.strokeStyle = '#bc4749'; x.lineWidth = 4; x.beginPath(); for (let i = 0; i <= 40; i++) { const px = 425 + i * 6.3, py = 200 + 150 * (1 - Math.exp(-i / 9)); i ? x.lineTo(px, py) : x.moveTo(px, py); } x.stroke();
-  x.font = '600 22px "Comic Sans MS", "Segoe Print", cursive'; x.fillStyle = '#24261c'; x.fillText('label', 432, 215); x.fillText('label', 600, 392);
-  x.fillStyle = '#bc4749'; x.fillText('placeholder', 60, 385);
+  x.font = '600 22px "Comic Sans MS", "Segoe Print", cursive'; x.fillStyle = '#24261c'; x.fillText('loss', 432, 215); x.fillText('epochs', 600, 392);
+  x.fillStyle = '#bc4749'; x.fillText('ship it ✓', 60, 385);
   [['#ccd5ae', 236, 340], ['#d4a373', 286, 352]].forEach(([col, px, py]) => { x.fillStyle = col; x.fillRect(px, py - 50, 44, 44); });
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; return t;
 }
 function makePeriodic() {
   const W = 380, H = 260, c = document.createElement('canvas'); c.width = W; c.height = H; const x = c.getContext('2d');
   x.fillStyle = '#f2e8cf'; x.fillRect(0, 0, W, H);
-  x.fillStyle = '#24261c'; x.font = '700 15px ui-monospace, Menlo, monospace'; x.fillText('PLACEHOLDER', 14, 22);
+  x.fillStyle = '#24261c'; x.font = '700 15px ui-monospace, Menlo, monospace'; x.fillText('PERIODIC TABLE', 14, 22);
   const cs = 19.5, ox = 14, oy = 34, cols = ['#ccd5ae', '#d4a373', '#9cc3cc', '#e0b4a4', '#e7dcbf'];
   for (let r = 0; r < 7; r++) for (let k = 0; k < 18; k++) {
     if (r === 0 && k > 0 && k < 17) continue; if ((r === 1 || r === 2) && k > 1 && k < 12) continue;

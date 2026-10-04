@@ -12,17 +12,23 @@ const SKILLS = [
   { name: 'Databases', list: 'Oracle, MongoDB, SQL' },
 ]
 const CERTS = [
-  { title: 'Generative AI Professional', issuer: 'Oracle' },
-  { title: 'Data Science Professional', issuer: 'Oracle' },
-  { title: 'Multicloud Architect Professional', issuer: 'Oracle' },
-  { title: 'Certified in Cybersecurity (CC)', issuer: 'ISC2' },
+  { title: 'Machine Learning Specialization', issuer: 'DeepLearning.AI', date: 'May 2026' },
+  { title: 'AWS Knowledge: Serverless (Badge)', issuer: 'Amazon Web Services (AWS)', date: 'May 2026' },
+  { title: 'Oracle Cloud Infrastructure 2025 Certified Generative AI Professional', issuer: 'Oracle', date: 'Oct 2025' },
+  { title: 'Oracle Data Platform 2025 Certified Foundations Associate', issuer: 'Oracle', date: 'Oct 2025' },
+  { title: 'Oracle Cloud Infrastructure 2025 Certified Multicloud Architect Professional', issuer: 'Oracle', date: 'Oct 2025' },
+  { title: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate', issuer: 'Oracle', date: 'Oct 2025' },
+  { title: 'Oracle Cloud Infrastructure 2025 Certified Foundations Associate', issuer: 'Oracle', date: 'Oct 2025' },
+  { title: 'Oracle Cloud Infrastructure 2025 Certified Data Science Professional', issuer: 'Oracle', date: 'Oct 2025' },
+  { title: 'Ready Player 50', issuer: 'CS50' },
+  { title: 'Certified in Cybersecurity (CC)', issuer: 'ISC2', date: 'Jun 2025' },
 ]
 const GLANCE = [
   { k: 'Current role', v: 'ML Engineer, Winners (IBL Group)' },
   { k: 'Experience', v: 'Nearly 2 years, Data & AI' },
   { k: 'Location', v: 'Mauritius' },
   { k: 'Education', v: 'BSc CS & System Eng., 2025' },
-  { k: 'Certifications', v: '4 (Oracle, ISC2)' },
+  { k: 'Certifications', v: '10 (Oracle, AWS, ISC2 and more)' },
 ]
 const JOBS = [
   {
@@ -60,10 +66,9 @@ const JOBS = [
   },
 ]
 const BEYOND = [
-  { title: 'Lego', text: 'Sets and builds on the shelf.' },
-  { title: 'Gaming', text: 'Minecraft on my Switch 2.' },
-  { title: 'Travel', text: 'Exploring new places.' },
-  { title: 'Videos', text: 'Tech explainers and travel vlogs.' },
+  { title: 'Lego', text: 'I have a Lego collection, and I build in my free time.' },
+  { title: 'Gaming', text: 'I play lots of games with my friends.' },
+  { title: 'Travel', text: 'I like to travel the world.' },
 ]
 
 const wide = ref(true)
@@ -88,7 +93,7 @@ const MONO = "font-family:'IBM Plex Mono',monospace"
           <div style="font-size:clamp(20px,1.9vw,24px);font-weight:700;letter-spacing:-0.01em">Machine Learning Engineer · Data &amp; AI</div>
           <p style="margin:0;font-size:18px;line-height:1.6;color:var(--muted);max-width:640px;text-wrap:pretty">Nearly two years of hands-on experience across data engineering, business intelligence, machine learning and MLOps. I take data from source to insight and own everything in between, and I built my company's highest-revenue digital initiative end to end.</p>
           <div style="display:flex;gap:10px;flex-wrap:wrap;padding-top:4px">
-            <a href="/uploads/cv.pdf" target="_blank" style="padding:12px 20px;border-radius:14px;background:#606c38;color:#f2e8cf;font-weight:700;font-size:16px;border:2px solid #24261c;box-shadow:4px 4px 0 #24261c">Download CV</a>
+            <a href="/uploads/Hafsah_Joomun_CV.pdf" target="_blank" style="padding:12px 20px;border-radius:14px;background:#606c38;color:#f2e8cf;font-weight:700;font-size:16px;border:2px solid #24261c;box-shadow:4px 4px 0 #24261c">Download CV</a>
             <a href="mailto:hafsah260103@gmail.com" style="padding:12px 20px;border-radius:14px;font-weight:700;font-size:16px;border:2px solid var(--line)">Email</a>
             <a href="https://www.linkedin.com/in/hafsah-joomun/" target="_blank" rel="noopener" style="padding:12px 20px;border-radius:14px;font-weight:700;font-size:16px;border:2px solid var(--line)">LinkedIn</a>
           </div>
@@ -147,9 +152,17 @@ const MONO = "font-family:'IBM Plex Mono',monospace"
 
           <section id="certifications" style="border:2px solid var(--line);border-radius:20px;background:var(--card);overflow:hidden;transition:background .6s;scroll-margin-top:24px">
             <h2 :style="H2" style="padding:16px 20px;font-size:22px;border-bottom:2px solid var(--line)">Certifications</h2>
-            <div v-for="c in CERTS" :key="c.title" style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:12px 20px;border-bottom:1px solid var(--rule)">
+            <div v-for="c in CERTS" :key="c.title" style="display:flex;flex-direction:column;gap:3px;padding:12px 20px;border-bottom:1px solid var(--rule)">
               <span style="font-size:15.5px;font-weight:600;line-height:1.35">{{ c.title }}</span>
-              <span :style="MONO" style="flex:none;font-size:11.5px;color:var(--muted)">{{ c.issuer }}</span>
+              <span :style="MONO" style="font-size:11.5px;color:var(--muted)">{{ c.issuer }}<template v-if="c.date"> · {{ c.date }}</template></span>
+            </div>
+          </section>
+
+          <section id="awards" style="border:2px solid var(--line);border-radius:20px;background:var(--card);overflow:hidden;transition:background .6s;scroll-margin-top:24px">
+            <h2 :style="H2" style="padding:16px 20px;font-size:22px;border-bottom:2px solid var(--line)">Awards</h2>
+            <div style="display:flex;flex-direction:column;gap:3px;padding:14px 20px 16px">
+              <span style="font-size:15.5px;font-weight:700;line-height:1.35">Top student in Computer Science, all 3 years</span>
+              <span style="font-size:15px;color:var(--muted)">Middlesex University Mauritius</span>
             </div>
           </section>
 
