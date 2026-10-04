@@ -15,7 +15,7 @@ defineProps({ backLink: { type: Boolean, default: false }, top: { type: String, 
     <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">
       <span>© 2026 Hafsah Joomun</span>
       <router-link v-if="backLink" to="/">← Back to the room</router-link>
-      <span v-else>Built in a tiny room in Mauritius</span>
+      <span v-else>Based in Mauritius</span>
     </div>
   </footer>
 </template>

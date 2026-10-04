@@ -10,37 +10,37 @@ const FAR_NARROW = { p: [0, 6.8, 0], yaw: 0.78, pitch: 0.5, dist: 26, shift: -1.
 const EXIT = { p: [0, -4.6, 0], yaw: 1.3, pitch: 0.62, dist: 36 }
 const STOPS = [
   { id: 'overview', label: 'Room', hold: [1.0, 1.6], view: { p: [0, 1.5, 0], yaw: 0.78, pitch: 0.5, dist: 20.5 },
-    kicker: 'Welcome in', title: 'This is my room.', body: 'Scroll to look around, or click on anything.' },
+    kicker: 'Welcome', title: 'An interactive tour of my work', body: 'Scroll to explore, or select any object to learn more.' },
   { id: 'setup', label: 'Work', hold: [2.4, 3.0], view: { p: [-1.6, 1.7, -2.6], yaw: 0.36, pitch: 0.5, dist: 7.0, shift: 1 },
-    kicker: 'Work', title: 'ML Engineer at Winners (IBL Group)', cta: 'Full experience', href: '/about#experience',
-    bullets: ["Led Retail IQ, now the company's highest-revenue digital initiative", 'Project owner of the promotion optimiser', "Live Oracle → Snowflake pipelines and the team's MLOps"] },
+    kicker: 'Work', title: 'Machine Learning Engineer, Winners (IBL Group)', cta: 'Full experience', href: '/about#experience',
+    bullets: ["Led end-to-end development of Retail IQ, now the company's highest-revenue digital initiative", 'Project owner of the promotion optimisation solution', "Building live Oracle-to-Snowflake pipelines and responsible for the team's MLOps"] },
   { id: 'skills', label: 'Skills', hold: [3.8, 4.4], view: { p: [-2.95, 1.4, -0.75], yaw: 1.12, pitch: 0.2, dist: 7.6, shift: 1 },
-    kicker: 'Skills', title: 'From source to insight', cta: 'All skills', href: '/about#skills',
+    kicker: 'Skills', title: 'Data and cloud expertise', cta: 'All skills', href: '/about#skills',
     chips: ['Snowflake', 'Microsoft Fabric', 'Power BI', 'Looker', 'Azure', 'AWS', 'Airflow', 'Airbyte', 'Informatica', 'Terraform', 'Docker', 'Kubernetes'] },
   { id: 'certs', label: 'Certs', hold: [5.2, 5.8], view: { p: [-3.2, 2.25, 1.05], yaw: 1.22, pitch: 0.16, dist: 7.0, shift: 1 },
     kicker: 'Certifications', title: '10 certifications', cta: 'All certifications', href: '/about#certifications',
-    bullets: ['Machine Learning Specialization, DeepLearning.AI', 'Six Oracle Cloud certifications, including Generative AI and Multicloud Architect', 'AWS Serverless badge and CS50 Ready Player 50', 'ISC2 Certified in Cybersecurity (CC)'] },
+    bullets: ['Machine Learning Specialization (DeepLearning.AI)', 'Six Oracle Cloud Infrastructure certifications, including Generative AI and Multicloud Architect', 'AWS Serverless badge and CS50 Ready Player 50', 'ISC2 Certified in Cybersecurity (CC)'] },
   { id: 'awards', label: 'Awards', hold: [6.6, 7.2], view: { p: [-3.25, 1.95, 1.65], yaw: 1.22, pitch: 0.16, dist: 5.0, shift: 1 },
-    kicker: 'Awards', title: 'Top student and HSC laureate', cta: 'More', href: '/about#awards',
-    bullets: ['Top student in Computer Science for all 3 years at Middlesex University', 'HSC Laureate 2023 (science side), ranked nationally in several subjects and the first girl in physics nationwide'] },
+    kicker: 'Awards', title: 'Academic distinction', cta: 'More', href: '/about#awards',
+    bullets: ['Top Computer Science student in each of the 3 years at Middlesex University', 'HSC Laureate 2023 (science stream), nationally ranked in several subjects and the first girl in physics nationwide'] },
   { id: 'home', label: 'Travel', hold: [8.0, 8.6], view: { p: [1.45, 1.85, -3.0], yaw: 0.22, pitch: 0.2, dist: 7.0, shift: 1 },
-    kicker: 'Travel', title: 'I like to travel the world', cta: 'More about me', href: '/about#beyond',
-    body: 'We only have one life, so we need to make the most of it. Home is Mauritius, but I always want to see more.' },
+    kicker: 'Beyond work', title: 'A passion for travel', cta: 'More about me', href: '/about#beyond',
+    body: 'Life is short, so I make the most of it by exploring the world. Mauritius is home, and there is always somewhere new to discover.' },
   { id: 'hobbies', label: 'Hobbies', hold: [9.4, 10.0], view: { p: [-2.95, 2.75, -0.75], yaw: 1.05, pitch: 0.42, dist: 4.2, shift: 1 },
-    kicker: 'Off the clock', title: 'Lego & gaming', cta: 'More about me', href: '/about#beyond',
-    body: 'I play lots of games with my friends, and I have a Lego collection that I build in my free time.' },
+    kicker: 'Beyond work', title: 'Lego and gaming', cta: 'More about me', href: '/about#beyond',
+    body: 'I enjoy gaming with friends, and I build from my Lego collection in my free time.' },
 ]
 const LABELS = { pc: 'Gaming setup', me: 'Hafsah', switch: 'Switch 2', shelf: 'Bookshelf', certs: 'Certificates', shields: 'Awards', window: 'Window', globe: 'Globe', travel: 'Suitcase', lego: 'Lego' }
 const JUMP = { pc: 1, me: 1, switch: 6, shelf: 2, certs: 3, shields: 4, window: 5, globe: 5, travel: 5, lego: 6 }
 const FLOW = ['Source', 'Pipelines', 'Warehouse', 'Insights', 'Dashboards', 'Production']
 const EXPERTISE = [
-  { title: 'Data engineering', body: 'Pipelines that move data reliably from source systems into the warehouse, ready for analytics.', tools: ['Airbyte', 'Airflow', 'Informatica'] },
-  { title: 'Data modelling', body: 'Structuring warehouse data so it is fast to query and easy for everyone to understand.', tools: ['Snowflake', 'SQL', 'Oracle'] },
-  { title: 'Cloud architecture', body: 'Designing the architecture behind the data, so it is secure, scalable and cost-aware.', tools: ['Azure', 'AWS', 'Oracle Cloud'] },
-  { title: 'Insights & analytics', body: 'Digging into the numbers to find what is really going on, and explaining it simply.', tools: ['Analysis', 'Reporting', 'Storytelling'] },
-  { title: 'Dashboards', body: 'Turning business data into clear dashboards that people actually use to make decisions.', tools: ['Power BI', 'Looker', 'Fabric'] },
-  { title: 'Workflow automation', body: 'Automating repetitive tasks and whole workflows for departments, so teams can spend their time on real work.', tools: ['Airflow', 'Zapier'] },
-  { title: 'DevOps & MLOps', body: 'Taking work all the way to production: automated testing, deployment and infrastructure as code.', tools: ['GitHub CI/CD', 'Docker', 'Kubernetes', 'Terraform'] },
+  { title: 'Data engineering', body: 'Reliable pipelines that move data from source systems into the warehouse, ready for analytics.', tools: ['Airbyte', 'Airflow', 'Informatica'] },
+  { title: 'Data modelling', body: 'Warehouse models designed for performance, clarity and ease of use.', tools: ['Snowflake', 'SQL', 'Oracle'] },
+  { title: 'Cloud architecture', body: 'Secure, scalable and cost-efficient architecture across the major cloud platforms.', tools: ['Azure', 'AWS', 'Oracle Cloud'] },
+  { title: 'Insights & analytics', body: 'Analysis that turns raw data into clear findings that support decisions.', tools: ['Analysis', 'Reporting', 'Storytelling'] },
+  { title: 'Dashboards', body: 'Dashboards that give stakeholders a clear, actionable view of the business.', tools: ['Power BI', 'Looker', 'Fabric'] },
+  { title: 'Workflow automation', body: 'Automating repetitive tasks and workflows across departments, freeing teams to focus on higher-value work.', tools: ['Airflow', 'Zapier'] },
+  { title: 'DevOps & MLOps', body: 'Automated testing, deployment and infrastructure as code to take solutions into production.', tools: ['GitHub CI/CD', 'Docker', 'Kubernetes', 'Terraform'] },
 ]
 
 const stageRef = ref(null), tipRef = ref(null), sectionRef = ref(null)
@@ -187,7 +187,7 @@ const railStyle = computed(() => {
           <span style="align-self:flex-start;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:6px 10px;border-radius:8px;border:2px solid var(--line);background:var(--panel)">Machine Learning Engineer · Mauritius</span>
           <h1 style="margin:0;font-size:clamp(58px,10.5vw,176px);font-family:'Young Serif',serif;font-weight:400;letter-spacing:-0.025em;line-height:.95">Hafsah Joomun<span style="color:#bc4749">.</span></h1>
           <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px">
-            <p style="margin:0;font-size:clamp(17px,1.5vw,20px);line-height:1.45;font-weight:500;max-width:520px;color:var(--muted);text-wrap:pretty">I take data from source to insight: pipelines, warehouses, dashboards and models.</p>
+            <p style="margin:0;font-size:clamp(17px,1.5vw,20px);line-height:1.45;font-weight:500;max-width:520px;color:var(--muted);text-wrap:pretty">I design and deliver end-to-end data and machine learning solutions, from pipelines and warehouses to dashboards and production models.</p>
             <div style="display:flex;gap:10px;flex-wrap:wrap;pointer-events:auto">
               <router-link to="/about" style="padding:12px 20px;border-radius:14px;background:#606c38;color:#f2e8cf;font-weight:700;font-size:16px;border:2px solid #24261c;box-shadow:4px 4px 0 #24261c">About me</router-link>
               <a href="/uploads/Hafsah_Joomun_CV.pdf" target="_blank" style="padding:12px 20px;border-radius:14px;background:var(--card);font-weight:700;font-size:16px;border:2px solid var(--line);box-shadow:4px 4px 0 var(--line)">Download CV</a>
@@ -196,7 +196,7 @@ const railStyle = computed(() => {
         </div>
 
         <div ref="hintRef" style="position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.04em;padding:8px 14px;border-radius:999px;background:var(--card);border:2px solid var(--line);pointer-events:none;white-space:nowrap">
-          <span>Scroll to step inside</span><span style="font-size:14px">↓</span>
+          <span>Scroll to explore</span><span style="font-size:14px">↓</span>
         </div>
 
         <div ref="tipRef" :style="{ opacity: hover ? 1 : 0 }" style="position:absolute;left:0;top:0;z-index:5;pointer-events:none;transition:opacity .15s ease">
@@ -237,8 +237,8 @@ const railStyle = computed(() => {
     <section id="expertise" style="max-width:1240px;margin:0 auto;padding:clamp(24px,9vw,120px) clamp(16px,3vw,40px) 40px;display:flex;flex-direction:column;gap:36px">
       <div style="display:flex;flex-direction:column;gap:14px">
         <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--kick)">What I do</span>
-        <h2 style="margin:0;font-size:clamp(40px,5.4vw,76px);font-family:'Young Serif',serif;font-weight:400;letter-spacing:-0.025em;line-height:.95">The whole lifecycle<span style="color:#bc4749">.</span></h2>
-        <p style="margin:0;font-size:clamp(17px,1.5vw,20px);line-height:1.5;color:var(--muted);max-width:640px;text-wrap:pretty">I build the data, the architecture behind it and everything on top, and I take it all the way to production.</p>
+        <h2 style="margin:0;font-size:clamp(40px,5.4vw,76px);font-family:'Young Serif',serif;font-weight:400;letter-spacing:-0.025em;line-height:.95">The full data lifecycle<span style="color:#bc4749">.</span></h2>
+        <p style="margin:0;font-size:clamp(17px,1.5vw,20px);line-height:1.5;color:var(--muted);max-width:640px;text-wrap:pretty">I design and build data platforms and the architecture behind them, and I own delivery all the way to production.</p>
       </div>
       <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 6px">
         <template v-for="(f, i) in FLOW" :key="f">

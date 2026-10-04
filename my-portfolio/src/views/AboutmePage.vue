@@ -41,12 +41,12 @@ const JOBS = [
       { name: 'Machine learning & BI', items: [
         'Contributed to a churn prediction model for loyalty-programme customers at risk of leaving.',
         'Built a string matching algorithm to match the same product across different systems.',
-        'Build Power BI dashboards that turn business data into clear, actionable insights.',
+        'Develop Power BI dashboards that turn business data into clear, actionable insights.',
       ] },
       { name: 'Data engineering & MLOps', items: [
-        'Build ETL/ELT pipelines and work in Snowflake daily to improve warehouse performance. Designed a full Snowflake backup solution on AWS.',
-        'Ingest with Airbyte; building custom CDC-style scripts that bring live Oracle changes into Snowflake.',
-        'Own the team\'s MLOps and DevOps: GitHub CI/CD that tests and deploys code, and infrastructure as code with Terraform. Automated manual work for other departments with Apache Airflow.',
+        'Develop ETL/ELT pipelines and continuously improve Snowflake warehouse performance and efficiency. Designed a full Snowflake backup solution on AWS.',
+        'Ingest data with Airbyte, and am building custom change-data-capture scripts that bring live Oracle changes into Snowflake.',
+        'Own the team\'s MLOps and DevOps, including GitHub CI/CD pipelines that test and deploy code and infrastructure as code with Terraform. Automated manual processes for other departments with Apache Airflow.',
       ] },
     ],
   },
@@ -54,7 +54,7 @@ const JOBS = [
     when: 'Aug – Nov 2025', title: 'Data Analyst', org: 'Checkout.com · Data Insights & Analytics',
     groups: [{ name: '', items: [
       'Built a cost-of-service model showing each department what it costs to handle its customer support tickets.',
-      'Built dashboards in Looker and Zendesk on Snowflake and GCP data; automated manual tasks with Zapier.',
+      'Built dashboards in Looker and Zendesk on Snowflake and GCP data, and automated manual tasks with Zapier.',
     ] }],
   },
   {
@@ -66,9 +66,9 @@ const JOBS = [
   },
 ]
 const BEYOND = [
-  { title: 'Lego', text: 'I have a Lego collection, and I build in my free time.' },
-  { title: 'Gaming', text: 'I play lots of games with my friends.' },
-  { title: 'Travel', text: 'I like to travel the world.' },
+  { title: 'Lego', text: 'I collect Lego and enjoy building in my free time.' },
+  { title: 'Gaming', text: 'I enjoy playing games with friends.' },
+  { title: 'Travel', text: 'I enjoy exploring new places around the world.' },
 ]
 
 const wide = ref(true)
@@ -91,7 +91,7 @@ const MONO = "font-family:'IBM Plex Mono',monospace"
           <span :style="MONO" style="font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--kick)">About</span>
           <h1 style="margin:0;font-size:clamp(52px,7.5vw,104px);font-family:'Young Serif',serif;font-weight:400;letter-spacing:-0.025em;line-height:.95">Hafsah Joomun</h1>
           <div style="font-size:clamp(20px,1.9vw,24px);font-weight:700;letter-spacing:-0.01em">Machine Learning Engineer · Data &amp; AI</div>
-          <p style="margin:0;font-size:18px;line-height:1.6;color:var(--muted);max-width:640px;text-wrap:pretty">Nearly two years of hands-on experience across data engineering, business intelligence, machine learning and MLOps. I take data from source to insight and own everything in between, and I built my company's highest-revenue digital initiative end to end.</p>
+          <p style="margin:0;font-size:18px;line-height:1.6;color:var(--muted);max-width:640px;text-wrap:pretty">Machine learning engineer with nearly two years of hands-on experience across data engineering, business intelligence, machine learning and MLOps. I take data from source to insight and own everything in between, including building my company's highest-revenue digital initiative end to end.</p>
           <div style="display:flex;gap:10px;flex-wrap:wrap;padding-top:4px">
             <a href="/uploads/Hafsah_Joomun_CV.pdf" target="_blank" style="padding:12px 20px;border-radius:14px;background:#606c38;color:#f2e8cf;font-weight:700;font-size:16px;border:2px solid #24261c;box-shadow:4px 4px 0 #24261c">Download CV</a>
             <a href="mailto:hafsah260103@gmail.com" style="padding:12px 20px;border-radius:14px;font-weight:700;font-size:16px;border:2px solid var(--line)">Email</a>
@@ -181,7 +181,7 @@ const MONO = "font-family:'IBM Plex Mono',monospace"
       </div>
 
       <section id="beyond" style="padding:clamp(56px,8vw,100px) 0 0;display:flex;flex-direction:column;gap:22px;scroll-margin-top:24px">
-        <h2 :style="H2" style="font-size:clamp(36px,4vw,52px);line-height:1">Off the clock</h2>
+        <h2 :style="H2" style="font-size:clamp(36px,4vw,52px);line-height:1">Beyond work</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px">
           <div v-for="b in BEYOND" :key="b.title" style="display:flex;flex-direction:column;gap:12px">
             <div style="position:relative;aspect-ratio:4/3;border:2px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card);display:grid;place-items:center">
