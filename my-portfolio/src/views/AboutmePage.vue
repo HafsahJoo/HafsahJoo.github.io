@@ -1,1492 +1,189 @@
-<template>
-  <div class="min-h-screen bg-LMveryLightBeige dark:bg-black relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-LMlightBeige/20 via-transparent to-LMbeige/10 dark:from-gray-800/20 dark:via-transparent dark:to-gray-700/10"></div>
-    <div class="fixed inset-0 bg-grid-pattern-light dark:bg-grid-pattern-dark opacity-60 dark:opacity-40 pointer-events-none"></div>
-
-    <div class="mb-10 sm:mb-16 relative z-10">
-      <Header />
-    </div>
-
-    <!-- Main content with homepage styling -->
-    <div class="max-w-[1200px] px-8 sm:px-28 mx-auto w-full relative z-10">
-          <div class="flex flex-col items-start mb-8">
-            <!-- Page title with decorative element -->
-            <div class="relative mb-8 sm:mb-12 w-full">
-              <h2
-                class="font-tommy font-medium text-2xl sm:text-4xl mb-2 text-gray-800 dark:text-white"
-              >
-                Who I Am<span class="text-mocha dark:text-DMyellow">...</span>
-              </h2>
-              <div
-                class="w-20 h-1 bg-gradient-to-r from-mocha to-sage dark:from-DMyellow dark:to-purple-900 rounded-full"
-              ></div>
-            </div>
-
-            <!-- Profile section with enhanced styling -->
-            <div class="w-full relative group">
-              <!-- Decorative background -->
-              <div
-                class="absolute -inset-1 bg-gradient-to-r from-mocha/20 via-sage/20 to-sand/20 dark:from-DMyellow/20 dark:via-amber-500/20 dark:to-orange-500/20  blur-sm opacity-0 group-hover:opacity-100 transition-all duration-700"
-              ></div>
-
-              <div
-                class="relative p-6 sm:p-8 border border-sand/40 dark:border-gray-700 bg-cream/40 dark:bg-gray-800/80 backdrop-blur-sm shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden"
-              >
-                <!-- Animated background pattern -->
-                <div
-                  class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-mocha/5 to-sage/5 dark:from-DMyellow/5 dark:to-amber-500/5  blur-3xl animate-pulse"
-                ></div>
-                <div
-                  class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-sand/5 to-mocha/5 dark:from-orange-500/5 dark:to-DMyellow/5  blur-2xl animate-pulse delay-1000"
-                ></div>
-
-                <div
-                  class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8"
-                >
-                  <!-- Profile Avatar Section -->
-                  <div class="flex-shrink-0 relative group/avatar">
-                    <div
-                      class="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 relative"
-                    >
-                      <div
-                        class="absolute inset-0 bg-gradient-to-r from-mocha via-sage to-sand dark:from-DMyellow dark:via-amber-500 dark:to-orange-500 rounded-full p-1"
-                      >
-                        <div
-                          class="w-full h-full bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center overflow-hidden"
-                        >
-                          <!-- Profile image -->
-                          <img
-                            src="/assets/pp/dp.jpeg"
-                            alt="Hafsah Joomun"
-                            class="w-full h-full object-cover rounded-full"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Content Section -->
-                  <div class="flex-1 space-y-4">
-                    <!-- Name and Title -->
-                    <div class="space-y-2">
-                      <div class="flex items-center gap-3">
-                        <h1
-                          class="font-pixel font-bold text-2xl sm:text-3xl lg:text-4xl text-mocha dark:text-DMyellow uppercase"
-                        >
-                          Hafsah Joomun
-                        </h1>
-                      </div>
-
-                      <div
-                        class="flex items-center gap-2 text-lg sm:text-xl text-gray-600 dark:text-gray-300"
-                      >
-                        <span class="font-medium"
-                          >Computer Science Student</span
-                        >
-
-                      </div>
-
-                      <!-- Quick stats -->
-                      <div class="flex flex-wrap gap-4 mt-3">
-                        <div
-                          class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400"
-                        >
-                          <svg
-                            class="w-4 h-4 text-mocha dark:text-DMyellow"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                            ></path>
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                            ></path>
-                          </svg>
-                          <span>Mauritius</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Description with better typography -->
-                    <div class="space-y-4">
-                      <div
-                        class="prose prose-gray dark:prose-invert max-w-none"
-                      >
-                        <p
-                          class="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg"
-                        >
-                          Hi there! 👋 I'm a passionate
-                          <span
-                            class="font-semibold text-mocha dark:text-DMyellow"
-                            >Computer Science student</span
-                          >
-                          who loves exploring creative and practical tech
-                          solutions.
-                        </p>
-                        <p
-                          class="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg"
-                        >
-                          I've worked on diverse projects including
-                          <span class="font-medium">software design</span>,
-                          <span class="font-medium">robotics</span>, and
-                          <span class="font-medium">game development</span>,
-                          always seeking challenges that push me to think
-                          differently and grow as a developer.
-                        </p>
-                        <p
-                          class="text-gray-600 dark:text-gray-400 text-sm sm:text-base italic"
-                        >
-                          When I'm not coding, you'll find me building with
-                          Legos 🧱 or exploring virtual worlds in video games 🎮
-                        </p>
-                      </div>
-                    </div>
-
-                    <!-- Enhanced CTA section -->
-                    <div class="flex flex-col sm:flex-row gap-3 pt-2">
-                      <button
-                        @click="openCV"
-                        class="font-pixel text-xs uppercase tracking-wider group inline-flex items-center px-4 py-2 bg-mocha hover:bg-sage dark:bg-gray-800 dark:hover:bg-DMyellow border-2 border-mocha dark:border-gray-600 text-white dark:text-DMyellow hover:text-charcoal dark:hover:text-black transition-all duration-300 hover:shadow-lg"
-                      >
-                        <span class="mr-2">></span>
-                        <span class="flex items-center gap-2">
-                          VIEW_CV
-                        </span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Collapsible Sections with enhanced styling -->
-            <div class="mt-6 w-full">
-              <!-- Personal Life & Interests Section -->
-              <div
-                class="mb-6 border border-sand/40 dark:border-gray-700  overflow-hidden bg-cream/40 dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300"
-              >
-                <div
-                  @click="toggleSection('personal')"
-                  class="cursor-pointer flex items-center justify-between p-3 sm:p-4 bg-gradient-to-r from-cream/40 to-cream dark:from-gray-800 dark:to-gray-700"
-                >
-                  <div class="flex items-center">
-                    <div
-                      class="w-1 h-6 bg-mocha dark:bg-DMyellow  mr-2 sm:mr-3"
-                    ></div>
-                    <h2
-                      class="font-pixel font-normal text-sm sm:text-lg text-mocha dark:text-DMyellow uppercase tracking-wider"
-                    >
-                      Personal Life & Interests
-                    </h2>
-                  </div>
-                  <span
-                    class="text-mocha dark:text-DMyellow text-xl sm:text-2xl mr-2 sm:mr-4 transition-transform duration-300"
-                    :class="{ 'transform rotate-180': isOpen.personal }"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 sm:h-6 sm:w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </span>
-                </div>
-
-                <div
-                  v-show="isOpen.personal"
-                  class="p-4 sm:p-6 transition-all duration-500"
-                >
-                  <div class="space-y-6">
-                    <!-- Hobbies & Interests -->
-                    <div
-                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
-                    >
-                      <div class="flex items-center mb-4">
-                        <div
-                          class="w-8 h-8 bg-mocha dark:bg-DMyellow  flex items-center justify-center mr-3"
-                        >
-                          <svg
-                            class="w-4 h-4 text-white dark:text-gray-900"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                            ></path>
-                          </svg>
-                        </div>
-                        <h3
-                          class="font-pixel text-xs sm:text-sm text-mocha dark:text-DMyellow uppercase tracking-wide"
-                        >
-                          What I Love Doing
-                        </h3>
-                      </div>
-                      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div
-                          class="flex items-start space-x-3 p-3 bg-sand/30 dark:bg-gray-800  border border-sand/50 dark:border-gray-600"
-                        >
-                          <div class="text-2xl">🎮</div>
-                          <div class="flex-1">
-                            <h4
-                              class="font-medium text-gray-800 dark:text-white"
-                            >
-                              Gaming
-                            </h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
-                              Started with classics on my old console. Now
-                              I'm deep into indie games and anything with a good
-                              story. Nothing beats a weekend gaming session.
-                            </p>
-                                                    </div>
-                        </div>
-                        <div
-                          class="flex items-start space-x-3 p-3 bg-sand/30 dark:bg-gray-800  border border-sand/50 dark:border-gray-600"
-                        >
-                          <div class="text-2xl">🧱</div>
-                          <div>
-                            <h4
-                              class="font-medium text-gray-800 dark:text-white"
-                            >
-                              LEGO Building
-                            </h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">
-                              Been collecting since my teen years. My desk is
-                              cluttered with half-finished builds and random
-                              pieces. There's something therapeutic about
-                              following those instruction manuals.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Background & Values -->
-                    <div
-                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
-                    >
-                      <div class="flex items-center mb-4">
-                        <div
-                          class="w-8 h-8 bg-mocha dark:bg-DMyellow  flex items-center justify-center mr-3"
-                        >
-                          <svg
-                            class="w-4 h-4 text-white dark:text-gray-900"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                            ></path>
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                            ></path>
-                          </svg>
-                        </div>
-                        <h3
-                          class="font-pixel text-xs sm:text-sm text-mocha dark:text-DMyellow uppercase tracking-wide"
-                        >
-                          How I See Things
-                        </h3>
-                      </div>
-                      <div
-                        class="prose prose-gray dark:prose-invert max-w-none"
-                      >
-                        <p
-                          class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4"
-                        >
-                          I'm the kind of person who gets excited about small
-                          details - whether it's finding the perfect LEGO piece
-                          or discovering a bug in code that's been hiding for
-                          a long time.
-                        </p>
-                        <p
-                          class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4"
-                        >
-                          I believe that everything
-                          should have a purpose, even if that purpose is just to
-                          make someone smile or solve a problem they didn't know
-                          they had.
-                        </p>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Skills Section -->
-
-              <div
-                class="mb-6 border border-sand/40 dark:border-gray-700  overflow-hidden bg-cream/40 dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300"
-              >
-                <div
-                  @click="toggleSection('skills')"
-                  class="cursor-pointer flex items-center justify-between p-3 sm:p-4 bg-gradient-to-r from-cream/40 to-cream dark:from-gray-800 dark:to-gray-700"
-                >
-                  <div class="flex items-center">
-                    <div
-                      class="w-1 h-6 bg-mocha dark:bg-DMyellow  mr-2 sm:mr-3"
-                    ></div>
-                    <h2
-                      class="font-pixel font-normal text-sm sm:text-lg text-mocha dark:text-DMyellow uppercase tracking-wider"
-                    >
-                      Skills
-                    </h2>
-                  </div>
-                  <span
-                    class="text-mocha dark:text-DMyellow text-xl sm:text-2xl mr-2 sm:mr-4 transition-transform duration-300"
-                    :class="{ 'transform rotate-180': isOpen.skills }"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 sm:h-6 sm:w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </span>
-                </div>
-
-                <div
-                  v-show="isOpen.skills"
-                  class="p-3 sm:p-4 transition-all duration-500"
-                >
-                  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
-                    <!-- Problem-Solving -->
-                    <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
-                    >
-                      <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-                        ></path>
-                      </svg>
-                      <span
-                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
-                        >Problem-Solving</span
-                      >
-                    </div>
-
-                    <!-- Web Development -->
-                    <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
-                    >
-                      <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                        ></path>
-                      </svg>
-                      <span
-                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
-                        >Web Development</span
-                      >
-                    </div>
-
-                    <!-- Collaboration & Teamwork -->
-                    <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
-                    >
-                      <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                        ></path>
-                      </svg>
-                      <span
-                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
-                        >Communication</span
-                      >
-                    </div>
-
-                    <!-- Version Control (Git) -->
-                    <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
-                    >
-                      <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                        ></path>
-                      </svg>
-                      <span
-                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
-                        >Version Control</span
-                      >
-                    </div>
-
-                    <!-- Project Management -->
-                    <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
-                    >
-                      <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                        ></path>
-                      </svg>
-                      <span
-                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
-                        >Project Management</span
-                      >
-                    </div>
-
-                    <!-- BI Tools -->
-                    <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
-                    >
-                      <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                        ></path>
-                      </svg>
-                      <span
-                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
-                        >BI Tools (Power BI, Looker)</span
-                      >
-                    </div>
-
-                    <!-- ETL Processing -->
-                    <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
-                    >
-                      <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M4 7v10c0 2 1 3 3 3h10c2 0 3-1 3-3V7c0-2-1-3-3-3H7c-2 0-3 1-3 3zm0 5h16M12 4v16"
-                        ></path>
-                      </svg>
-                      <span
-                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
-                        >ETL Processing (Talend, Informatica)
-                      </span>
-                    </div>
-
-                    <!-- AWS Technologies -->
-                    <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
-                    >
-                      <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
-                        ></path>
-                      </svg>
-                      <span
-                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
-                        >AWS Technologies
-                      </span>
-                    </div>
-
-                    <!-- Programming -->
-                    <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
-                    >
-                      <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                        ></path>
-                      </svg>
-                      <span
-                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
-                        >Programming (Python, C, C++, Dart)</span
-                      >
-                    </div>
-
-                    <!-- Database -->
-                    <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
-                    >
-                      <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"
-                        ></path>
-                      </svg>
-                      <span
-                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
-                        >Database (Firebase, MongoDB, SQL)</span
-                      >
-                    </div>
-
-                    <!-- Robotics -->
-                    <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
-                    >
-                      <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                        ></path>
-                      </svg>
-                      <span
-                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
-                        >Robotics</span
-                      >
-                    </div>
-
-                    <!-- Blockchain Development -->
-                    <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
-                    >
-                      <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
-                        ></path>
-                      </svg>
-                      <span
-                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
-                        >Blockchain Development</span
-                      >
-                    </div>
-
-                    <!-- Bash/Batch Scripting -->
-                    <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
-                    >
-                      <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                        ></path>
-                      </svg>
-                      <span
-                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
-                        >Bash/Batch Scripting</span
-                      >
-                    </div>
-
-                    <!-- Informatica -->
-                    <div
-                      class="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700  border border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-colors duration-300"
-                    >
-                      <svg
-                        class="w-5 h-5 sm:w-6 sm:h-6 text-mocha dark:text-DMyellow"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
-                        ></path>
-                      </svg>
-                      <span
-                        class="text-gray-700 dark:text-white font-medium text-sm sm:text-base"
-                        >Informatica</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Technologies & Tools Section -->
-              <div
-                class="mb-6 border border-sand/40 dark:border-gray-700  overflow-hidden bg-cream/40 dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300"
-              >
-                <div
-                  @click="toggleSection('tools')"
-                  class="cursor-pointer flex items-center justify-between p-3 sm:p-4 bg-gradient-to-r from-cream/40 to-cream dark:from-gray-800 dark:to-gray-700"
-                >
-                  <div class="flex items-center">
-                    <div
-                      class="w-1 h-6 bg-mocha dark:bg-DMyellow  mr-2 sm:mr-3"
-                    ></div>
-                    <h2
-                      class="font-pixel font-normal text-sm sm:text-lg text-mocha dark:text-DMyellow uppercase tracking-wider"
-                    >
-                      Technologies & Tools
-                    </h2>
-                  </div>
-                  <span
-                    class="text-mocha dark:text-DMyellow text-xl sm:text-2xl mr-2 sm:mr-4 transition-transform duration-300"
-                    :class="{ 'transform rotate-180': isOpen.tools }"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 sm:h-6 sm:w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </span>
-                </div>
-
-                <div
-                  v-show="isOpen.tools"
-                  class="p-4 sm:p-6 transition-all duration-500"
-                >
-                  <div class="space-y-6">
-                    <!-- Programming Languages -->
-                    <div
-                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
-                    >
-                      <div class="flex items-center mb-3">
-                        <div
-                          class="w-8 h-8 bg-mocha dark:bg-DMyellow  flex items-center justify-center mr-3"
-                        >
-                          <svg
-                            class="w-4 h-4 text-white dark:text-gray-900"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                            ></path>
-                          </svg>
-                        </div>
-                        <h3
-                          class="font-pixel text-xs sm:text-sm text-mocha dark:text-DMyellow uppercase tracking-wide"
-                        >
-                          Programming Languages
-                        </h3>
-                      </div>
-                      <div class="flex flex-wrap gap-2">
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >JavaScript</span
-                        >
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >Python</span
-                        >
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >Java</span
-                        > 
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >C++</span
-                        >
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >C</span
-                        >
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >Dart</span
-                        >
-                      </div>
-                    </div>
-
-                    <!-- Frameworks & Libraries -->
-                    <div
-                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
-                    >
-                      <div class="flex items-center mb-3">
-                        <div
-                          class="w-8 h-8 bg-mocha dark:bg-DMyellow  flex items-center justify-center mr-3"
-                        >
-                          <svg
-                            class="w-4 h-4 text-white dark:text-gray-900"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-                            ></path>
-                          </svg>
-                        </div>
-                        <h3
-                          class="font-pixel text-xs sm:text-sm text-mocha dark:text-DMyellow uppercase tracking-wide"
-                        >
-                          Frameworks & Libraries
-                        </h3>
-                      </div>
-                      <div class="flex flex-wrap gap-2">
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >Vue.js</span
-                        >
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >TailwindCSS</span
-                        >
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >Bootstrap</span
-                        >
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >Node.js</span
-                        >
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >Flutter</span
-                        >
-                      </div>
-                    </div>
-
-                    <!-- Development Tools -->
-                    <div
-                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
-                    >
-                      <div class="flex items-center mb-3">
-                        <div
-                          class="w-8 h-8 bg-mocha dark:bg-DMyellow  flex items-center justify-center mr-3"
-                        >
-                          <svg
-                            class="w-4 h-4 text-white dark:text-gray-900"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-                            ></path>
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                            ></path>
-                          </svg>
-                        </div>
-                        <h3
-                          class="font-pixel text-xs sm:text-sm text-mocha dark:text-DMyellow uppercase tracking-wide"
-                        >
-                          Development Tools
-                        </h3>
-                      </div>
-                      <div class="flex flex-wrap gap-2">
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >Git</span
-                        >
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >GitHub</span
-                        >
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >VS Code</span
-                        >
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >Figma</span
-                        >
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >Postman</span
-                        >
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >Bash/Batch</span
-                        >
-                      </div>
-                    </div>
-
-                    <!-- Data & Analytics Tools -->
-                    <div
-                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
-                    >
-                      <div class="flex items-center mb-3">
-                        <div
-                          class="w-8 h-8 bg-mocha dark:bg-DMyellow  flex items-center justify-center mr-3"
-                        >
-                          <svg
-                            class="w-4 h-4 text-white dark:text-gray-900"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                            ></path>
-                          </svg>
-                        </div>
-                        <h3
-                          class="font-pixel text-xs sm:text-sm text-mocha dark:text-DMyellow uppercase tracking-wide"
-                        >
-                          Data & Analytics
-                        </h3>
-                      </div>
-                      <div class="flex flex-wrap gap-2">
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >Power BI</span
-                        >
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >Looker</span
-                        >
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >Informatica</span
-                        >
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >Talend ETL</span
-                        >
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >Snowflake</span
-                        >
-                      </div>
-                    </div>
-
-                    <!-- Cloud Technologies -->
-                    <div
-                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
-                    >
-                      <div class="flex items-center mb-3">
-                        <div
-                          class="w-8 h-8 bg-mocha dark:bg-DMyellow  flex items-center justify-center mr-3"
-                        >
-                          <svg
-                            class="w-4 h-4 text-white dark:text-gray-900"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
-                            ></path>
-                          </svg>
-                        </div>
-                        <h3
-                          class="font-pixel text-xs sm:text-sm text-mocha dark:text-DMyellow uppercase tracking-wide"
-                        >
-                          Cloud Technologies
-                        </h3>
-                      </div>
-                      <div class="flex flex-wrap gap-2">
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >AWS</span
-                        >
-                      </div>
-                    </div>
-
-                    <!-- Databases & Storage -->
-                    <div
-                      class="border border-sand/60 dark:border-gray-600  p-4 bg-gradient-to-br from-sand/25 dark:from-gray-700 to-sand/35 dark:to-gray-700 hover:border-mocha dark:hover:border-DMyellow transition-all duration-300"
-                    >
-                      <div class="flex items-center mb-3">
-                        <div
-                          class="w-8 h-8 bg-mocha dark:bg-DMyellow  flex items-center justify-center mr-3"
-                        >
-                          <svg
-                            class="w-4 h-4 text-white dark:text-gray-900"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7c0-2.21-3.582-4-8-4s-8 1.79-8 4m0 5c0 2.21 3.582 4 8 4s8-1.79 8-4"
-                            ></path>
-                          </svg>
-                        </div>
-                        <h3
-                          class="font-pixel text-xs sm:text-sm text-mocha dark:text-DMyellow uppercase tracking-wide"
-                        >
-                          Databases & Storage
-                        </h3>
-                      </div>
-                      <div class="flex flex-wrap gap-2">
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >MySQL</span
-                        >
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >SQLite</span
-                        >
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >MongoDB</span
-                        >
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >Firebase</span
-                        >
-                        <span
-                          class="px-3 py-1.5 bg-sand/20 dark:bg-gray-800 text-gray-700 dark:text-white  text-xs sm:text-sm font-medium border border-sand/50 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow hover:shadow-sm transition-all duration-200"
-                          >PostgreSQL</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Experience Section -->
-              <div
-                class="mb-6 border border-sand/40 dark:border-gray-700  overflow-hidden bg-cream/40 dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300"
-              >
-                <div
-                  @click="toggleSection('experience')"
-                  class="cursor-pointer flex items-center justify-between p-3 sm:p-4 bg-gradient-to-r from-cream/40 to-cream dark:from-gray-800 dark:to-gray-700"
-                >
-                  <div class="flex items-center">
-                    <div
-                      class="w-1 h-6 bg-mocha dark:bg-DMyellow  mr-2 sm:mr-3"
-                    ></div>
-                    <h2
-                      class="font-pixel font-normal text-sm sm:text-lg text-mocha dark:text-DMyellow uppercase tracking-wider"
-                    >
-                      Experience
-                    </h2>
-                  </div>
-                  <span
-                    class="text-mocha dark:text-DMyellow text-xl sm:text-2xl mr-2 sm:mr-4 transition-transform duration-300"
-                    :class="{ 'transform rotate-180': isOpen.experience }"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 sm:h-6 sm:w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </span>
-                </div>
-
-                <div
-                  v-show="isOpen.experience"
-                  class="p-3 sm:p-4 transition-all duration-500"
-                >
-                  <div
-                    class="mb-6 p-3 sm:p-4 border-l-4 border-mocha dark:border-DMyellow bg-sand/25 dark:bg-gray-700 "
-                  >
-                    <div
-                      class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2"
-                    >
-                        <h3
-                        class="font-pixel text-sm sm:text-base text-mocha dark:text-DMyellow uppercase tracking-wide"
-                      >
-                        Checkout.com
-                      </h3>
-                      <span
-                        class="px-2 py-1 bg-mocha/10 dark:bg-DMyellow/10 text-mocha dark:text-DMyellow  text-xs sm:text-sm font-medium mt-1 sm:mt-0 inline-block"
-                      >
-                        Aug 2025 - Present
-                      </span>
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-400 text-xs sm:text-sm italic mb-2">
-                      Data Insights & Analytics
-                    </p>
-                    <ul
-                      class="mt-3 list-disc pl-4 sm:pl-6 text-gray-700 dark:text-gray-300 space-y-1 sm:space-y-2 text-sm sm:text-base"
-                    >
-                      <li class="leading-relaxed">
-                        Identifying manual processes and proposing automation opportunities to improve efficiency.
-                      </li>
-                      <li class="leading-relaxed">
-                        Building dashboards in Looker and Zendesk using data from snowflake/GCP.
-                      </li>
-                      <li class="leading-relaxed">
-                        Creating KPI scorecards for teams to track and evaluate employee performance.
-                      </li>
-                      <li class="leading-relaxed">
-                        Building a cost of service model to measure and optimize team operations.
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div
-                    class="mb-6 p-3 sm:p-4 border-l-4 border-mocha dark:border-DMyellow bg-sand/25 dark:bg-gray-700 "
-                  >
-                    <div
-                      class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2"
-                    >
-                        <h3
-                        class="font-pixel text-sm sm:text-base text-mocha dark:text-DMyellow uppercase tracking-wide"
-                      >
-                        Accenture
-                      </h3>
-                      <span
-                        class="px-2 py-1 bg-mocha/10 dark:bg-DMyellow/10 text-mocha dark:text-DMyellow  text-xs sm:text-sm font-medium mt-1 sm:mt-0 inline-block"
-                      >
-                        May 2025 - Aug 2025
-                      </span>
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-400 text-xs sm:text-sm italic mb-2">
-                      Packaged App Development Associate
-                    </p>
-                    <ul
-                      class="mt-3 list-disc pl-4 sm:pl-6 text-gray-700 dark:text-gray-300 space-y-1 sm:space-y-2 text-sm sm:text-base"
-                    >
-                      <li class="leading-relaxed">
-                        Built, tested, and deployed interfaces using the Informatica Application Integration Platform.
-                      </li>
-                      <li class="leading-relaxed">
-                        Designed and implemented data pipelines and transformations with Informatica Data Integration Platform.
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div
-                    class="mb-6 p-3 sm:p-4 border-l-4 border-mocha dark:border-DMyellow bg-sand/25 dark:bg-gray-700 "
-                  >
-                    <div
-                      class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2"
-                    >
-                        <h3
-                        class="font-pixel text-sm sm:text-base text-mocha dark:text-DMyellow uppercase tracking-wide"
-                      >
-                        Pick and Buy Ltd (Winners)
-                      </h3>
-                      <span
-                        class="px-2 py-1 bg-mocha/10 dark:bg-DMyellow/10 text-mocha dark:text-DMyellow  text-xs sm:text-sm font-medium mt-1 sm:mt-0 inline-block"
-                      >
-                        May 2024 - Aug 2024
-                      </span>
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-400 text-xs sm:text-sm italic mb-2">
-                      Business Intelligence (BI) Intern
-                    </p>
-                    <ul
-                      class="mt-3 list-disc pl-4 sm:pl-6 text-gray-700 dark:text-gray-300 space-y-1 sm:space-y-2 text-sm sm:text-base"
-                    >
-                      <li class="leading-relaxed">
-                        Engaged with stakeholders to gather requirements and
-                        identify relevant data sources.
-                      </li>
-                      <li class="leading-relaxed">
-                        Used SQL to query, clean, and transform data for BI
-                        dashboards.
-                      </li>
-                      <li class="leading-relaxed">
-                        Created ETL pipelines to extract, transform, and load
-                        data using Talend.
-                      </li>
-                      <li class="leading-relaxed">
-                        Developed Power BI dashboards based on stakeholder
-                        requirements.
-                      </li>
-                      <li class="leading-relaxed">
-                        Optimised Power BI dashboards to reduce load time and
-                        make them more efficient.
-                      </li>
-                      <li class="leading-relaxed">
-                        Trained in data warehousing concepts and worked on data
-                        warehouse project using Snowflake.
-                      </li>
-                      <li class="leading-relaxed">
-                        Debugged existing Java code and improved performance of
-                        Talend scripts.
-                      </li>
-                      <li class="leading-relaxed">
-                        Optimised and troubleshooted existing ETL processes by
-                        refactoring Java code to improve performance and
-                        reliability.
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div
-                    class="p-3 sm:p-4 border-l-4 border-mocha dark:border-DMyellow bg-sand/25 dark:bg-gray-700 "
-                  >
-                    <div
-                      class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2"
-                    >
-                        <h3
-                        class="font-pixel text-sm sm:text-base text-mocha dark:text-DMyellow uppercase tracking-wide"
-                      >
-                        IDP Education Ltd
-                      </h3>
-                      <span
-                        class="px-2 py-1 bg-mocha/10 dark:bg-DMyellow/10 text-mocha dark:text-DMyellow  text-xs sm:text-sm font-medium mt-1 sm:mt-0 inline-block"
-                      >
-                        2021-2023 | Part time
-                      </span>
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-400 text-xs sm:text-sm italic mb-2">
-                      Trainee
-                    </p>
-                    <ul
-                      class="mt-3 list-disc pl-4 sm:pl-6 text-gray-700 dark:text-gray-300 space-y-1 sm:space-y-2 text-sm sm:text-base"
-                    >
-                      <li class="leading-relaxed">
-                        Helped students choose their ideal study abroad
-                        destinations based on their goals.
-                      </li>
-                      <li class="leading-relaxed">
-                        Followed up regularly to keep students informed and on
-                        track during the application process.
-                      </li>
-                      <li class="leading-relaxed">
-                        Managed the organisation's social media accounts.
-                      </li>
-
-                      <li class="leading-relaxed">
-                        Analysed social media data to enhance audience
-                        engagement.
-                      </li>
-                      <li class="leading-relaxed">
-                        Participated in educational fairs, assisting with
-                        registration and cleaning data for analysis.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Education Section -->
-              <div
-                class="mb-6 border border-sand/40 dark:border-gray-700  overflow-hidden bg-cream/40 dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300"
-              >
-                <div
-                  @click="toggleSection('education')"
-                  class="cursor-pointer flex items-center justify-between p-3 sm:p-4 bg-gradient-to-r from-cream/40 to-cream dark:from-gray-800 dark:to-gray-700"
-                >
-                  <div class="flex items-center">
-                    <div
-                      class="w-1 h-6 bg-mocha dark:bg-DMyellow  mr-2 sm:mr-3"
-                    ></div>
-                    <h2
-                      class="font-pixel font-normal text-sm sm:text-lg text-mocha dark:text-DMyellow uppercase tracking-wider"
-                    >
-                      Education
-                    </h2>
-                  </div>
-                  <span
-                    class="text-mocha dark:text-DMyellow text-xl sm:text-2xl mr-2 sm:mr-4 transition-transform duration-300"
-                    :class="{ 'transform rotate-180': isOpen.education }"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 sm:h-6 sm:w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </span>
-                </div>
-
-                <div
-                  v-show="isOpen.education"
-                  class="p-3 sm:p-4 transition-all duration-500"
-                >
-                  <div
-                    class="p-3 sm:p-4 border-l-4 border-mocha dark:border-DMyellow bg-sand/25 dark:bg-gray-700  mb-4 sm:mb-6"
-                  >
-                    <div
-                      class="flex flex-col sm:flex-row sm:items-center sm:justify-between"
-                    >
-                        <h3
-                        class="font-pixel text-sm sm:text-base text-mocha dark:text-DMyellow uppercase tracking-wide"
-                      >
-                        Middlesex University Mauritius
-                      </h3>
-                      <span
-                        class="px-2 py-1 bg-mocha/10 dark:bg-DMyellow/10 text-mocha dark:text-DMyellow  text-xs sm:text-sm font-medium mt-1 sm:mt-0 inline-block"
-                      >
-                        2023-2025
-                      </span>
-                    </div>
-                    <p
-                      class="mt-2 text-gray-700 dark:text-gray-300 text-sm sm:text-base"
-                    >
-                      BSc Computer Science & Systems engineering
-                    </p>
-                  </div>
-
-                  <div
-                    class="p-3 sm:p-4 border-l-4 border-mocha dark:border-DMyellow bg-sand/25 dark:bg-gray-700 "
-                  >
-                    <div
-                      class="flex flex-col sm:flex-row sm:items-center sm:justify-between"
-                    >
-                        <h3
-                        class="font-pixel text-sm sm:text-base text-mocha dark:text-DMyellow uppercase tracking-wide"
-                      >
-                        Queen Elizabeth College
-                      </h3>
-                      <span
-                        class="px-2 py-1 bg-mocha/10 dark:bg-DMyellow/10 text-mocha dark:text-DMyellow  text-xs sm:text-sm font-medium mt-1 sm:mt-0 inline-block"
-                      >
-                        2015-2022
-                      </span>
-                    </div>
-                    <p
-                      class="mt-2 text-gray-700 dark:text-gray-300 text-sm sm:text-base"
-                    >
-                      High School
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Certifications Section -->
-              <div
-                class="mb-6 border border-sand/40 dark:border-gray-700  overflow-hidden bg-cream/40 dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300"
-              >
-                <div
-                  @click="toggleSection('certifications')"
-                  class="cursor-pointer flex items-center justify-between p-3 sm:p-4 bg-gradient-to-r from-cream/40 to-cream dark:from-gray-800 dark:to-gray-700"
-                >
-                  <div class="flex items-center">
-                    <div
-                      class="w-1 h-6 bg-mocha dark:bg-DMyellow  mr-2 sm:mr-3"
-                    ></div>
-                    <h2
-                      class="font-pixel font-normal text-sm sm:text-lg text-mocha dark:text-DMyellow uppercase tracking-wider"
-                    >
-                      Certifications
-                    </h2>
-                  </div>
-                  <span
-                    class="text-mocha dark:text-DMyellow text-xl sm:text-2xl mr-2 sm:mr-4 transition-transform duration-300"
-                    :class="{ 'transform rotate-180': isOpen.certifications }"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 sm:h-6 sm:w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </span>
-                </div>
-
-                <div
-                  v-show="isOpen.certifications"
-                  class="p-3 sm:p-4 transition-all duration-500"
-                >
-                  <div
-                    class="p-3 sm:p-4 border-l-4 border-mocha dark:border-DMyellow bg-sand/25 dark:bg-gray-700 "
-                  >
-                    <div
-                      class="flex flex-col sm:flex-row sm:items-center sm:justify-between"
-                    >
-                        <h3
-                        class="font-pixel text-sm sm:text-base text-mocha dark:text-DMyellow uppercase tracking-wide"
-                      >
-                        Certified in Cybersecurity (CC)
-                      </h3>
-                      <span
-                        class="px-2 py-1 bg-mocha/10 dark:bg-DMyellow/10 text-mocha dark:text-DMyellow  text-xs sm:text-sm font-medium mt-1 sm:mt-0 inline-block"
-                      >
-                        ISC2
-                      </span>
-                    </div>
-                    <p
-                      class="mt-2 text-gray-700 dark:text-gray-300 text-sm sm:text-base"
-                    >
-                      Professional certification in cybersecurity fundamentals
-                      and best practices
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-    </div>
-
-    <Footer class="relative z-10" />
-  </div>
-</template>
-
 <script setup>
-import { ref } from "vue";
-import Header from "../components/Header.vue";
-import Footer from "../components/Footer.vue";
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+import SiteHeader from '../components/SiteHeader.vue'
+import SiteFooter from '../components/SiteFooter.vue'
 
-const openCV = () => {
-  const cvPath = "hafsah_joomun_cv.pdf";
-  window.open(cvPath, "_blank");
-};
+const SKILLS = [
+  { name: 'Data warehouse', list: 'Snowflake, GCP' },
+  { name: 'BI tools', list: 'Power BI, Looker, Microsoft Fabric' },
+  { name: 'ETL / ELT', list: 'Airbyte, Informatica, Talend, Apache Airflow' },
+  { name: 'Cloud', list: 'Azure, AWS, Oracle Cloud' },
+  { name: 'DevOps & MLOps', list: 'Docker, Kubernetes, Terraform, GitHub CI/CD' },
+  { name: 'Databases', list: 'Oracle, MongoDB, SQL' },
+]
+const CERTS = [
+  { title: 'Generative AI Professional', issuer: 'Oracle' },
+  { title: 'Data Science Professional', issuer: 'Oracle' },
+  { title: 'Multicloud Architect Professional', issuer: 'Oracle' },
+  { title: 'Certified in Cybersecurity (CC)', issuer: 'ISC2' },
+]
+const GLANCE = [
+  { k: 'Current role', v: 'ML Engineer, Winners (IBL Group)' },
+  { k: 'Experience', v: 'Nearly 2 years, Data & AI' },
+  { k: 'Location', v: 'Mauritius' },
+  { k: 'Education', v: 'BSc CS & System Eng., 2025' },
+  { k: 'Certifications', v: '4 (Oracle, ISC2)' },
+]
+const JOBS = [
+  {
+    when: 'Nov 2025 – Now', current: true, title: 'Machine Learning Engineer', org: 'Winners (IBL Group) · Data & AI',
+    groups: [
+      { name: 'Highlights', items: [
+        'Led and built <strong>Retail IQ</strong>, the supplier analytics platform, end to end on Microsoft Fabric, Azure and Power BI. It is now among the company\'s highest-revenue digital initiatives.',
+        'Project owner of the <strong>promotion optimiser</strong>, which finds the best promotional price for each product and analyses promotions.',
+      ] },
+      { name: 'Machine learning & BI', items: [
+        'Contributed to a churn prediction model for loyalty-programme customers at risk of leaving.',
+        'Built a string matching algorithm to match the same product across different systems.',
+        'Build Power BI dashboards that turn business data into clear, actionable insights.',
+      ] },
+      { name: 'Data engineering & MLOps', items: [
+        'Build ETL/ELT pipelines and work in Snowflake daily to improve warehouse performance. Designed a full Snowflake backup solution on AWS.',
+        'Ingest with Airbyte; building custom CDC-style scripts that bring live Oracle changes into Snowflake.',
+        'Own the team\'s MLOps and DevOps: GitHub CI/CD that tests and deploys code, and infrastructure as code with Terraform. Automated manual work for other departments with Apache Airflow.',
+      ] },
+    ],
+  },
+  {
+    when: 'Aug – Nov 2025', title: 'Data Analyst', org: 'Checkout.com · Data Insights & Analytics',
+    groups: [{ name: '', items: [
+      'Built a cost-of-service model showing each department what it costs to handle its customer support tickets.',
+      'Built dashboards in Looker and Zendesk on Snowflake and GCP data; automated manual tasks with Zapier.',
+    ] }],
+  },
+  {
+    when: 'May – Aug 2025', title: 'App Development Associate', org: 'Accenture · Data & AI',
+    groups: [{ name: '', items: [
+      'Built, tested and deployed interfaces on the Informatica Application Integration platform.',
+      'Designed and implemented data pipelines and transformations with Informatica Data Integration.',
+    ] }],
+  },
+]
+const BEYOND = [
+  { title: 'Lego', text: 'Sets and builds on the shelf.' },
+  { title: 'Gaming', text: 'Minecraft on my Switch 2.' },
+  { title: 'Travel', text: 'Exploring new places.' },
+  { title: 'Videos', text: 'Tech explainers and travel vlogs.' },
+]
 
-const isOpen = ref({
-  skills: true,
-  tools: true,
-  experience: true,
-  education: true,
-  certifications: true,
-  personal: true,
-});
+const wide = ref(true)
+const onResize = () => { wide.value = window.innerWidth >= 760 }
+onMounted(() => { onResize(); window.addEventListener('resize', onResize) })
+onBeforeUnmount(() => window.removeEventListener('resize', onResize))
 
-const toggleSection = (section) => {
-  isOpen.value[section] = !isOpen.value[section];
-};
+const H2 = "margin:0;font-family:'IBM Plex Sans Condensed',sans-serif;font-weight:700;letter-spacing:-0.005em"
+const MONO = "font-family:'IBM Plex Mono',monospace"
 </script>
 
+<template>
+  <div style="min-height:100vh;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans',system-ui,sans-serif;transition:background-color .6s ease,color .6s ease">
+    <SiteHeader active="about" :wide="wide" />
+
+    <main style="max-width:1240px;margin:0 auto;padding:0 clamp(16px,3vw,40px)">
+
+      <section style="padding:clamp(28px,5vw,64px) 0 clamp(28px,4vw,44px);display:flex;flex-wrap:wrap;align-items:flex-end;gap:32px 56px">
+        <div style="flex:1 1 520px;display:flex;flex-direction:column;gap:18px">
+          <span :style="MONO" style="font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--kick)">About</span>
+          <h1 style="margin:0;font-size:clamp(52px,7.5vw,104px);font-family:'Young Serif',serif;font-weight:400;letter-spacing:-0.025em;line-height:.95">Hafsah Joomun</h1>
+          <div style="font-size:clamp(20px,1.9vw,24px);font-weight:700;letter-spacing:-0.01em">Machine Learning Engineer · Data &amp; AI</div>
+          <p style="margin:0;font-size:18px;line-height:1.6;color:var(--muted);max-width:640px;text-wrap:pretty">Nearly two years of hands-on experience across data engineering, business intelligence, machine learning and MLOps. I take data from source to insight and own everything in between, and I built my company's highest-revenue digital initiative end to end.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;padding-top:4px">
+            <a href="/uploads/cv.pdf" target="_blank" style="padding:12px 20px;border-radius:14px;background:#606c38;color:#f2e8cf;font-weight:700;font-size:16px;border:2px solid #24261c;box-shadow:4px 4px 0 #24261c">Download CV</a>
+            <a href="mailto:hafsah260103@gmail.com" style="padding:12px 20px;border-radius:14px;font-weight:700;font-size:16px;border:2px solid var(--line)">Email</a>
+            <a href="https://www.linkedin.com/in/hafsah-joomun/" target="_blank" rel="noopener" style="padding:12px 20px;border-radius:14px;font-weight:700;font-size:16px;border:2px solid var(--line)">LinkedIn</a>
+          </div>
+        </div>
+        <div style="flex:0 1 260px;position:relative;aspect-ratio:1/1;border:2px solid var(--line);border-radius:24px;overflow:hidden;background:var(--card)">
+          <img src="/assets/pp/dp.jpeg" alt="Hafsah Joomun" style="width:100%;height:100%;object-fit:cover;display:block" />
+        </div>
+      </section>
+
+      <section style="display:flex;flex-wrap:wrap;gap:2px;border:2px solid var(--line);border-radius:20px;overflow:hidden;background:var(--line);transition:background .6s">
+        <div v-for="g in GLANCE" :key="g.k" style="flex:1 1 180px;padding:18px 20px;display:flex;flex-direction:column;gap:6px;background:var(--card);transition:background .6s">
+          <span :style="MONO" style="font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)">{{ g.k }}</span>
+          <span style="font-size:17px;font-weight:700;line-height:1.3">{{ g.v }}</span>
+        </div>
+      </section>
+
+      <div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:48px 56px;padding:clamp(48px,7vw,88px) 0 0">
+
+        <section id="experience" style="flex:1 1 560px;min-width:0;display:flex;flex-direction:column;gap:8px;scroll-margin-top:24px">
+          <h2 :style="H2" style="margin-bottom:14px;font-size:clamp(36px,4vw,52px);line-height:1">Experience</h2>
+          <article v-for="(j, i) in JOBS" :key="j.title" :style="i === JOBS.length - 1 ? 'border-bottom:2px solid var(--line)' : ''" style="display:flex;flex-wrap:wrap;gap:10px 28px;padding:26px 0;border-top:2px solid var(--line)">
+            <div style="flex:0 0 150px;display:flex;flex-direction:column;gap:6px">
+              <span :style="MONO" style="font-size:13px;font-weight:600">{{ j.when }}</span>
+              <span v-if="j.current" :style="MONO" style="align-self:flex-start;font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:3px 7px;border-radius:6px;background:#606c38;color:#f2e8cf">Current</span>
+            </div>
+            <div style="flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:16px">
+              <div style="display:flex;flex-direction:column;gap:3px">
+                <h3 :style="H2" style="font-size:24px">{{ j.title }}</h3>
+                <span style="font-size:17px;font-weight:600;color:var(--muted)">{{ j.org }}</span>
+              </div>
+              <div v-for="g in j.groups" :key="g.name" style="display:flex;flex-direction:column;gap:8px">
+                <span v-if="g.name" :style="MONO" style="font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--kick)">{{ g.name }}</span>
+                <div v-for="t in g.items" :key="t" style="display:flex;gap:10px;font-size:16.5px;line-height:1.5">
+                  <span style="flex:none;width:7px;height:7px;margin-top:9px;border-radius:2px;background:var(--ink)"></span>
+                  <span style="text-wrap:pretty" v-html="t"></span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <aside style="flex:1 1 320px;max-width:100%;display:flex;flex-direction:column;gap:20px;position:sticky;top:24px">
+          <section id="skills" style="border:2px solid var(--line);border-radius:20px;background:var(--card);overflow:hidden;transition:background .6s;scroll-margin-top:24px">
+            <h2 :style="H2" style="padding:16px 20px;font-size:22px;border-bottom:2px solid var(--line)">Skills</h2>
+            <div style="display:flex;flex-direction:column">
+              <div v-for="g in SKILLS" :key="g.name" style="display:flex;flex-direction:column;gap:3px;padding:12px 20px;border-bottom:1px solid var(--rule)">
+                <span :style="MONO" style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)">{{ g.name }}</span>
+                <span style="font-size:15.5px;font-weight:600;line-height:1.4">{{ g.list }}</span>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:3px;padding:12px 20px 16px">
+                <span :style="MONO" style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)">Strengths</span>
+                <span style="font-size:15.5px;font-weight:600;line-height:1.4">Problem solving, teamwork, communication, project management</span>
+              </div>
+            </div>
+          </section>
+
+          <section id="certifications" style="border:2px solid var(--line);border-radius:20px;background:var(--card);overflow:hidden;transition:background .6s;scroll-margin-top:24px">
+            <h2 :style="H2" style="padding:16px 20px;font-size:22px;border-bottom:2px solid var(--line)">Certifications</h2>
+            <div v-for="c in CERTS" :key="c.title" style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:12px 20px;border-bottom:1px solid var(--rule)">
+              <span style="font-size:15.5px;font-weight:600;line-height:1.35">{{ c.title }}</span>
+              <span :style="MONO" style="flex:none;font-size:11.5px;color:var(--muted)">{{ c.issuer }}</span>
+            </div>
+          </section>
+
+          <section id="education" style="border:2px solid var(--line);border-radius:20px;background:var(--card);overflow:hidden;transition:background .6s;scroll-margin-top:24px">
+            <h2 :style="H2" style="padding:16px 20px;font-size:22px;border-bottom:2px solid var(--line)">Education</h2>
+            <div style="display:flex;flex-direction:column;gap:3px;padding:14px 20px;border-bottom:1px solid var(--rule)">
+              <div style="display:flex;justify-content:space-between;gap:12px"><span style="font-size:15.5px;font-weight:700;line-height:1.35">BSc Computer Science &amp; System Engineering</span><span :style="MONO" style="flex:none;font-size:12px">2025</span></div>
+              <span style="font-size:15px;color:var(--muted)">Middlesex University Mauritius</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:3px;padding:14px 20px 16px">
+              <div style="display:flex;justify-content:space-between;gap:12px"><span style="font-size:15.5px;font-weight:700;line-height:1.35">High School</span><span :style="MONO" style="flex:none;font-size:12px">2023</span></div>
+              <span style="font-size:15px;color:var(--muted)">Queen Elizabeth College</span>
+            </div>
+          </section>
+        </aside>
+      </div>
+
+      <section id="beyond" style="padding:clamp(56px,8vw,100px) 0 0;display:flex;flex-direction:column;gap:22px;scroll-margin-top:24px">
+        <h2 :style="H2" style="font-size:clamp(36px,4vw,52px);line-height:1">Off the clock</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px">
+          <div v-for="b in BEYOND" :key="b.title" style="display:flex;flex-direction:column;gap:12px">
+            <div style="position:relative;aspect-ratio:4/3;border:2px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card);display:grid;place-items:center">
+              <img v-if="b.img" :src="b.img" :alt="b.title" style="width:100%;height:100%;object-fit:cover;display:block" />
+              <span v-else :style="MONO" style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)">{{ b.title }}</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:2px">
+              <span :style="H2" style="font-size:19px">{{ b.title }}</span>
+              <span style="font-size:15.5px;color:var(--muted)">{{ b.text }}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <SiteFooter back-link top="100px" />
+  </div>
+</template>

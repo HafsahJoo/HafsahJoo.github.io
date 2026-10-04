@@ -1,443 +1,244 @@
-<template>
-  <div class="min-h-screen bg-LMveryLightBeige dark:bg-black transition-colors duration-500">
-    <Header />
-    
-    <div class="fixed inset-0 bg-gradient-to-br from-LMlightBeige/20 via-transparent to-LMbeige/10 dark:from-gray-800/30 dark:via-transparent dark:to-gray-700/10 pointer-events-none"></div>
-    <div class="fixed inset-0 bg-grid-pattern-light dark:bg-grid-pattern-dark opacity-3 dark:opacity-20 pointer-events-none"></div>
-    
-    <div class="max-w-[1200px] px-8 sm:px-28 mx-auto w-full grid min-h-screen place-items-start relative z-10">
-      <div class="grid grid-cols-1 gap-12 mt-14 sm:mt-28">
-        
-        <!-- Profile Section -->
-        <div class="col-span-1 grid grid-cols-1 sm:grid-cols-3 gap-8 items-center">
-          <div class="col-span-1 sm:col-span-2 relative">
-          <div class="relative">
-              <h1 class="font-pixel font-normal text-2xl sm:text-3xl mb-6 text-mocha dark:text-DMyellow drop-shadow-lg relative z-10 uppercase">
-              Hafsah joomun
-            </h1>
-          </div>
-          
-          <div class="relative">
-              <p class="font-inter text-text-secondary text-md sm:text-lg leading-relaxed mb-4 relative z-10">
-              A curious mind from Mauritius, passionate about technology, coding, and mathematics.
-            </p>
-              <p class="font-inter text-text-secondary text-md sm:text-lg leading-relaxed relative z-10">
-              This is my space to share my work and discoveries.
-            </p>
-              <div class="w-24 h-0.5 bg-gradient-to-r from-mocha dark:from-DMyellow to-sage dark:to-purple-900 mt-4 rounded-full"></div>
-          </div>
-          
-            <div class="flex flex-row mt-8 space-x-8">
-            <a href="https://www.linkedin.com/in/hafsah-joomun/" 
-                 class="group transform transition-all duration-300 hover:scale-125">
-                <img v-if="isDarkMode" src="../assets/icons/darklinkedin.svg" alt="linkedin" class="w-12 h-12 transition-transform duration-300" />
-                <img v-else src="../assets/icons/lightlinkedin.svg" alt="linkedin" class="w-12 h-12 transition-transform duration-300" />
-            </a>
-            <a href="#" 
-                 class="group transform transition-all duration-300 hover:scale-125">
-                <img v-if="isDarkMode" src="../assets/icons/darkgithub.svg" alt="github" class="w-12 h-12 transition-transform duration-300" />
-                <img v-else src="../assets/icons/lightgithub.svg" alt="github" class="w-12 h-12 transition-transform duration-300" />
-            </a>
-            <a href="mailto:hafsah260103@gmail.com" 
-                 class="group transform transition-all duration-300 hover:scale-125">
-                <img v-if="isDarkMode" src="../assets/icons/darkmail.svg" alt="mail" class="w-12 h-12 transition-transform duration-300" />
-                <img v-else src="../assets/icons/lightmail.svg" alt="mail" class="w-12 h-12 transition-transform duration-300" />
-            </a>
-          </div>
-        </div>
-        
-          <div class="col-span-1 hidden sm:block">
-          <div v-if="isDarkMode" class="transition-transform hover:scale-105">
-            <img src="../assets/icons/lightprofile.svg" alt="Dark Mode" class="w-full h-auto" />
-          </div>
-          <div v-else class="transition-transform hover:scale-105">
-            <img src="../assets/icons/darkprofile.svg" alt="Light Mode" class="w-full h-auto" />
-            </div>
-          </div>
-        </div>
-        
-        <!-- About Me Section -->
-        <div class="col-span-1 my-10">
-          <div>
-            <div class="bg-charcoal dark:bg-gray-900 border-2 border-mocha dark:border-DMyellow shadow-2xl overflow-hidden">
-              
-              <div class="bg-mocha dark:bg-gray-700 px-4 py-3 border-b border-sand dark:border-gray-600">
-                <div class="flex items-center justify-between">
-                  <div class="flex items-center space-x-3">
-                    <div class="flex space-x-2">
-                      <div class="w-3 h-3 bg-red-500 rounded-full"></div>
-                      <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                      <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                    </div>
-                    <span class="font-pixel text-white dark:text-DMyellow text-xs uppercase">ABOUT_ME.EXE</span>
-                  </div>
-                  <div class="font-mono text-xs text-white/70 dark:text-gray-300 hidden sm:block">
-                    hafsah@portfolio:~/about
-                  </div>
-                </div>
-              </div>
-              
-              <div class="p-8 bg-charcoal dark:bg-gray-900 h-[600px] flex flex-col">
-                <div class="font-mono text-sm space-y-3 flex-grow">
-                  <div class="text-sand dark:text-amber-400 mt-6">
-                    <pre class="text-center hidden sm:block text-xs">
-                      ⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀
-⠀⠀⠀⠀⢀⡴⣆⠀⠀⠀⠀⠀⣠⡀ ᶻ 𝗓 𐰁 .ᐟ ⣼⣿⡗⠀⠀⠀⠀
-⠀⠀⠀⣠⠟⠀⠘⠷⠶⠶⠶⠾⠉⢳⡄⠀⠀⠀⠀⠀⣧⣿⠀⠀⠀⠀⠀
-⠀⠀⣰⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣤⣤⣤⣤⣤⣿⢿⣄⠀⠀⠀⠀
-⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣧⠀⠀⠀⠀⠀⠀⠙⣷⡴⠶⣦
-⠀⠀⢱⡀⠀⠉⠉⠀⠀⠀⠀⠛⠃⠀⢠⡟⠀⠀⠀⢀⣀⣠⣤⠿⠞⠛⠋
-⣠⠾⠋⠙⣶⣤⣤⣤⣤⣤⣀⣠⣤⣾⣿⠴⠶⠚⠋⠉⠁⠀⠀⠀⠀⠀⠀
-⠛⠒⠛⠉⠉⠀⠀⠀⣴⠟⢃⡴⠛⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                    </pre>
-                    <pre class="text-center block sm:hidden text-xs">
-                      ⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀
-⠀⠀⠀⠀⢀⡴⣆⠀⠀⠀⠀⠀⣠⡀ ᶻ 𝗓 𐰁 .ᐟ ⣼⣿⡗⠀⠀⠀⠀
-⠀⠀⠀⣠⠟⠀⠘⠷⠶⠶⠶⠾⠉⢳⡄⠀⠀⠀⠀⠀⣧⣿⠀⠀⠀⠀⠀
-⠀⠀⣰⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣤⣤⣤⣤⣤⣿⢿⣄⠀⠀⠀⠀
-⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣧⠀⠀⠀⠀⠀⠀⠙⣷⡴⠶⣦
-⠀⠀⢱⡀⠀⠉⠉⠀⠀⠀⠀⠛⠃⠀⢠⡟⠀⠀⠀⢀⣀⣠⣤⠿⠞⠛⠋
-⣠⠾⠋⠙⣶⣤⣤⣤⣤⣤⣀⣠⣤⣾⣿⠴⠶⠚⠋⠉⠁⠀⠀⠀⠀⠀⠀
-⠛⠒⠛⠉⠉⠀⠀⠀⣴⠟⢃⡴⠛
-                    </pre>
-                  </div>
-                  
-                   <div v-for="(line, index) in aboutTerminalLines" :key="index" class="terminal-line" :class="{ 'typing': line.typing, 'visible': line.visible }">
-                     <div v-if="line.type === 'prompt'" class="flex flex-wrap items-center break-all">
-                       <span class="text-sage dark:text-DMyellow">user@portfolio</span>
-                       <span class="text-white">:</span>
-                       <span class="text-sand dark:text-amber-400">~/about</span>
-                       <span class="text-white">$ </span>
-                       <span class="typed-text text-white">{{ line.displayText }}</span>
-                       <span v-if="line.showCursor" class="animate-pulse text-white bg-white w-2 h-4 ml-1"></span>
-                    </div>
-                     <div v-else-if="line.type === 'output'" class="ml-2 sm:ml-4 break-words" :class="line.class" style="white-space: pre-line;">
-                       {{ line.displayText }}
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="flex justify-end pt-6">
-                  <router-link to="/aboutme" 
-                     class="font-pixel text-xs uppercase tracking-wider group inline-flex items-center px-4 py-2 bg-mocha hover:bg-sage dark:bg-gray-800 dark:hover:bg-DMyellow border-2 border-mocha dark:border-gray-600 text-white dark:text-DMyellow hover:text-charcoal dark:hover:text-black transition-all duration-300 hover:shadow-lg">
-                    <span class="mr-2">></span>
-                    About me 
-                  </router-link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Projects Section -->
-        <div class="col-span-1 mb-16 relative">
-          <div class="relative z-10">
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 sm:mb-12 space-y-4 sm:space-y-0">
-              <div class="relative">
-                <h1 class="font-pixel font-normal text-xl text-mocha dark:text-DMyellow uppercase tracking-wider">Projects</h1>
-                <div class="absolute -bottom-2 left-0 w-20 h-1 bg-gradient-to-r from-mocha to-sage dark:from-DMyellow dark:to-purple-900"></div>
-              </div>
-              <router-link to="/projects" 
-                class="font-pixel text-xs uppercase tracking-wider group inline-flex items-center px-4 py-2 bg-mocha hover:bg-sage dark:bg-gray-800 dark:hover:bg-DMyellow border-2 border-mocha dark:border-gray-600 text-white dark:text-DMyellow hover:text-charcoal dark:hover:text-black transition-all duration-300 hover:shadow-lg self-start sm:self-auto">
-                <span class="mr-2">></span>
-                VIEW_ALL
-              </router-link>
-            </div>
-            
-            <div class="overflow-x-auto sm:overflow-visible">
-              <div class="flex space-x-6 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-x-0 pb-4 sm:pb-0">
-              <div class="group relative bg-gradient-to-br from-cream/30 to-sand/20 dark:from-gray-800/50 dark:to-gray-700/30 border-2 border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-all duration-500 overflow-hidden flex-shrink-0 w-80 sm:w-auto">
-                <div class="aspect-video bg-gradient-to-br from-LMBlue/10 to-LMbeige/20 dark:from-gray-700 dark:to-gray-600 relative overflow-hidden">
-                  <img src="/assets/oia2.jpg" alt="OIA ROBOT" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                  <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                </div>
-                <div class="p-6">
-                  <h3 class="font-pixel text-sm text-mocha dark:text-DMyellow uppercase mb-3 tracking-wide">OIA ROBOT</h3>
-                  <p class="font-inter text-sm text-text-secondary dark:text-gray-300 leading-relaxed mb-4">
-                    Robotic arm playing rock paper scissors using gesture detection from MediaPipe and Python
-                  </p>
-                  <router-link to="/project1" 
-                    class="font-pixel text-xs uppercase tracking-wider inline-flex items-center text-mocha dark:text-DMyellow hover:text-sage dark:hover:text-amber-300 transition-colors duration-300">
-                    <span class="mr-2">></span>
-                    EXPLORE
-                  </router-link>
-                </div>
-              </div>
-
-              <div class="group relative bg-gradient-to-br from-cream/30 to-sand/20 dark:from-gray-800/50 dark:to-gray-700/30 border-2 border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-all duration-500 overflow-hidden flex-shrink-0 w-80 sm:w-auto">
-                <div class="aspect-video bg-gradient-to-br from-LMBlue/10 to-LMbeige/20 dark:from-gray-700 dark:to-gray-600 relative overflow-hidden">
-                  <img src="/assets/vm.jpg" alt="Vending Machine Robot" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                  <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                </div>
-                <div class="p-6">
-                  <h3 class="font-pixel text-sm text-mocha dark:text-DMyellow uppercase mb-3 tracking-wide">Vending Machine</h3>
-                  <p class="font-inter text-sm text-text-secondary dark:text-gray-300 leading-relaxed mb-4">
-                    Smart vending machine built using Arduino, ESP32 cam with QR code detection technology
-                  </p>
-                  <router-link to="/project2" 
-                    class="font-pixel text-xs uppercase tracking-wider inline-flex items-center text-mocha dark:text-DMyellow hover:text-sage dark:hover:text-amber-300 transition-colors duration-300">
-                    <span class="mr-2">></span>
-                    EXPLORE
-                  </router-link>
-                </div>
-              </div>
-
-              <div class="group relative bg-gradient-to-br from-cream/30 to-sand/20 dark:from-gray-800/50 dark:to-gray-700/30 border-2 border-sand/60 dark:border-gray-600 hover:border-mocha dark:hover:border-DMyellow transition-all duration-500 overflow-hidden flex-shrink-0 w-80 sm:w-auto">
-                <div class="aspect-video bg-gradient-to-br from-LMBlue/10 to-LMbeige/20 dark:from-gray-700 dark:to-gray-600 relative overflow-hidden">
-                  <img src="/assets/pacman4.png" alt="Pacman Game" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                  <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                </div>
-                <div class="p-6">
-                  <h3 class="font-pixel text-sm text-mocha dark:text-DMyellow uppercase mb-3 tracking-wide">Pacman Game</h3>
-                  <p class="font-inter text-sm text-text-secondary dark:text-gray-300 leading-relaxed mb-4">
-                    Classic Pacman game recreation built using Python with modern gameplay mechanics
-                  </p>
-                  <router-link to="/project3" 
-                    class="font-pixel text-xs uppercase tracking-wider inline-flex items-center text-mocha dark:text-DMyellow hover:text-sage dark:hover:text-amber-300 transition-colors duration-300">
-                    <span class="mr-2">></span>
-                    EXPLORE
-                  </router-link>
-                </div>
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Blogs Section -->
-        <div class="col-span-1 mb-16 relative">
-          <div class="relative z-10">
-            <div class="flex items-center justify-between mb-12">
-              <div class="relative">
-                <h1 class="font-pixel font-normal text-xl text-mocha dark:text-DMyellow uppercase tracking-wider">Blogs</h1>
-                <div class="absolute -bottom-2 left-0 w-20 h-1 bg-gradient-to-r from-mocha to-sage dark:from-DMyellow dark:to-purple-900"></div>
-              </div>
-            </div>
-            
-            <div class="bg-charcoal dark:bg-gray-900 border-2 border-mocha dark:border-DMyellow shadow-2xl overflow-hidden">
-              
-              <div class="bg-mocha dark:bg-gray-700 px-4 py-3 border-b border-sand dark:border-gray-600">
-                <div class="flex items-center justify-between">
-                  <div class="flex items-center space-x-3">
-                    <div class="flex space-x-2">
-                      <div class="w-3 h-3 bg-red-500 rounded-full"></div>
-                      <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                      <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                    </div>
-                    <span class="font-pixel text-white dark:text-DMyellow text-xs uppercase">BLOG_SYSTEM.EXE</span>
-                  </div>
-                  <div class="font-mono text-xs text-white/70 dark:text-gray-300 hidden sm:block">
-                    hafsah@portfolio:~/blogs
-                  </div>
-                </div>
-              </div>
-              
-              <div class="p-8 bg-charcoal dark:bg-gray-900 min-h-[300px]">
-                <div class="font-mono text-sm space-y-3">
-                  <div class="text-sand dark:text-amber-400 mb-6">
-                    <div class="flex items-center mb-2">
-                      <span class="text-green-400">✓</span>
-                      <span class="ml-2">Initializing blog system...</span>
-                    </div>
-                    <div class="flex items-center mb-2">
-                      <span class="text-green-400">✓</span>
-                      <span class="ml-2">Loading content management...</span>
-                    </div>
-                    <div class="flex items-center mb-4">
-                      <span class="text-red-400">⚠</span>
-                      <span class="ml-2 text-red-400">Blog posts not found</span>
-                    </div>
-                  </div>
-                  
-                  <div class="space-y-2">
-                    <div class="flex flex-wrap items-center break-all">
-                      <span class="text-sage dark:text-DMyellow">user@portfolio</span>
-                      <span class="text-white">:</span>
-                      <span class="text-sand dark:text-amber-400">~/blogs</span>
-                      <span class="text-white">$ ls -la</span>
-                    </div>
-                    <div class="text-gray-400 ml-2 sm:ml-4 break-words">
-                      <div class="break-all">total 0</div>
-                      <div class="break-all">drwxr-xr-x 2 user user 4096 Oct  2 2025 .</div>
-                      <div class="break-all">drwxr-xr-x 8 user user 4096 Oct  2 2025 ..</div>
-                      <div class="break-all">-rw-r--r-- 1 user user   42 Oct  2 2025 .gitkeep</div>
-                    </div>
-                  </div>
-                  
-                  <div class="space-y-2 mt-6">
-                    <div class="flex flex-wrap items-center break-all">
-                      <span class="text-sage dark:text-DMyellow">user@portfolio</span>
-                      <span class="text-white">:</span>
-                      <span class="text-sand dark:text-amber-400">~/blogs</span>
-                      <span class="text-white">$ cat .gitkeep</span>
-                    </div>
-                    <div class="text-sand ml-2 sm:ml-4 break-words">
-                      <div class="break-words"># Blog posts coming soon!</div>
-                      <div class="break-words"># Stay tuned for updates...</div>
-                    </div>
-                </div>
-                
-                  <div class="space-y-2 mt-6">
-                    <div class="flex flex-wrap items-center break-all">
-                      <span class="text-sage dark:text-DMyellow">user@portfolio</span>
-                      <span class="text-white">:</span>
-                      <span class="text-sand dark:text-amber-400">~/blogs</span>
-                      <span class="text-white">$ echo "Status: In Development"</span>
-                    </div>
-                    <div class="text-green-400 ml-2 sm:ml-4 mb-4 break-words">
-                      Status: In Development
-                    </div>
-                  </div>
-                  
-                  <div class="flex flex-wrap items-center mt-8 break-all">
-                    <span class="text-sage dark:text-DMyellow">user@portfolio</span>
-                    <span class="text-white">:</span>
-                    <span class="text-sand dark:text-amber-400">~/blogs</span>
-                    <span class="text-white">$ </span>
-                    <span class="animate-pulse text-white bg-white w-2 h-4 ml-1"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <Footer class="relative z-10" />
-  </div>
-</template>
-
 <script setup>
-import { inject, ref, onMounted } from "vue";
-import Header from "../components/Header.vue";
-import Footer from "../components/Footer.vue";
-import Blog from "../components/BlogCard.vue";
+import { ref, computed, watch, onMounted, onBeforeUnmount } from 'vue'
+import SiteHeader from '../components/SiteHeader.vue'
+import SiteFooter from '../components/SiteFooter.vue'
+import { dark } from '../lib/theme'
 
-const isDarkMode = inject("isDarkMode");
-const aboutTerminalLines = ref([]);
-const aboutAnimationComplete = ref(false);
+const U = 9.6
+const FAR = { p: [0, 9.6, 0], yaw: 0.78, pitch: 0.5, dist: 43 }
+const FAR_NARROW = { p: [0, 6.8, 0], yaw: 0.78, pitch: 0.5, dist: 22 }
+const EXIT = { p: [0, -4.6, 0], yaw: 1.3, pitch: 0.62, dist: 36 }
+const LOREM = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.'
+const STOPS = [
+  { id: 'overview', label: 'Stop 1', hold: [1.0, 1.6], view: { p: [0, 1.5, 0], yaw: 0.78, pitch: 0.5, dist: 20.5 },
+    kicker: 'Kicker', title: 'Placeholder title', body: LOREM },
+  { id: 'setup', label: 'Stop 2', hold: [2.4, 3.0], view: { p: [-1.6, 1.7, -2.6], yaw: 0.36, pitch: 0.5, dist: 7.0, shift: 1 },
+    kicker: 'Kicker', title: 'Placeholder title', cta: 'Link text', href: '/about#experience',
+    bullets: ['Placeholder bullet one', 'Placeholder bullet two', 'Placeholder bullet three'] },
+  { id: 'skills', label: 'Stop 3', hold: [3.8, 4.4], view: { p: [-2.95, 1.4, -0.75], yaw: 1.12, pitch: 0.2, dist: 7.6, shift: 1 },
+    kicker: 'Kicker', title: 'Placeholder title', cta: 'Link text', href: '/about#skills',
+    chips: ['Tag 1', 'Tag 2', 'Tag 3', 'Tag 4', 'Tag 5', 'Tag 6', 'Tag 7', 'Tag 8'] },
+  { id: 'certs', label: 'Stop 4', hold: [5.2, 5.8], view: { p: [-3.2, 2.25, 1.05], yaw: 1.22, pitch: 0.16, dist: 7.0, shift: 1 },
+    kicker: 'Kicker', title: 'Placeholder title', cta: 'Link text', href: '/about#certifications',
+    bullets: ['Placeholder bullet one', 'Placeholder bullet two', 'Placeholder bullet three', 'Placeholder bullet four'] },
+  { id: 'home', label: 'Stop 5', hold: [6.6, 7.2], view: { p: [1.45, 1.85, -3.0], yaw: 0.22, pitch: 0.2, dist: 7.0, shift: 1 },
+    kicker: 'Kicker', title: 'Placeholder title', cta: 'Link text', href: '/about#education', body: LOREM },
+  { id: 'hobbies', label: 'Stop 6', hold: [8.0, 8.6], view: { p: [-2.95, 2.75, -0.75], yaw: 1.05, pitch: 0.42, dist: 4.2, shift: 1 },
+    kicker: 'Kicker', title: 'Placeholder title', cta: 'Link text', href: '/about#beyond', body: LOREM },
+]
+const LABELS = { pc: 'Label', me: 'Label', switch: 'Label', shelf: 'Label', certs: 'Label', shields: 'Label', window: 'Label', globe: 'Label', travel: 'Label', lego: 'Label' }
+const JUMP = { pc: 1, me: 1, switch: 5, shelf: 2, certs: 3, shields: 3, window: 4, globe: 4, travel: 4, lego: 5 }
+const CURRENT = [1, 2, 3].map((n) => ({ tag: `0${n} · Tag`, title: 'Placeholder title', body: LOREM, stack: 'Tag · Tag · Tag' }))
 
-// About terminal animation sequence
-const aboutSequence = [
-  { type: 'prompt', delay: 1000 },
-  { type: 'command', text: 'whoami', class: 'text-white', delay: 0 },
-  { type: 'output', text: 'Hafsah Joomun - Computer Science Student', class: 'text-mocha dark:text-cyan-400', delay: 400 },
-  { type: 'prompt', delay: 1200 },
-  { type: 'command', text: 'cat about.txt', class: 'text-white', delay: 0 },
-  { type: 'output', text: 'Hi, I\'m Joomun hafsah, a Computer Science student\nwho loves solving logical problems and exploring technology.\nFrom the beautiful island of Mauritius 🇲🇺', class: 'text-gray-400 dark:text-yellow-300', delay: 600 },
-  { type: 'prompt', delay: 1000 },
-  { type: 'command', text: 'ls skills/', class: 'text-white', delay: 0 },
-  { type: 'output', text: 'programming/  mathematics/  robotics/  problem-solving/', class: 'text-LMbeige dark:text-magenta-400', delay: 500 }
-];
+const stageRef = ref(null), tipRef = ref(null), sectionRef = ref(null)
+const heroRef = ref(null), hintRef = ref(null), railRef = ref(null)
+const wide = ref(true)
+const hover = ref(null)
+const stop = ref(-1)
+const shownStop = ref(0)
 
-const typeText = (text, speed = 80) => {
-  return new Promise((resolve) => {
-    let i = 0;
-    const currentLine = aboutTerminalLines.value[aboutTerminalLines.value.length - 1];
-    currentLine.showCursor = true;
-    
-    const typeInterval = setInterval(() => {
-      currentLine.displayText = text.substring(0, i + 1);
-      i++;
-      
-      if (i >= text.length) {
-        clearInterval(typeInterval);
-        currentLine.showCursor = false;
-        resolve();
-      }
-    }, speed);
-  });
-};
+let room = null, dead = false, vh = 0, laidOut = false
 
-const addAboutLine = (lineData) => {
-  const line = {
-    type: lineData.type,
-    displayText: '',
-    fullText: lineData.text,
-    class: lineData.class,
-    visible: true,
-    typing: false,
-    showCursor: false
-  };
-  
-  aboutTerminalLines.value.push(line);
-  return line;
-};
+const unit = () => Math.max(520, vh || window.innerHeight) * 0.6
 
-const runAboutAnimation = async () => {
-  let currentPromptLine = null;
-  
-  for (let i = 0; i < aboutSequence.length; i++) {
-    const step = aboutSequence[i];
-    
-    await new Promise(resolve => setTimeout(resolve, step.delay));
-    
-    if (step.type === 'prompt') {
-      currentPromptLine = addAboutLine(step);
-      currentPromptLine.type = 'prompt';
-      currentPromptLine.displayText = '';
-      currentPromptLine.showCursor = true;
-    } else if (step.type === 'command') {
-      if (currentPromptLine) {
-        await typeText(step.text, 80);
-        currentPromptLine.showCursor = false;
-        currentPromptLine = null;
-      }
-    } else if (step.type === 'output') {
-      const outputLine = addAboutLine(step);
-      outputLine.displayText = step.text;
-    }
+function buildTimeline(isWide) {
+  const keys = [{ u: 0, view: isWide ? FAR : FAR_NARROW }]
+  STOPS.forEach((s) => {
+    const v = isWide ? s.view : { ...s.view, shift: 1 }
+    keys.push({ u: s.hold[0], view: v }, { u: s.hold[1], view: v })
+  })
+  keys.push({ u: U, view: EXIT })
+  return keys
+}
+
+function applyLayout(isWide) {
+  room.setLayout(isWide ? { sx: 0.26 } : { sy: 0.34, fit: 1.9 })
+  room.setTimeline(buildTimeline(isWide))
+}
+
+function progress() {
+  const el = sectionRef.value
+  if (!el) return 0
+  return Math.max(0, Math.min(U, -el.getBoundingClientRect().top / unit()))
+}
+
+function update() {
+  const u = progress()
+  if (room) room.setProgress(u)
+  const h = heroRef.value, hint = hintRef.value, rail = railRef.value
+  if (h) { const k = Math.min(1, u / 0.7); h.style.opacity = String(1 - k); h.style.transform = `translateY(${-k * 70}px)` }
+  if (hint) hint.style.opacity = String(1 - Math.min(1, u / 0.25))
+  if (rail) { const on = u > 0.7 && u < U - 0.6; rail.style.opacity = on ? '1' : '0'; rail.style.pointerEvents = on ? 'auto' : 'none' }
+  let s = -1
+  STOPS.forEach((st, i) => { if (u >= st.hold[0] - 0.28 && u <= st.hold[1] + 0.28) s = i })
+  if (s !== stop.value) { stop.value = s; if (s >= 0) shownStop.value = s }
+}
+
+function scrollToStop(i) {
+  const el = sectionRef.value
+  if (!el) return
+  const s = STOPS[i]
+  const top = el.getBoundingClientRect().top + window.scrollY + ((s.hold[0] + s.hold[1]) / 2) * unit()
+  window.scrollTo({ top, behavior: 'smooth' })
+}
+
+function jump(id) {
+  const i = JUMP[id]
+  if (i != null) scrollToStop(i)
+}
+
+function onResize() {
+  const w = window.innerWidth, h = window.innerHeight
+  if (!vh || Math.abs(h - vh) / vh > 0.25) vh = h
+  const isWide = w >= 900
+  if (isWide !== wide.value || !laidOut) {
+    laidOut = true
+    wide.value = isWide
+    if (room) applyLayout(isWide)
   }
-  
-  setTimeout(() => {
-    const finalLine = {
-      type: 'prompt',
-      displayText: '',
-      visible: true,
-      showCursor: true
-    };
-    aboutTerminalLines.value.push(finalLine);
-    aboutAnimationComplete.value = true;
-  }, 1000);
-};
+  update()
+}
 
-onMounted(() => {
-  setTimeout(() => {
-    runAboutAnimation();
-  }, 500);
-});
+onMounted(async () => {
+  window.addEventListener('scroll', update, { passive: true })
+  window.addEventListener('resize', onResize)
+  onResize()
+  const mod = await import('../lib/room2.js')
+  if (dead || !stageRef.value) return
+  room = mod.createRoom(stageRef.value, {
+    dark: dark.value, fov: 32, tipEl: tipRef.value, blobOpacity: 0.26,
+    onHover: (id) => { hover.value = id },
+    onSelect: (id) => jump(id),
+  })
+  applyLayout(wide.value)
+  update()
+})
+
+onBeforeUnmount(() => {
+  dead = true
+  window.removeEventListener('scroll', update)
+  window.removeEventListener('resize', onResize)
+  if (room) room.dispose()
+})
+
+watch(dark, (d) => { if (room) room.setTheme(d) })
+
+const on = computed(() => stop.value >= 0)
+const cap = computed(() => {
+  const s = STOPS[shownStop.value] || STOPS[0]
+  return {
+    ...s,
+    chips: (s.chips || []).slice(0, wide.value ? 99 : 9),
+    count: String(shownStop.value + 1).padStart(2, '0') + ' / ' + String(STOPS.length).padStart(2, '0'),
+  }
+})
+const capStyle = computed(() => {
+  const w = wide.value
+  return {
+    left: w ? 'clamp(16px,4vw,64px)' : '14px',
+    right: w ? 'auto' : '14px',
+    top: w ? '50%' : 'auto',
+    bottom: w ? 'auto' : '18px',
+    transform: `translateY(${w ? (on.value ? '-50%' : 'calc(-50% + 16px)') : (on.value ? '0px' : '16px')})`,
+    width: w ? 'min(400px,36vw)' : 'auto',
+    opacity: on.value ? 1 : 0,
+    pointerEvents: on.value ? 'auto' : 'none',
+  }
+})
+const capCardStyle = computed(() => {
+  const w = wide.value
+  return { padding: w ? '22px 24px 24px' : '16px 18px 18px', gap: w ? '14px' : '10px', maxHeight: w ? 'calc(100dvh - 190px)' : '42dvh' }
+})
+const capTitleSize = computed(() => (wide.value ? 'clamp(26px,2.4vw,34px)' : '23px'))
+const capTextSize = computed(() => (wide.value ? '15.5px' : '14.5px'))
+const railStyle = computed(() => {
+  const w = wide.value
+  return {
+    left: w ? 'auto' : '50%', right: w ? 'clamp(12px,2.4vw,32px)' : 'auto',
+    top: w ? '50%' : '78px', transform: w ? 'translateY(-50%)' : 'translateX(-50%)',
+    flexDirection: w ? 'column' : 'row', padding: w ? '8px 10px' : '4px 10px',
+  }
+})
 </script>
 
-<style scoped>
-.fade-in {
-  animation: fadeIn 0.5s ease-in-out;
-}
+<template>
+  <div style="min-height:100vh;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans',system-ui,sans-serif;transition:background-color .6s ease,color .6s ease">
+    <SiteHeader active="home" fixed :wide="wide" />
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    <section ref="sectionRef" style="position:relative;height:680vh">
+      <div style="position:sticky;top:0;height:100dvh;min-height:520px;overflow:hidden">
+        <div ref="stageRef" style="position:absolute;inset:0;z-index:1"></div>
 
-.terminal-line {
-  opacity: 0;
-  animation: slideIn 0.3s ease-out forwards;
-}
+        <div ref="heroRef" style="position:absolute;left:0;right:0;top:0;z-index:3;padding:clamp(96px,14vh,140px) clamp(16px,3vw,40px) 0;display:flex;flex-direction:column;gap:18px;pointer-events:none;will-change:opacity,transform">
+          <span style="align-self:flex-start;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:6px 10px;border-radius:8px;border:2px solid var(--line);background:var(--panel)">Role · Location</span>
+          <h1 style="margin:0;font-size:clamp(58px,10.5vw,176px);font-family:'Young Serif',serif;font-weight:400;letter-spacing:-0.025em;line-height:.95">Your Name<span style="color:#bc4749">.</span></h1>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px">
+            <p style="margin:0;font-size:clamp(17px,1.5vw,20px);line-height:1.45;font-weight:500;max-width:520px;color:var(--muted);text-wrap:pretty">{{ LOREM }}</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;pointer-events:auto">
+              <router-link to="/about" style="padding:12px 20px;border-radius:14px;background:#606c38;color:#f2e8cf;font-weight:700;font-size:16px;border:2px solid #24261c;box-shadow:4px 4px 0 #24261c">Button</router-link>
+              <a href="/uploads/cv.pdf" target="_blank" style="padding:12px 20px;border-radius:14px;background:var(--card);font-weight:700;font-size:16px;border:2px solid var(--line);box-shadow:4px 4px 0 var(--line)">Button</a>
+            </div>
+          </div>
+        </div>
 
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-</style>
+        <div ref="hintRef" style="position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.04em;padding:8px 14px;border-radius:999px;background:var(--card);border:2px solid var(--line);pointer-events:none;white-space:nowrap">
+          <span>Scroll to step inside</span><span style="font-size:14px">↓</span>
+        </div>
+
+        <div ref="tipRef" :style="{ opacity: hover ? 1 : 0 }" style="position:absolute;left:0;top:0;z-index:5;pointer-events:none;transition:opacity .15s ease">
+          <div style="transform:translate(14px,-46px);display:flex;align-items:center;gap:8px;background:#24261c;color:#f2e8cf;border-radius:10px;padding:7px 12px;font-weight:700;font-size:14px;white-space:nowrap">
+            <span style="width:7px;height:7px;border-radius:2px;background:#bc4749"></span><span>{{ hover ? LABELS[hover] || '' : '' }}</span>
+          </div>
+        </div>
+
+        <aside :style="capStyle" style="position:absolute;z-index:4;transition:opacity .35s ease,transform .35s ease">
+          <div :style="capCardStyle" style="background:var(--card);border:2px solid var(--line);border-radius:22px;box-shadow:6px 6px 0 var(--line);display:flex;flex-direction:column;overflow:auto;transition:background .6s">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase">
+              <span style="color:var(--kick);font-weight:600">{{ cap.kicker }}</span>
+              <span style="color:var(--muted)">{{ cap.count }}</span>
+            </div>
+            <h2 :style="{ fontSize: capTitleSize }" style="margin:0;font-family:'IBM Plex Sans Condensed',sans-serif;font-weight:700;letter-spacing:-0.005em;line-height:1.02;text-wrap:balance">{{ cap.title }}</h2>
+            <p v-if="cap.body" style="margin:0;font-size:16.5px;line-height:1.5;color:var(--muted);text-wrap:pretty">{{ cap.body }}</p>
+            <div v-if="cap.bullets" style="display:flex;flex-direction:column;gap:9px">
+              <div v-for="b in cap.bullets" :key="b" :style="{ fontSize: capTextSize }" style="display:flex;gap:10px;line-height:1.42">
+                <span style="flex:none;width:8px;height:8px;margin-top:7px;border-radius:2px;background:#bc4749"></span><span style="text-wrap:pretty">{{ b }}</span>
+              </div>
+            </div>
+            <div v-if="cap.chips.length" style="display:flex;flex-wrap:wrap;gap:6px">
+              <span v-for="c in cap.chips" :key="c" style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;padding:5px 9px;border-radius:8px;border:1.5px solid var(--line)">{{ c }}</span>
+            </div>
+            <router-link v-if="cap.cta" :to="cap.href" style="align-self:flex-start;font-weight:700;font-size:15px;border-bottom:2px solid currentColor;padding-bottom:1px">{{ cap.cta }} →</router-link>
+          </div>
+        </aside>
+
+        <nav ref="railRef" aria-label="Room tour" :style="railStyle" style="position:absolute;z-index:4;display:flex;gap:2px;border-radius:16px;background:var(--card);border:2px solid var(--line);opacity:0;pointer-events:none;transition:opacity .3s ease,background .6s">
+          <button v-for="(r, i) in STOPS" :key="r.id" @click="scrollToStop(i)" :title="r.label" style="display:flex;align-items:center;justify-content:flex-end;gap:10px;padding:6px 4px;border:0;background:transparent;cursor:pointer;color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.04em">
+            <span v-if="wide" :style="{ opacity: stop === i ? 1 : 0.5 }" style="transition:opacity .25s">{{ r.label }}</span>
+            <span :style="{ width: stop === i ? '14px' : '10px', height: stop === i ? '14px' : '10px', background: stop === i ? '#606c38' : 'var(--card)' }" style="border-radius:50%;border:2px solid var(--line);transition:all .25s ease"></span>
+          </button>
+        </nav>
+      </div>
+    </section>
+
+    <section id="currently" style="max-width:1240px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(16px,3vw,40px) 40px;display:flex;flex-direction:column;gap:36px">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px">
+        <h2 style="margin:0;font-size:clamp(40px,5.4vw,76px);font-family:'IBM Plex Sans Condensed',sans-serif;font-weight:700;letter-spacing:-0.005em;line-height:.95;max-width:780px;text-wrap:balance">Section heading</h2>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--muted)">Company · Team · Date</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:22px">
+        <article v-for="p in CURRENT" :key="p.title" style="border:2px solid var(--line);border-radius:22px;background:var(--card);padding:24px;display:flex;flex-direction:column;gap:12px;transition:background .6s">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--kick)">{{ p.tag }}</span>
+          <h3 style="margin:0;font-size:28px;font-family:'IBM Plex Sans Condensed',sans-serif;font-weight:700;letter-spacing:-0.005em">{{ p.title }}</h3>
+          <p style="margin:0;font-size:16px;line-height:1.5;color:var(--muted);text-wrap:pretty">{{ p.body }}</p>
+          <span style="margin-top:auto;padding-top:6px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted)">{{ p.stack }}</span>
+        </article>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding-top:6px;font-size:16px">
+        <span style="color:var(--muted)">Placeholder text.</span>
+        <router-link to="/about#experience" style="font-weight:700;border-bottom:2px solid currentColor">Link text →</router-link>
+      </div>
+    </section>
+
+    <SiteFooter />
+  </div>
+</template>
