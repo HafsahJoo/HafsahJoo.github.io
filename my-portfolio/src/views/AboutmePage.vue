@@ -46,7 +46,7 @@ const JOBS = [
       { name: 'Data engineering & MLOps', items: [
         'Develop ETL/ELT pipelines and continuously improve Snowflake warehouse performance and efficiency. Designed a full Snowflake backup solution on AWS.',
         'Ingest data with Airbyte, and am building custom change-data-capture scripts that bring live Oracle changes into Snowflake.',
-        'Own the team\'s MLOps and DevOps, including GitHub CI/CD pipelines that test and deploy code and infrastructure as code with Terraform. Automated manual processes for other departments with Apache Airflow.',
+        'Work on the team\'s MLOps and DevOps, including GitHub CI/CD pipelines that test and deploy code and infrastructure as code with Terraform. Automated manual processes for other departments with Apache Airflow.',
       ] },
     ],
   },

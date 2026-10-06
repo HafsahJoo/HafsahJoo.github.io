@@ -13,7 +13,7 @@ const STOPS = [
     kicker: 'Welcome', title: 'An interactive tour of my work', body: 'Scroll to explore, or select any object to learn more.' },
   { id: 'setup', label: 'Work', hold: [2.4, 3.0], view: { p: [-1.6, 1.7, -2.6], yaw: 0.36, pitch: 0.5, dist: 7.0, shift: 1 },
     kicker: 'Work', title: 'Machine Learning Engineer, Winners (IBL Group)', cta: 'Full experience', href: '/about#experience',
-    bullets: ["Led end-to-end development of Retail IQ, now the company's highest-revenue digital initiative", 'Project owner of the promotion optimisation solution', "Building live Oracle-to-Snowflake pipelines and responsible for the team's MLOps"] },
+    bullets: ["Led end-to-end development of Retail IQ, now the company's highest-revenue digital initiative", 'Project owner of the promotion optimisation solution'] },
   { id: 'skills', label: 'Skills', hold: [3.8, 4.4], view: { p: [-2.95, 1.4, -0.75], yaw: 1.12, pitch: 0.2, dist: 7.6, shift: 1 },
     kicker: 'Skills', title: 'Data and cloud expertise', cta: 'All skills', href: '/about#skills',
     chips: ['Snowflake', 'Microsoft Fabric', 'Power BI', 'Looker', 'Azure', 'AWS', 'Airflow', 'Airbyte', 'Informatica', 'Terraform', 'Docker', 'Kubernetes'] },
