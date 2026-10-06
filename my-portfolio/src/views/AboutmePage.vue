@@ -35,18 +35,30 @@ const JOBS = [
     when: 'Nov 2025 – Now', current: true, title: 'Machine Learning Engineer', org: 'Winners (IBL Group) · Data & AI',
     groups: [
       { name: 'Highlights', items: [
-        'Led and built <strong>Retail IQ</strong>, the supplier analytics platform, end to end on Microsoft Fabric, Azure and Power BI. It is now among the company\'s highest-revenue digital initiatives.',
-        'Project owner of the <strong>promotion optimiser</strong>, which finds the best promotional price for each product and analyses promotions.',
+        'Led and built <strong>Retail IQ</strong>, a data monetisation platform, end to end in just 3 months, using embedded Power BI, Microsoft Fabric and the Azure ecosystem. It is now among the company\'s highest-revenue digital initiatives.',
+        'Project owner of the <strong>promotion optimiser</strong>, which finds the best promotional price for each product and analyses past promotions.',
       ] },
-      { name: 'Machine learning & BI', items: [
+      { name: 'Reporting & data modelling', items: [
+        'Built Power BI reports and dashboards covering sales, stock and the key KPIs of the retail sector, for commercial and other departments.',
+        'Use star-schema data models for BI reporting, so reports are consistent, fast and easy to use.',
+        'Work with commercial teams and other departments to understand their needs and turn them into reports, datasets and data models.',
+      ] },
+      { name: 'Data engineering & automation', items: [
+        'Build ETL/ELT pipelines that bring data from the company\'s ERP, Oracle and SQL Server into Snowflake, transforming millions of rows.',
+        'Continuously improve Snowflake warehouse performance and efficiency, and designed a full Snowflake backup solution on AWS.',
+        'Ingest data with Airbyte, and am building custom change-data-capture scripts that bring live Oracle changes into Snowflake.',
+        'Automate recurring processes and manual work for other departments with Apache Airflow.',
+        'Troubleshoot and resolve pipeline, refresh and data issues as they arise.',
+      ] },
+      { name: 'Machine learning & AI', items: [
         'Contributed to a churn prediction model for loyalty-programme customers at risk of leaving.',
         'Built a string matching algorithm to match the same product across different systems.',
-        'Develop Power BI dashboards that turn business data into clear, actionable insights.',
+        'Experience in building AI agents.',
       ] },
-      { name: 'Data engineering & MLOps', items: [
-        'Develop ETL/ELT pipelines and continuously improve Snowflake warehouse performance and efficiency. Designed a full Snowflake backup solution on AWS.',
-        'Ingest data with Airbyte, and am building custom change-data-capture scripts that bring live Oracle changes into Snowflake.',
-        'Work on the team\'s MLOps and DevOps, including GitHub CI/CD pipelines that test and deploy code and infrastructure as code with Terraform. Automated manual processes for other departments with Apache Airflow.',
+      { name: 'DevOps & MLOps', items: [
+        'Use Docker and Kubernetes to containerise applications and set up servers and environments.',
+        'Use Terraform to define and set up infrastructure as code.',
+        'Work on the team\'s MLOps and DevOps, including GitHub CI/CD pipelines that automatically test and deploy code.',,
       ] },
     ],
   },
