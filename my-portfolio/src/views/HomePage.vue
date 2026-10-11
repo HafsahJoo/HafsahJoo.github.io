@@ -65,7 +65,7 @@ function buildTimeline(isWide) {
 }
 
 function applyLayout(isWide) {
-  room.setLayout(isWide ? { sx: 0.26 } : { sy: 0.34, fit: 1.9 })
+  room.setLayout(isWide ? { sx: 0.26 } : { sy: 0.5, fit: 1.9 })
   room.setTimeline(buildTimeline(isWide))
 }
 
@@ -161,10 +161,11 @@ const capStyle = computed(() => {
 })
 const capCardStyle = computed(() => {
   const w = wide.value
-  return { padding: w ? '22px 24px 24px' : '16px 18px 18px', gap: w ? '14px' : '10px', maxHeight: w ? 'calc(100dvh - 190px)' : '42dvh' }
+  return { padding: w ? '22px 24px 24px' : '14px 16px 16px', gap: w ? '14px' : '8px', maxHeight: w ? 'calc(100dvh - 190px)' : '60dvh' }
 })
-const capTitleSize = computed(() => (wide.value ? 'clamp(26px,2.4vw,34px)' : '23px'))
-const capTextSize = computed(() => (wide.value ? '15.5px' : '14.5px'))
+const capTitleSize = computed(() => (wide.value ? 'clamp(26px,2.4vw,34px)' : '20px'))
+const capBodySize = computed(() => (wide.value ? '16.5px' : '14px'))
+const capTextSize = computed(() => (wide.value ? '15.5px' : '13.5px'))
 const railStyle = computed(() => {
   const w = wide.value
   return {
@@ -212,7 +213,7 @@ const railStyle = computed(() => {
               <span style="color:var(--muted)">{{ cap.count }}</span>
             </div>
             <h2 :style="{ fontSize: capTitleSize }" style="margin:0;font-family:'IBM Plex Sans Condensed',sans-serif;font-weight:700;letter-spacing:-0.005em;line-height:1.02;text-wrap:balance">{{ cap.title }}</h2>
-            <p v-if="cap.body" style="margin:0;font-size:16.5px;line-height:1.5;color:var(--muted);text-wrap:pretty">{{ cap.body }}</p>
+            <p v-if="cap.body" :style="{ fontSize: capBodySize }" style="margin:0;line-height:1.45;color:var(--muted);text-wrap:pretty">{{ cap.body }}</p>
             <div v-if="cap.bullets" style="display:flex;flex-direction:column;gap:9px">
               <div v-for="b in cap.bullets" :key="b" :style="{ fontSize: capTextSize }" style="display:flex;gap:10px;line-height:1.42">
                 <span style="flex:none;width:8px;height:8px;margin-top:7px;border-radius:2px;background:#bc4749"></span><span style="text-wrap:pretty">{{ b }}</span>
