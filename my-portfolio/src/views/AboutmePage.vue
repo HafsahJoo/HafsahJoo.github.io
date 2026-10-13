@@ -4,12 +4,12 @@ import SiteHeader from '../components/SiteHeader.vue'
 import SiteFooter from '../components/SiteFooter.vue'
 
 const SKILLS = [
-  { name: 'Data warehouse', list: 'Snowflake, GCP' },
-  { name: 'BI tools', list: 'Power BI, Looker, Microsoft Fabric' },
-  { name: 'ETL / ELT', list: 'Airbyte, Informatica, Talend, Apache Airflow' },
+  { name: 'Data engineering', list: 'Snowflake, dbt, Airflow, Airbyte, Talend, Informatica' },
   { name: 'Cloud', list: 'Azure, AWS, Oracle Cloud' },
-  { name: 'DevOps & MLOps', list: 'Docker, Kubernetes, Terraform, GitHub CI/CD' },
-  { name: 'Databases', list: 'Oracle, MongoDB, SQL' },
+  { name: 'BI tools', list: 'Power BI, Looker, Microsoft Fabric' },
+  { name: 'Databases', list: 'Oracle, MongoDB, MySQL' },
+  { name: 'Programming', list: 'Python, JavaScript' },
+  { name: 'DevOps', list: 'Docker, Kubernetes, Terraform, CI/CD' },
 ]
 const CERTS = [
   { title: 'Machine Learning Specialization', issuer: 'DeepLearning.AI', date: 'May 2026' },
@@ -35,30 +35,31 @@ const JOBS = [
     when: 'Nov 2025 – Now', current: true, title: 'Machine Learning Engineer', org: 'Winners (IBL Group) · Data & AI',
     groups: [
       { name: 'Highlights', items: [
-        'Led and built <strong>Retail IQ</strong>, a data monetisation platform, end to end in just 3 months, using embedded Power BI, Microsoft Fabric and the Azure ecosystem. It is now among the company\'s highest-revenue digital initiatives.',
-        'Project owner of the <strong>promotion optimiser</strong>, which finds the best promotional price for each product and analyses past promotions.',
+        'Led and built <strong>Retail IQ</strong>, one of Winners\' highest-revenue digital initiatives, end to end in just 3 months, using embedded Power BI, Microsoft Fabric and Azure.',
+        'Own the development of the <strong>promotion optimisation engine</strong>, which finds the best promotional price for each product, analyses promotions, finds trends and analyses competitors\' data.',
       ] },
       { name: 'Reporting & data modelling', items: [
-        'Built Power BI reports and dashboards covering sales, stock and the key KPIs of the retail sector, for commercial and other departments.',
+        'Build and maintain Power BI dashboards that turn business data into clear, actionable insights.',
         'Use star-schema data models for BI reporting, so reports are consistent, fast and easy to use.',
-        'Work with commercial teams and other departments to understand their needs and turn them into reports, datasets and data models.',
+        'Work with commercial and other departments to gather requirements and turn them into reports, datasets and data models.',
       ] },
       { name: 'Data engineering & automation', items: [
-        'Build ETL/ELT pipelines that bring data from the company\'s ERP, Oracle and SQL Server into Snowflake, transforming millions of rows.',
-        'Continuously improve Snowflake warehouse performance and efficiency, and designed a full Snowflake backup solution on AWS.',
-        'Ingest data with Airbyte, and am building custom change-data-capture scripts that bring live Oracle changes into Snowflake.',
-        'Automate recurring processes and manual work for other departments with Apache Airflow.',
+        'Build and maintain ETL/ELT pipelines that transform millions of rows daily from the ERP and from Oracle and SQL Server sources.',
+        'Work daily in Snowflake\'s medallion architecture (bronze, silver, gold), continuously improving the warehouse and adding new capabilities.',
+        'Designed a full Snowflake backup solution on AWS.',
+        'Work with Airbyte for data ingestion, and am building custom scripts that mimic change data capture (CDC) to bring live changes from Oracle into Snowflake.',
+        'Automated manual tasks for other departments using Apache Airflow.',
         'Troubleshoot and resolve pipeline, refresh and data issues as they arise.',
       ] },
-      { name: 'Machine learning & AI', items: [
-        'Contributed to a churn prediction model for loyalty-programme customers at risk of leaving.',
+      { name: 'Applications, machine learning & AI', items: [
+        'Develop front-end and back-end applications with FastAPI and Streamlit to present analysis and model results in interactive tools that business teams can use.',
+        'Contributed to a churn prediction model that identifies loyalty-programme customers at risk of leaving.',
         'Built a string matching algorithm to match the same product across different systems.',
-        'Experience in building AI agents.',
+        'Assisted in building an AI agent that automates daily tasks.',
       ] },
       { name: 'DevOps & MLOps', items: [
         'Use Docker and Kubernetes to containerise applications and set up servers and environments.',
-        'Use Terraform to define and set up infrastructure as code.',
-        'Work on the team\'s MLOps and DevOps, including GitHub CI/CD pipelines that automatically test and deploy code.',,
+        'Work on MLOps and DevOps, including GitHub CI/CD pipelines that automatically test and deploy code, and infrastructure as code with Terraform.',
       ] },
     ],
   },
@@ -103,7 +104,7 @@ const MONO = "font-family:'IBM Plex Mono',monospace"
           <span :style="MONO" style="font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--kick)">About</span>
           <h1 style="margin:0;font-size:clamp(52px,7.5vw,104px);font-family:'Young Serif',serif;font-weight:400;letter-spacing:-0.025em;line-height:.95">Hafsah Joomun</h1>
           <div style="font-size:clamp(20px,1.9vw,24px);font-weight:700;letter-spacing:-0.01em">Machine Learning Engineer · Data &amp; AI</div>
-          <p style="margin:0;font-size:18px;line-height:1.6;color:var(--muted);max-width:640px;text-wrap:pretty">Machine learning engineer with nearly two years of hands-on experience across data engineering, business intelligence, machine learning and MLOps. I take data from source to insight and own everything in between, including building my company's highest-revenue digital initiative end to end.</p>
+          <p style="margin:0;font-size:18px;line-height:1.6;color:var(--muted);max-width:640px;text-wrap:pretty">Machine Learning Engineer with nearly two years of hands-on experience across data engineering, business intelligence, machine learning and MLOps. I bridge the gap between raw data and business value, building end-to-end solutions from data pipelines to actionable insights. I led the end-to-end development of one of Winners' highest-revenue digital initiatives, delivering it in just three months.</p>
           <div style="display:flex;gap:10px;flex-wrap:wrap;padding-top:4px">
             <a href="/uploads/Hafsah_Joomun_CV.pdf" target="_blank" style="padding:12px 20px;border-radius:14px;background:#606c38;color:#f2e8cf;font-weight:700;font-size:16px;border:2px solid #24261c;box-shadow:4px 4px 0 #24261c">Download CV</a>
             <a href="mailto:hafsah260103@gmail.com" style="padding:12px 20px;border-radius:14px;font-weight:700;font-size:16px;border:2px solid var(--line)">Email</a>
@@ -185,7 +186,7 @@ const MONO = "font-family:'IBM Plex Mono',monospace"
               <span style="font-size:15px;color:var(--muted)">Middlesex University Mauritius</span>
             </div>
             <div style="display:flex;flex-direction:column;gap:3px;padding:14px 20px 16px">
-              <div style="display:flex;justify-content:space-between;gap:12px"><span style="font-size:15.5px;font-weight:700;line-height:1.35">High School</span><span :style="MONO" style="flex:none;font-size:12px">2023</span></div>
+              <div style="display:flex;justify-content:space-between;gap:12px"><span style="font-size:15.5px;font-weight:700;line-height:1.35">Higher School Certificate</span><span :style="MONO" style="flex:none;font-size:12px">2023</span></div>
               <span style="font-size:15px;color:var(--muted)">Queen Elizabeth College</span>
             </div>
           </section>

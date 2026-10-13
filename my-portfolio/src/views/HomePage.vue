@@ -13,10 +13,10 @@ const STOPS = [
     kicker: 'Welcome', title: 'An interactive tour of my work', body: 'Scroll to explore, or select any object to learn more.' },
   { id: 'setup', label: 'Work', hold: [2.4, 3.0], view: { p: [-1.6, 1.7, -2.6], yaw: 0.36, pitch: 0.5, dist: 7.0, shift: 1 },
     kicker: 'Work', title: 'Machine Learning Engineer, Winners (IBL Group)', cta: 'Full experience', href: '/about#experience',
-    bullets: ["Led end-to-end development of Retail IQ in just 3 months, now among the company's highest-revenue digital initiatives", 'Project owner of the promotion optimisation solution'] },
+    bullets: ["Led end-to-end development of Retail IQ in just 3 months, one of Winners' highest-revenue digital initiatives", 'Own the development of the promotion optimisation engine', 'Build and maintain ETL/ELT pipelines that transform millions of rows daily'] },
   { id: 'skills', label: 'Skills', hold: [3.8, 4.4], view: { p: [-2.95, 1.4, -0.75], yaw: 1.12, pitch: 0.2, dist: 7.6, shift: 1 },
     kicker: 'Skills', title: 'Data and cloud expertise', cta: 'All skills', href: '/about#skills',
-    chips: ['Snowflake', 'Microsoft Fabric', 'Power BI', 'Looker', 'Azure', 'AWS', 'Airflow', 'Airbyte', 'Informatica', 'Terraform', 'Docker', 'Kubernetes'] },
+    chips: ['Snowflake', 'dbt', 'Python', 'Microsoft Fabric', 'Power BI', 'Looker', 'Azure', 'AWS', 'Airflow', 'Airbyte', 'Informatica', 'Terraform', 'Docker', 'Kubernetes'] },
   { id: 'certs', label: 'Certs', hold: [5.2, 5.8], view: { p: [-3.2, 2.25, 1.05], yaw: 1.22, pitch: 0.16, dist: 7.0, shift: 1 },
     kicker: 'Certifications', title: '10 certifications', cta: 'All certifications', href: '/about#certifications',
     bullets: ['Machine Learning Specialization (DeepLearning.AI)', 'Six Oracle Cloud Infrastructure certifications, including Generative AI and Multicloud Architect', 'AWS Serverless badge and CS50 Ready Player 50', 'ISC2 Certified in Cybersecurity (CC)'] },
@@ -34,12 +34,13 @@ const LABELS = { pc: 'Gaming setup', me: 'Hafsah', switch: 'Switch 2', shelf: 'B
 const JUMP = { pc: 1, me: 1, switch: 6, shelf: 2, certs: 3, shields: 4, window: 5, globe: 5, travel: 5, lego: 6 }
 const FLOW = ['Source', 'Pipelines', 'Warehouse', 'Insights', 'Dashboards', 'Production']
 const EXPERTISE = [
-  { title: 'Data engineering', body: 'Reliable pipelines that move data from source systems into the warehouse, ready for analytics.', tools: ['Airbyte', 'Airflow', 'Informatica'] },
+  { title: 'Data engineering', body: 'Reliable pipelines that move data from source systems into the warehouse, ready for analytics.', tools: ['Airbyte', 'Airflow', 'Informatica', 'dbt'] },
   { title: 'Data modelling', body: 'Warehouse models designed for performance, clarity and ease of use.', tools: ['Snowflake', 'SQL', 'Oracle'] },
   { title: 'Cloud architecture', body: 'Secure, scalable and cost-efficient architecture across the major cloud platforms.', tools: ['Azure', 'AWS', 'Oracle Cloud'] },
   { title: 'Insights & analytics', body: 'Analysis that turns raw data into clear findings that support decisions.', tools: ['Power BI', 'SQL', 'Snowflake'] },
   { title: 'Dashboards', body: 'Dashboards that give stakeholders a clear, actionable view of the business.', tools: ['Power BI', 'Looker', 'Fabric'] },
   { title: 'Workflow automation', body: 'Automating repetitive tasks and workflows across departments, freeing teams to focus on higher-value work.', tools: ['Airflow', 'Zapier'] },
+  { title: 'Applications & AI', body: 'Front-end and back-end applications that present analysis and model results as interactive tools for business teams.', tools: ['FastAPI', 'Streamlit', 'Python'] },
   { title: 'DevOps & MLOps', body: 'Automated testing, deployment and infrastructure as code to take solutions into production.', tools: ['GitHub CI/CD', 'Docker', 'Kubernetes', 'Terraform'] },
 ]
 
@@ -65,7 +66,7 @@ function buildTimeline(isWide) {
 }
 
 function applyLayout(isWide) {
-  room.setLayout(isWide ? { sx: 0.26 } : { sy: 0.5, fit: 1.9 })
+  room.setLayout(isWide ? { sx: 0.26 } : { sy: 0.18, fit: 1.9 })
   room.setTimeline(buildTimeline(isWide))
 }
 
@@ -161,11 +162,10 @@ const capStyle = computed(() => {
 })
 const capCardStyle = computed(() => {
   const w = wide.value
-  return { padding: w ? '22px 24px 24px' : '14px 16px 16px', gap: w ? '14px' : '8px', maxHeight: w ? 'calc(100dvh - 190px)' : '60dvh' }
+  return { padding: w ? '22px 24px 24px' : '16px 18px 18px', gap: w ? '14px' : '10px', maxHeight: w ? 'calc(100dvh - 190px)' : '42dvh' }
 })
-const capTitleSize = computed(() => (wide.value ? 'clamp(26px,2.4vw,34px)' : '20px'))
-const capBodySize = computed(() => (wide.value ? '16.5px' : '14px'))
-const capTextSize = computed(() => (wide.value ? '15.5px' : '13.5px'))
+const capTitleSize = computed(() => (wide.value ? 'clamp(26px,2.4vw,34px)' : '23px'))
+const capTextSize = computed(() => (wide.value ? '15.5px' : '14.5px'))
 const railStyle = computed(() => {
   const w = wide.value
   return {
@@ -188,7 +188,7 @@ const railStyle = computed(() => {
           <span style="align-self:flex-start;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:6px 10px;border-radius:8px;border:2px solid var(--line);background:var(--panel)">Machine Learning Engineer · Mauritius</span>
           <h1 style="margin:0;font-size:clamp(58px,10.5vw,176px);font-family:'Young Serif',serif;font-weight:400;letter-spacing:-0.025em;line-height:.95">Hafsah Joomun<span style="color:#bc4749">.</span></h1>
           <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px">
-            <p style="margin:0;font-size:clamp(17px,1.5vw,20px);line-height:1.45;font-weight:500;max-width:520px;color:var(--muted);text-wrap:pretty">I design and deliver end-to-end data and machine learning solutions, from pipelines and warehouses to dashboards and production models.</p>
+            <p style="margin:0;font-size:clamp(17px,1.5vw,20px);line-height:1.45;font-weight:500;max-width:520px;color:var(--muted);text-wrap:pretty">I bridge the gap between raw data and business value, building end-to-end solutions from data pipelines to actionable insights.</p>
             <div style="display:flex;gap:10px;flex-wrap:wrap;pointer-events:auto">
               <router-link to="/about" style="padding:12px 20px;border-radius:14px;background:#606c38;color:#f2e8cf;font-weight:700;font-size:16px;border:2px solid #24261c;box-shadow:4px 4px 0 #24261c">About me</router-link>
               <a href="/uploads/Hafsah_Joomun_CV.pdf" target="_blank" style="padding:12px 20px;border-radius:14px;background:var(--card);font-weight:700;font-size:16px;border:2px solid var(--line);box-shadow:4px 4px 0 var(--line)">Download CV</a>
@@ -213,7 +213,7 @@ const railStyle = computed(() => {
               <span style="color:var(--muted)">{{ cap.count }}</span>
             </div>
             <h2 :style="{ fontSize: capTitleSize }" style="margin:0;font-family:'IBM Plex Sans Condensed',sans-serif;font-weight:700;letter-spacing:-0.005em;line-height:1.02;text-wrap:balance">{{ cap.title }}</h2>
-            <p v-if="cap.body" :style="{ fontSize: capBodySize }" style="margin:0;line-height:1.45;color:var(--muted);text-wrap:pretty">{{ cap.body }}</p>
+            <p v-if="cap.body"  style="margin:0;font-size:16.5px;line-height:1.5;color:var(--muted);text-wrap:pretty">{{ cap.body }}</p>
             <div v-if="cap.bullets" style="display:flex;flex-direction:column;gap:9px">
               <div v-for="b in cap.bullets" :key="b" :style="{ fontSize: capTextSize }" style="display:flex;gap:10px;line-height:1.42">
                 <span style="flex:none;width:8px;height:8px;margin-top:7px;border-radius:2px;background:#bc4749"></span><span style="text-wrap:pretty">{{ b }}</span>
