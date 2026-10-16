@@ -2,6 +2,7 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import SiteHeader from '../components/SiteHeader.vue'
 import SiteFooter from '../components/SiteFooter.vue'
+import PhotoLightbox from '../components/PhotoLightbox.vue'
 
 const SKILLS = [
   { name: 'Data engineering', list: 'Snowflake, dbt, Airflow, Airbyte, Talend, Informatica' },
@@ -78,11 +79,28 @@ const JOBS = [
     ] }],
   },
 ]
+const GALLERY = '/assets/gallery'
+const photos = (folder, files) => files.map((file) => ({ src: `${GALLERY}/${folder}/${file}` }))
 const BEYOND = [
-  { title: 'Lego', text: 'I collect Lego and enjoy building in my free time.' },
-  { title: 'Gaming', text: 'I enjoy playing games with friends.' },
-  { title: 'Travel', text: 'I enjoy exploring new places around the world.' },
+  {
+    title: 'Lego', text: 'I collect Lego and enjoy building in my free time.', cover: 0,
+    photos: photos('lego', ['lego-bee.jpeg']),
+  },
+  {
+    title: 'Gaming', text: 'I enjoy playing games with friends.', cover: 1,
+    photos: photos('gaming', ['switch.jpeg', 'desk.jpg']),
+  },
+  {
+    title: 'Travel', text: 'I enjoy exploring new places around the world.', cover: 7,
+    photos: photos('travel', [
+      'london.jpeg', 'dubai.jpeg', 'istanbul.jpeg', 'austria.jpeg', 'florence.jpeg', 'rome.jpeg', 'venice.jpeg',
+      'lauterbrunnen.jpeg', 'switzerland.jpeg', 'grindelwald.jpeg', 'titlis-1.jpeg', 'titlis-2.jpeg', 'titlis-3.jpeg', 'window-seat.jpeg',
+    ]),
+  },
 ]
+const openGallery = ref(null)
+const photoIndex = ref(0)
+const show = (b) => { openGallery.value = b; photoIndex.value = b.cover }
 
 const wide = ref(true)
 const onResize = () => { wide.value = window.innerWidth >= 760 }
@@ -196,20 +214,41 @@ const MONO = "font-family:'IBM Plex Mono',monospace"
       <section id="beyond" style="padding:clamp(56px,8vw,100px) 0 0;display:flex;flex-direction:column;gap:22px;scroll-margin-top:24px">
         <h2 :style="H2" style="font-size:clamp(36px,4vw,52px);line-height:1">Beyond work</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px">
-          <div v-for="b in BEYOND" :key="b.title" style="display:flex;flex-direction:column;gap:12px">
-            <div style="position:relative;aspect-ratio:4/3;border:2px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card);display:grid;place-items:center">
-              <img v-if="b.img" :src="b.img" :alt="b.title" style="width:100%;height:100%;object-fit:cover;display:block" />
-              <span v-else :style="MONO" style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)">{{ b.title }}</span>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:2px">
+          <button v-for="b in BEYOND" :key="b.title" type="button" class="beyond-card" :aria-label="`Open ${b.title} photos`" @click="show(b)">
+            <span style="position:relative;display:block;aspect-ratio:4/3;border:2px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card)">
+              <img :src="b.photos[b.cover].src" :alt="b.title" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block" />
+              <span v-if="b.photos.length > 1" :style="MONO" style="position:absolute;right:10px;bottom:10px;font-size:12px;font-weight:600;padding:5px 9px;border-radius:999px;background:var(--card);border:2px solid var(--line)">{{ b.photos.length }} photos</span>
+            </span>
+            <span style="display:flex;flex-direction:column;gap:2px">
               <span :style="H2" style="font-size:19px">{{ b.title }}</span>
               <span style="font-size:15.5px;color:var(--muted)">{{ b.text }}</span>
-            </div>
-          </div>
+            </span>
+          </button>
         </div>
       </section>
     </main>
 
+    <PhotoLightbox v-if="openGallery" v-model:index="photoIndex" :photos="openGallery.photos" :title="openGallery.title" @close="openGallery = null" />
+
     <SiteFooter back-link top="100px" />
   </div>
 </template>
+
+<style scoped>
+.beyond-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: transform .2s ease;
+}
+.beyond-card:hover {
+  transform: translateY(-4px);
+}
+</style>
